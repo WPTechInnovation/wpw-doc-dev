@@ -1,0 +1,175 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started | Worldpay Within</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">    
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-12 columns">
+        <img style="padding-top: 5px; padding-bottom: 5px;" src="images/worldpaylogosmall.png" alt="Worldpay Logo"/>
+        <div style="padding-left: 5px; color: white; background-color: red;"><a class="whiteLink" href="index.html"><h1 style="font-size: 1.8em !important;">Worldpay Within Documentation</h1></a></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="callout">
+          
+    
+
+
+              <div class="row">
+
+           
+                    <div class="large-12 columns">
+<!-- Insert page content below -->
+
+
+                      
+
+                              <h3>Getting started</h3>
+
+                              <p>You will at the very least need to install Go and the Golang SDK, thereafter you can code against the raw Go SDK or alterantively against one of the mulitple language wrappers, which give access to the SDK. The Golang SDK communicates with these other languages using RPC calls (in both directions), and the wrappers in the background interface using Thrift, this is not exposed to you as a developer, you work with the Interface layer in your language of choice.</p>
+      
+                              <h3>The binaries (if you don't want to build from source)</h3>
+
+                              <p>Please see the releases section of GitHub for access to pre-built binaries of the RPC Agent and Dev Client apps. Both of the apps have been built for 32bit and 64bit architectures on Windows, MacOS, Linux and Linux (ARM).</p>
+
+                              <p>While the RPC Agent can be run from anywhere it makes sense to add it to the directory of the application which will call it. The reason for this is that each application needs it own running instance of the RPC Agent and it can easily get confusing when there are multiple applications and agents deployed.</p>
+
+                              <p>Please see the examples in both the Java and Node.JS wrappers. these examples currently hold binaries for MacOS x64. I suggest replacing that binary with an alternate build, if required.</p>
+
+                              <p>The dev client can really be run from anywhere as it is not coupled with anything else.</p>
+
+                              <h4>Usage</h4>
+
+                              <li>RPC Agent <code>./rpc-agent -configfile <filename></code>. Please see explanation of rpc-agent config file for further info.</li>
+                              <li>Dev Client <code>./dev-client</code></li>
+
+
+
+
+
+                              <h3>Install - if you want to go from the Go source files!</h3>
+
+                              <div class="callout">
+                              <ol>
+                              <li>Install Go command line</li>
+                              <li>Set up the environmental variables correctly; you only need to set $GOPATH, and that should be set as //, where is wherever you want the code, is /src/innovation.worldpay.com</li>
+                              <li>clone the repo to $GOPATH/src/innovation.worldpay.com</li>
+                              <li>Get the dependencies; go get github.com/Sirupsen/logrus</li>
+                              <li>Get the dependencies; go get github.com/gorilla/mux</li>
+                              <li>Get the dependencies; go get github.com/nu7hatch/gouuid</li>
+                              <li>Get the dependencies; go get git.apache.org/thrift.git/lib/go/thrift</li>
+                              </ol>
+                              </div>
+
+                              <h3>Configuration file versus command line flags</h3>
+
+                                <p>The RPC client takes command line flags e.g. -port 9091 but it can also take the flag -configfile 'conf.json' so you can specify the configuration in a config file. For example:</p>
+
+                                <div class="callout" style="background-color: #EEEEEE;">
+                                <pre>
+{
+    "WorldpayWithinConfig": {
+        "BufferSize" : 100,
+        "Buffered": false,
+        "Framed": false,
+        "Host": "127.0.0.1",
+        "Logfile": "worldpayWithin.log",
+        "Loglevel": "warn",
+        "Port": 9081,
+        "Protocol": "binary",
+        "Secure": false
+    }
+}
+                                </pre>
+                                </div>
+
+
+
+                              <h3>Tutorial on running two example apps on one machien</h3>
+
+
+                              <p>Tutorial for running on the same machine e.g. Java (producer) and Node.js (consumer)</p>
+
+                              <div style="text-align: center;"><figure>
+                                  <img style="padding-top: 25px;" src="images/get-started/outputoforchestration1.png" alt="The output of the log files for the orchestration of the flow"/>
+                                  <figcaption>The output of the log files for the orchestration of the flow.</figcaption>
+                              </figure></div>
+
+
+
+                              <div style="text-align: center;"><figure>
+                                  <img style="padding-top: 25px;" src="images/get-started/order-details-onlineworldpaycom.png" alt="Showing the payment in online.worldpay.com"/>
+                                  <figcaption>Showing the payment in online.worldpay.com.</figcaption>
+                              </figure></div>
+
+                              <ul>
+                              <li>Java - 9090 - Producer</li>
+                              <li>Node.js - 9091 - consumer</li>
+                              </ul>
+
+                              <ol>
+                              <li>Each app needs to run on it's own instance of the RPC service, so run one on 9090 and the other on 9091</li>
+                              <li>So we're running Java off of 9090 and running node.js off of 9091</li>
+                              <li>Open two terminal windows</li>
+                              <li>Configure the rpc agent in each terminal window to run on each of the ports, in the producer window run the RPC on port 9090 and the consumer window run the RPC on port 9091</li>
+                              <li>Configure the java app to run on 9090 (run as the producer)</li>
+                              <li>Configure the node.js app to run on 9091 - in createClient in example code (run as the consumer)</li>
+                              <li>Run the java producer app so we're broadcasting, note that the RPC agent broadcasting will continue to run in the background whilst the java program has exited</li>
+                              <li>Run the node.js consumer app immediately</li>
+                              <li>The service discovery, price negotiation, payment and service release flows will all be twiggered, as you can see below</li>
+                              </ol>
+
+
+
+
+
+
+
+<!-- Insert page content above -->
+                    </div>                       
+              </div>
+            </div>
+        </div>
+     </div>
+
+
+
+<!--
+        
+            
+
+  
+        <
+
+
+
+-->
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91392512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
