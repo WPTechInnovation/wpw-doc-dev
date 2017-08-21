@@ -16,23 +16,7 @@
   [pypi-link]: https://pypi.python.org/pypi/mkdocs-material
 
 # Worldpay Within
-
-## Quick start
-
-Install with `pip`:
-
-``` sh
-pip install mkdocs-material
-```
-
-Append the following line to your existing `mkdocs.yml`:
-
-``` yaml
-theme: 'material'
-```
-
-For detailed installation instructions and a demo, visit
-http://squidfunk.github.io/mkdocs-material/
+New site build with MkDocs and Material UI.
 
 ## License
 
