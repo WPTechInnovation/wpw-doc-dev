@@ -404,8 +404,12 @@ hr {
   top: 0;
   width: 0;
   height: 0;
-  -webkit-transition: width   0s 0.25s, height  0s 0.25s, opacity 0.25s;
-  transition: width   0s 0.25s, height  0s 0.25s, opacity 0.25s;
+  -webkit-transition: width   0s 0.25s,
+ height  0s 0.25s,
+ opacity 0.25s;
+  transition: width   0s 0.25s,
+ height  0s 0.25s,
+ opacity 0.25s;
   background-color: rgba(0, 0, 0, 0.54);
   opacity: 0;
   z-index: 3; }
@@ -444,8 +448,10 @@ hr {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
   .md-clipboard::before {
-    -webkit-transition: color   0.25s, opacity 0.25s;
-    transition: color   0.25s, opacity 0.25s;
+    -webkit-transition: color   0.25s,
+ opacity 0.25s;
+    transition: color   0.25s,
+ opacity 0.25s;
     color: rgba(0, 0, 0, 0.54);
     content: "content_copy";
     opacity: 0.25; }
@@ -548,6 +554,14 @@ pre.\:hover .md-clipboard::before,
     .md-header-nav__button:hover,
 .md-header-nav__button.\:hover {
       opacity: 0.7; }
+    .md-header-nav__button.md-logo {
+      margin: 0;
+      position: relative; }
+      .md-header-nav__button.md-logo .md-subtitle {
+        font-size: 12px;
+        position: absolute;
+        bottom: 0;
+        right: 0; }
     .md-header-nav__button.md-logo img {
       display: block; }
     .no-js .md-header-nav__button.md-icon--search {
@@ -687,7 +701,7 @@ pre.\:hover .md-clipboard::before,
       html .md-nav__link[for="toc"] + .md-nav__link::after {
         display: none; }
     .md-nav__link[data-md-state="blur"] {
-      color: rgba(0, 0, 0, 0.54); }
+      color: rgba(0, 0, 0, 0.28); }
     .md-nav__link:active {
       color: #f01e14; }
     .md-nav__item--nested > .md-nav__link {
@@ -1094,10 +1108,19 @@ pre.\:hover .md-clipboard::before,
     .md-tabs[data-md-state="hidden"] .md-tabs__link {
       -webkit-transform: translateY(50%);
               transform: translateY(50%);
-      -webkit-transition: color     0.25s, opacity   0.1s, -webkit-transform 0s 0.4s;
-      transition: color     0.25s, opacity   0.1s, -webkit-transform 0s 0.4s;
-      transition: color     0.25s, transform 0s 0.4s, opacity   0.1s;
-      transition: color     0.25s, transform 0s 0.4s, opacity   0.1s, -webkit-transform 0s 0.4s;
+      -webkit-transition: color     0.25s,
+ opacity   0.1s,
+ -webkit-transform 0s 0.4s;
+      transition: color     0.25s,
+ opacity   0.1s,
+ -webkit-transform 0s 0.4s;
+      transition: color     0.25s,
+ transform 0s 0.4s,
+ opacity   0.1s;
+      transition: color     0.25s,
+ transform 0s 0.4s,
+ opacity   0.1s,
+ -webkit-transform 0s 0.4s;
       opacity: 0; }
 
 .admonition {
@@ -1494,10 +1517,19 @@ pre.\:hover .md-clipboard::before,
   display: inline-block;
   -webkit-transform: translateX(0.5rem);
           transform: translateX(0.5rem);
-  -webkit-transition: color     0.25s, opacity   0.125s 0.125s, -webkit-transform 0.25s  0.125s;
-  transition: color     0.25s, opacity   0.125s 0.125s, -webkit-transform 0.25s  0.125s;
-  transition: transform 0.25s  0.125s, color     0.25s, opacity   0.125s 0.125s;
-  transition: transform 0.25s  0.125s, color     0.25s, opacity   0.125s 0.125s, -webkit-transform 0.25s  0.125s;
+  -webkit-transition: color     0.25s,
+ opacity   0.125s 0.125s,
+ -webkit-transform 0.25s  0.125s;
+  transition: color     0.25s,
+ opacity   0.125s 0.125s,
+ -webkit-transform 0.25s  0.125s;
+  transition: transform 0.25s  0.125s,
+ color     0.25s,
+ opacity   0.125s 0.125s;
+  transition: transform 0.25s  0.125s,
+ color     0.25s,
+ opacity   0.125s 0.125s,
+ -webkit-transform 0.25s  0.125s;
   color: rgba(0, 0, 0, 0.26);
   font-size: 0;
   opacity: 0;
@@ -1511,10 +1543,19 @@ pre.\:hover .md-clipboard::before,
   margin-left: 1rem;
   -webkit-transform: translate(0, 0.5rem);
           transform: translate(0, 0.5rem);
-  -webkit-transition: color     0.25s, opacity   0.125s 0.25s, -webkit-transform 0.25s  0.25s;
-  transition: color     0.25s, opacity   0.125s 0.25s, -webkit-transform 0.25s  0.25s;
-  transition: transform 0.25s  0.25s, color     0.25s, opacity   0.125s 0.25s;
-  transition: transform 0.25s  0.25s, color     0.25s, opacity   0.125s 0.25s, -webkit-transform 0.25s  0.25s;
+  -webkit-transition: color     0.25s,
+ opacity   0.125s 0.25s,
+ -webkit-transform 0.25s  0.25s;
+  transition: color     0.25s,
+ opacity   0.125s 0.25s,
+ -webkit-transform 0.25s  0.25s;
+  transition: transform 0.25s  0.25s,
+ color     0.25s,
+ opacity   0.125s 0.25s;
+  transition: transform 0.25s  0.25s,
+ color     0.25s,
+ opacity   0.125s 0.25s,
+ -webkit-transform 0.25s  0.25s;
   opacity: 0; }
   html body .md-typeset .headerlink {
     color: rgba(0, 0, 0, 0.26); }
@@ -1829,19 +1870,29 @@ pre.\:hover .md-clipboard::before,
       height: 4rem;
       -webkit-transform-origin: center;
               transform-origin: center;
-      -webkit-transition: opacity   0.2s 0.2s, -webkit-transform 0.3s 0.1s;
-      transition: opacity   0.2s 0.2s, -webkit-transform 0.3s 0.1s;
-      transition: transform 0.3s 0.1s, opacity   0.2s 0.2s;
-      transition: transform 0.3s 0.1s, opacity   0.2s 0.2s, -webkit-transform 0.3s 0.1s;
+      -webkit-transition: opacity   0.2s 0.2s,
+ -webkit-transform 0.3s 0.1s;
+      transition: opacity   0.2s 0.2s,
+ -webkit-transform 0.3s 0.1s;
+      transition: transform 0.3s 0.1s,
+ opacity   0.2s 0.2s;
+      transition: transform 0.3s 0.1s,
+ opacity   0.2s 0.2s,
+ -webkit-transform 0.3s 0.1s;
       border-radius: 2rem;
       background-color: white;
       overflow: hidden;
       pointer-events: none; }
       [data-md-toggle="search"]:checked ~ .md-header .md-search__overlay {
-        -webkit-transition: opacity   0.1s, -webkit-transform 0.4s;
-        transition: opacity   0.1s, -webkit-transform 0.4s;
-        transition: transform 0.4s, opacity   0.1s;
-        transition: transform 0.4s, opacity   0.1s, -webkit-transform 0.4s;
+        -webkit-transition: opacity   0.1s,
+ -webkit-transform 0.4s;
+        transition: opacity   0.1s,
+ -webkit-transform 0.4s;
+        transition: transform 0.4s,
+ opacity   0.1s;
+        transition: transform 0.4s,
+ opacity   0.1s,
+ -webkit-transform 0.4s;
         opacity: 1; }
     .md-search__inner {
       position: fixed;
@@ -1887,8 +1938,12 @@ pre.\:hover .md-clipboard::before,
     [data-md-toggle="drawer"]:checked ~ .md-overlay {
       width: 100%;
       height: 100%;
-      -webkit-transition: width   0s, height  0s, opacity 0.25s;
-      transition: width   0s, height  0s, opacity 0.25s;
+      -webkit-transition: width   0s,
+ height  0s,
+ opacity 0.25s;
+      transition: width   0s,
+ height  0s,
+ opacity 0.25s;
       opacity: 1; }
       .md-header-nav__button.md-icon--home, .md-header-nav__button.md-logo {
         display: none; }
@@ -1949,9 +2004,9 @@ pre.\:hover .md-clipboard::before,
           html .md-nav--primary .md-nav__title--site .md-nav__button {
             display: block;
             position: absolute;
-            top: 0.4rem;
+            top: 0;
             left: 0.4rem;
-            width: 6.4rem;
+            width: 18rem;
             height: 6.4rem;
             font-size: 4.8rem; }
           html .md-nav--primary .md-nav__title--site::before {
@@ -2075,15 +2130,23 @@ pre.\:hover .md-clipboard::before,
       left: 0;
       width: 0;
       height: 0;
-      -webkit-transition: width   0s 0.25s, height  0s 0.25s, opacity 0.25s;
-      transition: width   0s 0.25s, height  0s 0.25s, opacity 0.25s;
+      -webkit-transition: width   0s 0.25s,
+ height  0s 0.25s,
+ opacity 0.25s;
+      transition: width   0s 0.25s,
+ height  0s 0.25s,
+ opacity 0.25s;
       background-color: rgba(0, 0, 0, 0.54);
       cursor: pointer; }
       [data-md-toggle="search"]:checked ~ .md-header .md-search__overlay {
         width: 100%;
         height: 100%;
-        -webkit-transition: width   0s, height  0s, opacity 0.25s;
-        transition: width   0s, height  0s, opacity 0.25s;
+        -webkit-transition: width   0s,
+ height  0s,
+ opacity 0.25s;
+        transition: width   0s,
+ height  0s,
+ opacity 0.25s;
         opacity: 1; }
     .md-search__inner {
       position: relative; }

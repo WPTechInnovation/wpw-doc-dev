@@ -19,17 +19,17 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Material for MkDocs
-site_description: A Material Design theme for MkDocs
-site_author: Martin Donath
-site_url: http://squidfunk.github.io/mkdocs-material/
+site_name: Worldpay Within
+site_description: Worldpay Within website
+site_author: Worldpay Within
+site_url: /
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: szarych/wpw-doc-dev
+repo_url: https://github.com/szarych/wpw-doc-dev
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2017 Martin Donath'
+copyright: 'Copyright &copy; 2017 Worldpay Within'
 
 # Theme directory
 theme_dir: worldpay
@@ -39,15 +39,6 @@ extra:
   logo: 'assets/images/logo.svg'
   feature:
     tabs: false
-  social:
-    - type: globe
-      link: http://struct.cc
-    - type: github-alt
-      link: https://github.com/squidfunk
-    - type: twitter
-      link: https://twitter.com/squidfunk
-    - type: linkedin
-      link: https://linkedin.com/in/squidfunk
 
 # Extensions
 markdown_extensions:
