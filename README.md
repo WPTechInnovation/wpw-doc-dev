@@ -15,11 +15,7 @@
   [pypi-image]: https://img.shields.io/pypi/v/mkdocs-material.svg
   [pypi-link]: https://pypi.python.org/pypi/mkdocs-material
 
-# Material for MkDocs
-
-A Material Design theme for [MkDocs](http://www.mkdocs.org).
-
-[![Material for MkDocs](docs/images/material.png)](http://squidfunk.github.io/mkdocs-material/)
+# Worldpay Within
 
 ## Quick start
 
