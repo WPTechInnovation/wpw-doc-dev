@@ -62,6 +62,10 @@ button[data-md-color-accent] {
   }
 }
 
+.md-nav__link.md-nav__link--active {
+  color: #DC2525;
+}
+
 // Build primary colors
 @each $name, $color in (
   "red":         $clr-red-400,

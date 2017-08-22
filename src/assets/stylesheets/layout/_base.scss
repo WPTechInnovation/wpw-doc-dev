@@ -183,6 +183,10 @@ a.md-button {
   }
 }
 
+a.md-nav__link--active {
+  color: $md-color-primary; 
+}
+
 // ----------------------------------------------------------------------------
 // Rules: flexible elements, implemented with table layout
 // ----------------------------------------------------------------------------

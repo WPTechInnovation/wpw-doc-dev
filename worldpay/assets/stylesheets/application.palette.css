@@ -16,6 +16,9 @@ button[data-md-color-primary].\:hover,
 button[data-md-color-accent].\:hover {
     opacity: 0.75; }
 
+.md-nav__link.md-nav__link--active {
+  color: #DC2525; }
+
 button[data-md-color-primary="red"] {
   background-color: #ef5350; }
 

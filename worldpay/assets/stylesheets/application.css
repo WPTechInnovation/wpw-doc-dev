@@ -431,6 +431,9 @@ a.md-button.\:hover {
 a.md-button.\:hover a {
       color: white; }
 
+a.md-nav__link--active {
+  color: #f01e14; }
+
 .md-flex {
   display: table; }
   .md-flex__cell {
@@ -576,7 +579,7 @@ pre.\:hover .md-clipboard::before,
       .md-header-nav__button.md-logo .md-subtitle {
         font-size: 11px;
         position: absolute;
-        bottom: 0;
+        bottom: 1px;
         letter-spacing: 7px;
         left: 40px; }
     .md-header-nav__button.md-logo img {
@@ -667,8 +670,8 @@ pre.\:hover .md-clipboard::before,
       line-height: 1.9; }
 
 .md-nav {
-  font-size: 1.4rem;
-  line-height: 1.3; }
+  font-size: 1.6rem;
+  line-height: 1.4; }
   .md-nav--secondary {
     -webkit-transition: border-left 0.25s;
     transition: border-left 0.25s;
@@ -1977,14 +1980,21 @@ pre.\:hover .md-clipboard::before,
           position: relative;
           background-color: #f01e14;
           color: white; }
-          html .md-nav--primary .md-nav__title--site .md-nav__button {
+          html .md-nav--primary .md-nav__title--site .md-nav__button.md-logo {
             display: block;
-            position: absolute;
-            top: 0.4rem;
-            left: 0.4rem;
-            width: 16rem;
-            height: 6.4rem;
-            font-size: 4rem; }
+            position: relative;
+            bottom: 3.6rem;
+            left: -1rem; }
+            html .md-nav--primary .md-nav__title--site .md-nav__button.md-logo img {
+              width: 160px;
+              height: 32px; }
+            html .md-nav--primary .md-nav__title--site .md-nav__button.md-logo .md-subtitle {
+              font-size: 11px;
+              position: absolute;
+              bottom: 1px;
+              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              letter-spacing: 7px;
+              left: 40px; }
           html .md-nav--primary .md-nav__title--site::before {
             display: none; }
       .md-nav--primary .md-nav__list {
