@@ -35,18 +35,20 @@
 
                               <h3>The Flows</h3>
 
-                              <p>There are certain flows that are allowable for the consumer and producer, and this flow should be adhered to when utilising the Worldpay Within SDK. What follows is a diagram of the flow, and then a detailed breakdown of the steps of the flows, what they do; and explicitly the order in which they should be followed.</p>
+                              <!--<p>There are certain flows that are allowable for the consumer and producer, and this flow should be adhered to when utilising the Worldpay Within SDK. What follows is a diagram of the flow, and then a detailed breakdown of the steps of the flows, what they do; and explicitly the order in which they should be followed.</p>
 
-                              <p>The devices are not synchronised by the SDK in any way - so it is up to the developer of the app that sits on top of the SDK to call the Worldpay Within API in the correct order. This is the responsibility of the developer. However if the order below is adhered to then the outcome of the functionality will be as desired.</p>
+                              <p>The devices are not synchronised by the SDK in any way - so it is up to the developer of the app that sits on top of the SDK to call the Worldpay Within API in the correct order. This is the responsibility of the developer. However if the order below is adhered to then the outcome of the functionality will be as desired.</p>-->
+                              <p>We recommend following the below flows for consumer and producer devices. You can find a breakdown in each of the <a href="#steps">steps below.</a></p>
+                              <p>The devices are not synchronised by the SDK, so you'll need to ensure that the SDKs call the Worldpay Within API int he correct order. If you follow the steps below, then the outcome should be as expected.</p>
       
                               <h4>The flows diagram</h4>
 
                               <div style="text-align: center;"><figure>
-                                  <img style="padding-top: 25px;" src="images/the-flows/the-flows.JPG" alt="The flows of the producer and consumer"/>
+                                  <img style="padding-top: 25px;" src="images/the-flows/flows-mockup.png" alt="The flows of the producer and consumer"/>
                                   <figcaption>The flows of the producer and consumer.</figcaption>
                               </figure></div>
 
-                              <h4>The Consumer flow</h4>
+                              <h4 id="steps">The Consumer flow</h4>
 
                               <p>This is the flow of the consumer, please note that these flow steps map to the interface either in Go or in the Wrapper - e.g. in Java this is fully documented in the javadoc.</p>
 
@@ -86,8 +88,78 @@
 
 
 <h4>API calls in Worldpay Within</h4>
-
 <p>The steps in the flow neatly map to the api flows, here is some further information about what they do</p>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Parameter</strong></td>
+      <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+      <td>Setup</td>
+      <td>Sets up the wrapper to be able to start communicating with the underlying SDK.</td>
+    </tr>
+    <tr>
+      <td>addService</td>
+      <td>Adds a service of type WWSerive to the producer, used if the device you are operating on is a producer, if added to a device you intend as a consumer this will give that device producer functionality.</td>
+    </tr>
+    <tr>
+      <td>removeService</td>
+      <td>This removes the service from the producer</td>
+    </tr>
+    <tr>
+      <td>initConsumer</td>
+      <td>This initiates the device as a consumer, which enables it to find services, negotiate prices, make payments and receive services.</td>
+    </tr>
+    <tr>
+      <td>initProducer</td>
+      <td>This initiates the device as a producer / or initialises the devices producer capability.</td>
+    </tr>
+    <tr>
+      <td>getDevice</td>
+      <td>This is able to provide back details of the the current device that the SDK is running on, and it credentials / information.</td>
+    </tr>
+    <tr>
+      <td>startServiceBroadcast</td>
+      <td>This enables the producer device to start broadcasting itself via UDP broadcast over the network to notifiy devices it is available to be consumed.</td>
+    </tr>
+    <tr>
+      <td>stopServiceBroadcast</td>
+      <td>This method stops the SDK from broadcasting the current service messages that it is broadcasting.</td>
+    </tr>
+    <tr>
+      <td>deviceDiscovery</td>
+      <td>This enables the consumer device to discovery other devices (producers) on the network that are UDP broadcasting.</td>
+    </tr>
+    <tr>
+      <td>requestServices</td>
+      <td>Get a list of services that are avaialble from the broadcasting device. </td>
+    </tr>
+    <tr>
+      <td>getServicePrices</td>
+      <td>This is used by the consumer to get the list of prices associated with a particular serviceId</td>
+    </tr>
+    <tr>
+      <td>selectService</td>
+      <td>Selection of a service is performed by the consumer, providing details of the service, the amount and at what price point it wants to purchase the service.</td>
+    </tr>
+    <tr>
+      <td>makePayment</td>
+      <td>This allows the consumer to request a payment be made at the producer device, by providing the total price response object as the request. The producer will then make the payment (or attempt to) and send back a Payment Response detailing whether it was successful or not. </td>
+    </tr>
+    <tr>
+      <td>beginServiceDelivery</td>
+      <td>This begins the service delivery, and is requested by the consumer, and will proceed as long as the correct information is provided to the producer. If the correct credentials are passed through, then the producer will start releasing the service known as a 'trusted trigger'</td>
+    </tr>
+    <tr>
+      <td>endServiceDelivery</td>
+      <td>This ends the service delivery, a request initiated by the consumer.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!--<p>The steps in the flow neatly map to the api flows, here is some further information about what they do</p>
 
 <p><a name="setup"></a>setup - Sets up the wrapper to be able to start communicating with the underlying SDK.</p>
  
@@ -125,13 +197,12 @@
 
 
 
-<p><a name="makePayment"></a>makePayment - This allows the consumer to request a payment be made at the producer device, by providing the total price response object as the request. The producer will then make the payment (or attempt to) and send back a Payment Response detailing whether it was successful or not.    
+<p><a name="makePayment"></a>makePayment - This allows the consumer to request a payment be made at the producer device, by providing the total price response object as the request. The producer will then make the payment (or attempt to) and send back a Payment Response detailing whether it was successful or not.</p>    
 
-<p><a name="beginServiceDelivery"></a>beginServiceDelivery - This begins the service delivery, and is requested by the consumer, and will proceed as long as the correct information is provided to the producer. If the correct credentials are passed through, then the producer will start releasing the service known as a 'trusted trigger'
+<p><a name="beginServiceDelivery"></a>beginServiceDelivery - This begins the service delivery, and is requested by the consumer, and will proceed as long as the correct information is provided to the producer. If the correct credentials are passed through, then the producer will start releasing the service known as a 'trusted trigger'</p>
 
-<p><a name="endServiceDelivery"></a>endServiceDelivery - This ends the service delivery, a request initiated by the consumer.
-
-
+<p><a name="endServiceDelivery"></a>endServiceDelivery - This ends the service delivery, a request initiated by the consumer.</p>
+-->
 
 
 
