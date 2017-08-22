@@ -236,7 +236,7 @@ button[data-md-color-accent] {
       // Active or hovered link
       &[data-md-state="active"],
       &:hover {
-        background-color: transparentize($color, 0.9);
+        background-color: $md-color-black--lighter;
       }
     }
 

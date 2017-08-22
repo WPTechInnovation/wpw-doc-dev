@@ -160,6 +160,29 @@ hr {
   }
 }
 
+a.md-button {
+  background-color: transparent;
+  color: $md-color-primary;
+  border: 2px solid $md-color-primary;
+  text-align: center;
+  padding: 0.85em 2em;
+  transition: none;
+  border-radius: 2em;
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem 0;
+
+  &:hover {
+    background-color: $md-color-primary;
+    color: white;
+    text-decoration: none;
+
+    a {
+      color: white;
+    }
+  }
+}
+
 // ----------------------------------------------------------------------------
 // Rules: flexible elements, implemented with table layout
 // ----------------------------------------------------------------------------

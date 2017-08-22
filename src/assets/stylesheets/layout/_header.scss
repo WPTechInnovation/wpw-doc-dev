@@ -83,10 +83,11 @@
       position: relative;
 
       .md-subtitle {
-        font-size: 12px;
+        font-size: 11px;
         position: absolute;
         bottom: 0;
-        right: 0;
+        letter-spacing: 7px;
+        left: 40px;
       }
     }
 

@@ -22,11 +22,13 @@
 site_name: Worldpay Within
 site_description: Worldpay Within website
 site_author: Worldpay Within
-site_url: /
+site_url: http://localhost:8000/
 
 # Repository
 repo_name: szarych/wpw-doc-dev
 repo_url: https://github.com/szarych/wpw-doc-dev
+
+edit_uri: /edit/master/docs/
 
 # Copyright
 copyright: 'Copyright &copy; 2017 Worldpay Within'
@@ -64,8 +66,7 @@ markdown_extensions:
 
 # Page tree
 pages:
-  - Material: index.md
-  - Getting started: getting-started.md
+  - Getting started: index.md
   - Extensions:
     - Admonition: extensions/admonition.md
     - CodeHilite: extensions/codehilite.md
@@ -75,9 +76,6 @@ pages:
     - PyMdown: extensions/pymdown.md
   - Specimen: specimen.md
   - Customization: customization.md
-  - Release notes: release-notes.md
-  - Contributing: contributing.md
-  - License: license.md
 
 # Google Analytics
 google_analytics:
