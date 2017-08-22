@@ -396,7 +396,7 @@ kbd {
 
     // Table headings
     th {
-      min-width: 10rem;
+      min-width: 18rem;
       padding: 1.2rem 1.6rem;
       background-color: $md-color-black--light;
       color: $md-color-white;
@@ -430,7 +430,7 @@ kbd {
 
   // Data table wrapper, in case JavaScript is available
   .md-typeset__table {
-    display: inline-block;
+    display: block;
     margin-bottom: 0.5em;
     padding: 0 1.6rem;
 

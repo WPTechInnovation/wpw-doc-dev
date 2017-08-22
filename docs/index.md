@@ -27,5 +27,6 @@
 <a class="md-button" href="https://github.com/WPTechInnovation/worldpay-within-sdk/tree/master/wrappers/java">Java</a>
 <a class="md-button" href="dotnet.html">.NET</a>
 <a class="md-button" href="getting-started-with-go.html">Go</a>
+<a class="md-button" href="getting-started-with-go.html">Go</a>
 <a class="md-button" href="nodejs.html">Node.js</a>
 <a class="md-button" href="python27.html">Python (2.7)</a>
