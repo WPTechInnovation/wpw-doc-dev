@@ -1,46 +1,8 @@
-# Specimen
-
-## Body copy
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,
-mollis sed massa vel, *ornare viverra ex*. Mauris a ullamcorper lacus. Nullam
-urna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales
-pulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan
-tempor.
-
-**Sed suscipit**, orci non pretium pretium, quam mi gravida metus, vel
-venenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum
-eros. [Nulla aliquam](/) orci sit amet nisl posuere malesuada. Proin aliquet
-nulla velit, quis ultricies orci feugiat et. `Ut tincidunt sollicitudin`
-tincidunt. Aenean ullamcorper sit amet nulla at interdum.
-
-## Headings
-
-### The 3rd level
-
-#### The 4th level
-
-##### The 5th level
-
-###### The 6th level
-
-## Headings <small>with secondary text</small>
-
-### The 3rd level <small>with secondary text</small>
-
-#### The 4th level <small>with secondary text</small>
-
-##### The 5th level <small>with secondary text</small>
-
-###### The 6th level <small>with secondary text</small>
-
+# Theme Documentation
 ## Blockquotes
 
 > Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.
-  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc
-  mauris, a ultricies libero efficitur sed. *Class aptent* taciti sociosqu ad
-  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie
-  imperdiet consectetur.
+  Pellentesque aliquet quam enim, eu volutpat urna rutrum a.
 
 ### Blockquote nesting
 
@@ -49,19 +11,15 @@ tincidunt. Aenean ullamcorper sit amet nulla at interdum.
   [libero fermentum](/) urna, ut efficitur elit ligula et nunc.
 
 > > Mauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.
-    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.
-    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.
-    eu odio.
+    Ut sit amet placerat ante.
 
 > > > `Suspendisse rutrum facilisis risus`, eu posuere neque commodo a.
-      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo
-      bibendum, sodales mauris ut, tincidunt massa.
+      Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
 ### Other content blocks
 
 > Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu
-  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,
-  sit amet laoreet nibh.
+  lectus dapibus, eleifend nulla varius, lobortis turpis.
   ``` js hl_lines="8"
   var _extends = function(target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -82,43 +40,27 @@ tincidunt. Aenean ullamcorper sit amet nulla at interdum.
 
 ### Unordered lists
 
-* Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus
-  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,
-  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.
-
+* Sed sagittis eleifend rutrum.
     * Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
     * Nam vulputate tincidunt fringilla.
     * Nullam dignissim ultrices urna non auctor.
-
-* Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut
-  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam
-  ac, aliquet sed mauris.
-
-* Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur
-  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh
-  lacinia sed. Aenean in finibus diam.
+* Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex.
+* Nulla et rhoncus turpis. 
 
 ### Ordered lists
 
-1. Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis
-  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla
-  consectetur feugiat sodales.
+1. Integer vehicula feugiat magna, a mollis tellus. 
 
 2. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam
-  pellentesque lacinia eu vel odio.
+  ridiculus mus.
 
-    1. Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet
-      quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a
-      ultricies libero efficitur sed.
+    1. Vivamus venenatis porttitor tortor sit amet rutrum. 
 
         1. Mauris dictum mi lacus
         2. Ut sit amet placerat ante
         3. Suspendisse ac eros arcu
 
-    2. Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet
-      rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed
-      aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.
+    2. Morbi eget dapibus felis. 
 
     3. Pellentesque eget `:::js var _extends` ornare tellus, ut gravida mi.
     ``` js hl_lines="1"
@@ -142,12 +84,10 @@ tincidunt. Aenean ullamcorper sit amet nulla at interdum.
 Lorem ipsum dolor sit amet
 
 :   Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus
-    tellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor
-    lobortis orci, at elementum urna sodales vitae. In in vehicula nulla.
+    tellus non sem sollicitudin, quis rutrum leo facilisis.
 
     Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
     Nam vulputate tincidunt fringilla.
-    Nullam dignissim ultrices urna non auctor.
 
 Cras arcu libero
 
@@ -183,102 +123,25 @@ eget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.
 
 ## Horizontal rules
 
-Aenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet
-dui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna
-non auctor.
-
 ***
-
-Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis
-elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla
-consectetur feugiat sodales.
 
 ## Data tables
 
-| Sollicitudo / Pellentesi | consectetur | adipiscing | elit    | arcu | sed |
-| ------------------------ | ----------- | ---------- | ------- | ---- | --- |
-| Vivamus a pharetra       | yes         | yes        | yes     | yes  | yes |
-| Ornare viverra ex        | yes         | yes        | yes     | yes  | yes |
-| Mauris a ullamcorper     | yes         | yes        | partial | yes  | yes |
-| Nullam urna elit         | yes         | yes        | yes     | yes  | yes |
-| Malesuada eget finibus   | yes         | yes        | yes     | yes  | yes |
-| Ullamcorper              | yes         | yes        | yes     | yes  | yes |
-| Vestibulum sodales       | yes         | -          | yes     | -    | yes |
-| Pulvinar nisl            | yes         | yes        | yes     | -    | -   |
-| Pharetra aliquet est     | yes         | yes        | yes     | yes  | yes |
-| Sed suscipit             | yes         | yes        | yes     | yes  | yes |
-| Orci non pretium         | yes         | partial    | -       | -    | -   |
+| Sollicitudo / Pellentesi | consectetur | adipiscing |
+| ------------------------ | ----------- | ---------- |
+| Vivamus a pharetra       | yes         | yes        |
+| Ornare viverra ex        | yes         | yes        |
+| Mauris a ullamcorper     | yes         | yes        |
+| Nullam urna elit         | yes         | yes        |
+| Malesuada eget finibus   | yes         | yes        |
 
-Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus
-non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,
-at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.
-
-| Left       | Center   | Right   |
-| :--------- | :------: | ------: |
-| Lorem      | *dolor*  | `amet`  |
-| [ipsum](/) | **sit**  |         |
-
-Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu
-lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,
-sit amet laoreet nibh.
-
-<table>
-  <colgroup>
-    <col width="30%">
-    <col width="70%">
-  </colgroup>
-  <thead>
-    <tr class="header">
-      <th>Table</th>
-      <th>with colgroups (Pandoc)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Lorem</td>
-      <td>ipsum dolor sit amet.</td>
-    </tr>
-    <tr>
-      <td>Sed sagittis</td>
-      <td>eleifend rutrum. Donec vitae suscipit est.</td>
-    </tr>
-  </tbody>
-</table>
-
-# Admonition
+## Admonition
 
 [Admonition][1] is an extension included in the standard Markdown library that
 makes it possible to add block-styled side content to your documentation, for
 example summaries, notes, hints or warnings.
 
   [1]: https://pythonhosted.org/Markdown/extensions/admonition.html
-
-## Installation
-
-Add the following lines to your `mkdocs.yml`:
-
-``` yaml
-markdown_extensions:
-  - admonition
-```
-
-## Usage
-
-Admonition blocks follow a simple syntax: every block is started with `!!!`,
-followed by a single keyword which is used as the [type qualifier][2] of the
-block. The content of the block then follows on the next line, indented by
-four spaces.
-
-Example:
-
-``` markdown
-!!! note
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-```
-
-Result:
 
 !!! note
 
@@ -290,20 +153,6 @@ Result:
 
 ### Changing the title
 
-By default, the block title will equal the type qualifier in titlecase. However,
-it can easily be changed by adding a quoted string after the type qualifier.
-
-Example:
-
-``` markdown
-!!! note "Phasellus posuere in sem ut cursus"
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-```
-
-Result:
-
 !!! note "Phasellus posuere in sem ut cursus"
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -311,20 +160,6 @@ Result:
     massa, nec semper lorem quam in massa.
 
 ### Removing the title
-
-Similar to setting a [custom title][3], the icon and title can be omitted by
-providing an empty string after the type qualifier:
-
-Example:
-
-``` markdown
-!!! note ""
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-```
-
-Result:
 
 !!! note ""
 

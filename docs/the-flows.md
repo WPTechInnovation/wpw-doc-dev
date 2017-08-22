@@ -5,9 +5,11 @@
 ## The Flows diagram
 
 <div style="text-align: center;"><figure>
-    <img style="padding-top: 25px;" src="images/the-flows/the-flows.JPG" alt="The flows of the producer and consumer"/>
+    <img style="padding-top: 25px;" src="../images/the-flows.svg" alt="The flows of the producer and consumer"/>
     <figcaption>The flows of the producer and consumer.</figcaption>
 </figure></div>
+
+
 
 ## The Consumer flow
 
@@ -45,20 +47,20 @@
 
   The steps in the flow neatly map to the api flows, here is some further information about what they do:
 
-| Method            | Description                                     |
-| ----------------- | ----------------------------------------------- |
-| `setup`           | Sets up the wrapper to be able to start communicating with the underlying SDK |
-| `addService`      | Adds a service of type WWSerive to the producer, used if the device you are operating on is a producer, if added to a device you intend as a consumer this will give that device producer functionality            |
-| `removeService`   | This removes the service from the producer      |
-| `initConsumer`    | This initiates the device as a consumer, which enables it to find services, negotiate prices, make payments and receive services |
-| `initProducer`    | This initiates the device as a producer / or initialises the devices producer capability |
-| `getDevice`       | This is able to provide back details of the the current device that the SDK is running on, and it credentials / information |
-| `startServiceBroadcast` | This enables the producer device to start broadcasting itself via UDP broadcast over the network to notifiy devices it is available to be consumed      |
-| `stopServiceBroadcast`  | This method stops the SDK from broadcasting the current service messages that it is broadcasting |
-| `deviceDiscovery` | This enables the consumer device to discovery other devices (producers) on the network that are UDP broadcasting |
-| `requestServices` | Get a list of services that are avaialble from the broadcasting device |
-| `getServicePrices`| This is used by the consumer to get the list of prices associated with a particular serviceId |
-| `selectService`   | Selection of a service is performed by the consumer, providing details of the service, the amount and at what price point it wants to purchase the service     |
-| `makePayment`     | This allows the consumer to request a payment be made at the producer device, by providing the total price response object as the request. The producer will then make the payment (or attempt to) and send back a Payment Response detailing whether it was successful or not    |
-| `beginServiceDelivery`  | This begins the service delivery, and is requested by the consumer, and will proceed as long as the correct information is provided to the producer. If the correct credentials are passed through, then the producer will start releasing the service known as a 'trusted trigger'   |
-| `endServiceDelivery`    | This ends the service delivery, a request initiated by the consumer |
+| Method                 | Description                                     |
+| ---------------------- | ----------------------------------------------- |
+| `setup`                | Sets up the wrapper to be able to start communicating with the underlying SDK |
+| `addService`           | Adds a service of type WWSerive to the producer, used if the device you are operating on is a producer, if added to a device you intend as a consumer this will give that device producer functionality |
+| `removeService`        | This removes the service from the producer      |
+| `initConsumer`         | This initiates the device as a consumer, which enables it to find services, negotiate prices, make payments and receive services |
+| `initProducer`         | This initiates the device as a producer / or initialises the devices producer capability |
+| `getDevice`            | This is able to provide back details of the the current device that the SDK is running on, and it credentials / information |
+| `startServiceBroadcast`| This enables the producer device to start broadcasting itself via UDP broadcast over the network to notifiy devices it is available to be consumed      |
+| `stopServiceBroadcast` | This method stops the SDK from broadcasting the current service messages that it is broadcasting |
+| `deviceDiscovery`      | This enables the consumer device to discovery other devices (producers) on the network that are UDP broadcasting |
+| `requestServices`      | Get a list of services that are avaialble from the broadcasting device |
+| `getServicePrices`     | This is used by the consumer to get the list of prices associated with a particular serviceId |
+| `selectService`        | Selection of a service is performed by the consumer, providing details of the service, the amount and at what price point it wants to purchase the service     |
+| `makePayment`          | This allows the consumer to request a payment be made at the producer device, by providing the total price response object as the request. The producer will then make the payment (or attempt to) and send back a Payment Response detailing whether it was successful or not    |
+| `beginServiceDelivery` | This begins the service delivery, and is requested by the consumer, and will proceed as long as the correct information is provided to the producer. If the correct credentials are passed through, then the producer will start releasing the service known as a 'trusted trigger'   |
+| `endServiceDelivery`   | This ends the service delivery, a request initiated by the consumer |
