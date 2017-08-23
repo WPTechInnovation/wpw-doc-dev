@@ -5,7 +5,7 @@
 ## The Flows diagram
 
 ![alt text][logo]
-[logo]: ../images/the-flows.svg "The flows of the producer and consumer"
+[logo]: images/the-flows.svg "The flows of the producer and consumer"
 
 <figcaption>The flows of the producer and consumer</figcaption>
 
