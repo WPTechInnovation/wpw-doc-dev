@@ -206,7 +206,7 @@ kbd {
   .md-typeset pre {
     background-color: rgba(236, 236, 236, 0.5);
     color: #37474F;
-    font-size: 85%; }
+    font-size: 90%; }
   .md-typeset code {
     margin: 0 0.29412em;
     padding: 0.07353em 0;
@@ -343,7 +343,7 @@ kbd {
     .md-typeset table:not([class]) td:not([align]) {
       text-align: left; }
     .md-typeset table:not([class]) th {
-      min-width: 18rem;
+      min-width: 20rem;
       padding: 1.2rem 1.6rem;
       background-color: rgba(0, 0, 0, 0.8);
       color: white;

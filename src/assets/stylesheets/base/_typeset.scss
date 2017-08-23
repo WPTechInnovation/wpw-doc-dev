@@ -193,7 +193,7 @@ kbd {
   pre {
     background-color: $md-code-background;
     color: $md-code-color;
-    font-size: 85%;
+    font-size: 90%;
   }
 
   // Inline code blocks, correct relative ems for smaller font size
@@ -422,7 +422,7 @@ kbd {
 
     // Table headings
     th {
-      min-width: 18rem;
+      min-width: 20rem;
       padding: 1.2rem 1.6rem;
       background-color: $md-color-black--light;
       color: $md-color-white;
