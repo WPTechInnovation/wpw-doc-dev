@@ -450,40 +450,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#arithmatex-mathjax" title="Arithmatex MathJax" class="md-nav__link">
-    Arithmatex MathJax
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#blocks" title="Blocks" class="md-nav__link">
-    Blocks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inline" title="Inline" class="md-nav__link">
-    Inline
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inlinehilite" title="InlineHilite" class="md-nav__link">
-    InlineHilite
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -723,40 +689,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arithmatex-mathjax" title="Arithmatex MathJax" class="md-nav__link">
-    Arithmatex MathJax
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#blocks" title="Blocks" class="md-nav__link">
-    Blocks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inline" title="Inline" class="md-nav__link">
-    Inline
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inlinehilite" title="InlineHilite" class="md-nav__link">
-    InlineHilite
-  </a>
   
 </li>
         
@@ -1169,75 +1101,6 @@ possible <span class="critic comment">and comments can be added inline</span>.</
 <p>Formatting can also be applied to blocks, by putting the opening and closing
 tags on separate lines and adding new lines between the tags and the content.</p>
 </mark>
-<h3 id="arithmatex-mathjax">Arithmatex <small>MathJax</small><a class="headerlink" href="#arithmatex-mathjax" title="Permanent link">&para;</a></h3>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/">Arithmatex</a> integrates Material with <a href="https://www.mathjax.org/">MathJax</a> which parses
-block-style and inline equations written in TeX markup and outputs them in
-mathematical notation. See <a href="http://meta.math.stackexchange.com/questions/5020/">this thread</a> for a short introduction and quick
-reference on how to write equations in TeX syntax.</p>
-<p>Besides activating the extension in the <code>mkdocs.yml</code>, the MathJax JavaScript
-runtime needs to be included. This must be done with
-<a href="../customization.md#additional-javascript">additional JavaScript</a>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="s">&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML&#39;</span>
-</pre></div>
-
-<p>If you want to override the default MathJax configuration, you can do this by
-adding another JavaScript file <strong>before</strong> the MathJax runtime in
-<code>extra_javascript</code> which contains your MathJax configuration, e.g.:</p>
-<div class="codehilite"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s2">&quot;\\(&quot;</span><span class="p">,</span><span class="s2">&quot;\\)&quot;</span><span class="p">]</span> <span class="p">],</span>
-    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s2">&quot;\\[&quot;</span><span class="p">,</span><span class="s2">&quot;\\]&quot;</span><span class="p">]</span> <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="nx">TeX</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">TagSide</span><span class="o">:</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span>
-    <span class="nx">TagIndent</span><span class="o">:</span> <span class="s2">&quot;.8em&quot;</span><span class="p">,</span>
-    <span class="nx">MultLineWidth</span><span class="o">:</span> <span class="s2">&quot;85%&quot;</span><span class="p">,</span>
-    <span class="nx">equationNumbers</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">autoNumber</span><span class="o">:</span> <span class="s2">&quot;AMS&quot;</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="nx">unicode</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">fonts</span><span class="o">:</span> <span class="s2">&quot;STIXGeneral,&#39;Arial Unicode MS&#39;&quot;</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">displayAlign</span><span class="o">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
-  <span class="nx">showProcessingMessages</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nx">messageStyle</span><span class="o">:</span> <span class="s2">&quot;none&quot;</span>
-<span class="p">};</span>
-</pre></div>
-
-<p>In your <code>mkdocs.yml</code>, include it with:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="s">&#39;javascripts/extra.js&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="s">&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML&#39;</span>
-</pre></div>
-
-<h4 id="blocks">Blocks<a class="headerlink" href="#blocks" title="Permanent link">&para;</a></h4>
-<p>Blocks are enclosed in <code class="codehilite"><span class="sb">$$</span><span class="nb">...</span><span class="s">$$</span></code> which are placed on separate lines.</p>
-<p>Example:</p>
-<div class="codehilite"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
-<span class="nv">\frac</span><span class="nb">{n</span><span class="o">!</span><span class="nb">}{k</span><span class="o">!(</span><span class="nb">n</span><span class="o">-</span><span class="nb">k</span><span class="o">)!</span><span class="nb">} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\binom</span><span class="nb">{n}{k}</span>
-<span class="s">$$</span>
-</pre></div>
-
-<p>Result:</p>
-<span>\[
-\frac{n!}{k!(n-k)!} = \binom{n}{k}
-\]</span><h4 id="inline">Inline<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h4>
-<p>Inline equations need to be enclosed in <code class="codehilite"><span class="s">$</span><span class="nb">...</span><span class="s">$</span></code>:</p>
-<p>Example:</p>
-<div class="codehilite"><pre><span></span>Lorem ipsum dolor sit amet: <span class="s">$</span><span class="nb">p</span><span class="o">(</span><span class="nb">x|y</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{p</span><span class="o">(</span><span class="nb">y|x</span><span class="o">)</span><span class="nb">p</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{p</span><span class="o">(</span><span class="nb">y</span><span class="o">)</span><span class="nb">}</span><span class="s">$</span>
-</pre></div>
-
-<p>Result:</p>
-<p>Lorem ipsum dolor sit amet: <span>\(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\)</span></p>
-<h3 id="inlinehilite">InlineHilite<a class="headerlink" href="#inlinehilite" title="Permanent link">&para;</a></h3>
-<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/">InlineHilite</a> adds support for inline code highlighting. It's useful for
-short snippets included within body copy, e.g. <code class="codehilite"><span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></code> and can be
-achived by prefixing inline code with a shebang and language identifier,
-e.g. <code>#!js</code>.</p>
                 
                   
                 
