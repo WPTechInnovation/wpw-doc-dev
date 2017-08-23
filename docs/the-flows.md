@@ -4,10 +4,11 @@
       
 ## The Flows diagram
 
-<div style="text-align: center;"><figure>
-    <img style="padding-top: 25px;" src="../images/the-flows.svg" alt="The flows of the producer and consumer"/>
-    <figcaption>The flows of the producer and consumer.</figcaption>
-</figure></div>
+![alt text][logo]
+[logo]: ../images/the-flows.svg "The flows of the producer and consumer"
+
+<figcaption>The flows of the producer and consumer</figcaption>
+
 
 
 
