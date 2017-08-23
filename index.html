@@ -1,200 +1,204 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Worldpay Within</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  </head>
-  <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <img style="padding-top: 5px; padding-bottom: 5px;" src="images/worldpaylogosmall.png" alt="Worldpay Logo"/>
-        <div style="padding-left: 5px; color: white; background-color: red;"><a class="whiteLink" href="index.html"><h1 style="font-size: 1.8em !important;">Worldpay Within Documentation</h1></a></div>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Welcome to Worldpay Within</title>
+      <link rel="stylesheet" href="css/foundation.css">
+      <link rel="stylesheet" href="css/app.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   </head>
+   <body>
+      <div class="row">
+         <div class="large-12 columns">
+            <img style="padding-top: 5px; padding-bottom: 5px;" src="images/worldpaylogosmall.png" alt="Worldpay Logo"/>
+            <div style="padding-left: 5px; color: white; background-color: red;">
+               <a class="whiteLink" href="index.html">
+                  <h1 style="font-size: 1.8em !important;">Worldpay Within Documentation</h1>
+               </a>
+            </div>
+         </div>
       </div>
-    </div>
+      <div class="row">
+         <div class="large-12 columns">
+            <div class="callout">
+               <div class="row">
+                  <div class="large-12 columns">
+                     <label>Search for a topic or question, and then press enter</label>
+                  </div>
+                  <div>
+                     <div>
+                        <script>
+                           (function() {
+                             var cx = '000080293992878021123:-m1v34m9wk0';
+                             var gcse = document.createElement('script');
+                             gcse.type = 'text/javascript';
+                             gcse.async = true;
+                             gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                             var s = document.getElementsByTagName('script')[0];
+                             s.parentNode.insertBefore(gcse, s);
+                           })();
+                        </script>
+                        <gcse:search></gcse:search>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="large-3 columns">
+                     <!--
+                        <label>Select Wrapper Language</label>
+                        <select>
+                          <option value="golang">Golang</option>
+                          <option value=".net">.net</option>
+                          <option value="java" selected>Java</option>
+                          <option value="nodejs">Node.js</option>
+                        </select>
+                        -->
+                     <div class="callout">
+                        <p><a href="atdc.html">The Atlanta Fintech Hackathon</a>
+                        <p><a href="">Introduction</a></p>
+                        <p><a href="getting-started.html">Getting started</a></p>
+                        <p><a href="getit.html">Get the SDK</a></p>
+                        <p><a href="https://wpwithin-slack-in.herokuapp.com" target="_blank">Sign up to our slack</a> (ext)</p>
+                        <hr/>
+                        <p><a href="the-flows.html">The flows</a></p>
+                        <ul>
+                           <li><a href="the-flows.html#initConsumer">Set up a consumer</a></li>
+                           <li><a href="the-flows.html#initProducer">Set up a producer</a></li>
+                           <li><a href="the-flows.html#addservice">Add services to the producer</a></li>
+                           <li><a href="the-flows.html#deviceDiscovery">Look for services (the consumer)</a></li>
+                           <li><a href="the-flows.html#selectService">Select a service</a></li>
+                           <li><a href="the-flows.html#makePayment">Make a payment</a></li>
+                           <li><a href="the-flows.html#beginServiceDelivery">Consume the service</a></li>
+                           <li><a href="the-flows.html#setup">More</a></li>
+                        </ul>
+                        <hr/>
+                        <p><a href="api-spec.html">API specification</a>
+                        <ul>
+                           <li><a href="wrapper-doc/javadoc/" target="_blank">Java (Javadoc)</a></li>
+                           <li><a href="dotnet.html" target="_blank">.NET</a></li>
+                           <li><a href="https://godoc.org/github.com/WPTechInnovation/worldpay-within-sdk" target="_blank">Go</a></li>
+                           <li><a href="nodejs.html" targer="_blank">Node.js</a></li>
+                           <li><a href="python27.html" target="_blank"">Python 2.7</a></li>
+                           <li>Python 3.0</li>
+                        </ul>
+                        </p>
+                        <p><a href="architecture.html">Architecture</a></p>
+                     </div>
+                  </div>
+                  <div class="large-9 columns">
+                     <!-- Insert page content below -->
+                  
+                     <!--<p>Worldpay propose to facilitate these payments by a secure payment engine “Worldpay Within” which can be deployed to devices and utilise the Worldpay Online.worldpay.com platform for IoT payments. By using a set of APIs “Thing” developers will be able to integrate Worldpay Within into their IoT device, enabling the “Thing” to make and / or receive payments for services to and from other “Things” in the IoT.</p>
+                     <p>The aim of the Worldpay Within SDK is to allow payments within IoT.</p>
+                     <p>Worldpay Within orchestrates smart things talking to each other and paying for services. It does this through 4 main services, this is between 'consumer' devices (requesting the service / consuming the service) and 'producer' devices (providing the service / producing the service):</p>
+                     <ol>
+                        <li>Discover - UDP broadcast from the 'producer' thing to the 'consumer' thing</li>
+                        <li>Negotiate - AT the moment the consumer contacts the producer using HTTPS RESTful web service, get's a menu of prices and selects a price. Wouldn't it be great if there was smart bidding?</li>
+                        <li>Make a payment - Online.worldpay.com or Worldpay Total (US or Securnet) are used to make a payment</li>
+                        <li>Release a service - Trusted trigger provides a secure token to the consumer that is used to request the service from the producer.</li>
+                     </ol>
+                     <p>SDK source code is in the repo (make up of the 'wrapper' which is the API layer), you then need the IOT core component, which you download from releases. This is the RPC-agent - so the IoT core component can be thought of as the engine, or the Go SDK packaged up to work with whatever API (think of the wrapper as the API) in whichever language you prefer.</p>
+                     <p>We talk about wrappers, this is the API code in the preferred language, or the rest of the rocket.</p>
+                     <p>The core of this SDK is written in Go with a native Go interface. Along with the native Go interface is an RPC layer (Apache Thrift) to allow communication through other languages. It is intended that we will develop a number of complementary wrapper libraries for other languages which should include C#.NET, Java, Python at a minimum.</p>
+                     <p><a href="atdc.html">Here's a quick introduction for the Atlanta Fintech Hackathon</a></p>
+                     <p><a href="https://wpwithin-slack-in.herokuapp.com">Sign up to our slack group, for comms, support and staying connected</a></p>
+                     <a href="getting-started.html" class="alert button">Getting started guide</a>
+                     <a href="getit.html" class="alert button">Get the SDK</a>
+                     <a href="architecture.html" class="alert button">The Worldpay Within Architecture</a>
+                     <h3>What is Worldpay Within and what does Worldpay within do</h3>
+                     <p>Worldpay is an embeddable payments agent, for the Internet of Things (IoT) that can be 'plugged' into your app for a smart device, enabling it to discover services of other devices, pay for those services, and then consume those services. Conversely it also allows your smart device to expose services to consumers, receive payments for those services, and then release services to a consumer using the idea of a 'Trusted Trigger'.</p>
+                     <p>It is all about enabling payments in IoT, and allowing smart devices to communicate with each other and exchange value for services in IoT</p>
+                     <p>So a consumer is a smart device which is looking for services, pays for services and consumes services</p>
+                     <p>On the other hand a producer is a smart device that is able to advertise availability of it's owner services to consumers, then negogiate a payment, take a payment, and release those services to the trusted consumer that made the payment</p>
+                     <div style="text-align: center;">
+                        <figure>
+                           <img style="padding-top: 25px;" src="images/intro/what-worldpay-within-does.JPG" alt="What Worldpay Within Does"/>
+                           <figcaption>What Worldpay Within Does.</figcaption>
+                        </figure>
+                     </div>
+                     <p>The use case shown in the example above has a smart car looking for parking, and paying a smart parking meter for parking in it's parking bay. The smart car "wants to park", so has HCE (Host Card Emulation; card credentials), it acts as a shopper. When trying to make a payment, it will go off to the Worldpay online payments gateway and request tokenised card credentials based on the smart device it is trying to consume services from.</p>
+                     <p>This token is then securely passed to the parking meter. In this case the parking meter is the Producer, or is acting as the merchant, or HTE (Host Terminal Emulation, accepting payment), which then directly communicates with the online Worldlpay gateway to make a 'card on file' or 'eCommerce' type payment authorisation request. With the payment authorised it then releases the purhcased service to the consumer.</p>
+                     <p>The beauty of Worldpay Within is that it enables smart devices to both make payments and receive payments. In this example above the parking meter could then go on to make payments to the electricity companies smart hub which is powering it.</p>-->
 
+                    <h3>What it is</h3>
+                    <p>Driven by the <a href="#iot">Internet of Things</a>, Worldpay have been keen to demonstrate how you can integrate payments into everyday objects. We've created Worldpay Within, which is an embeddable payments agent that can be 'plugged' into your app for a smart device and lets you discover other devices and pay for that device’s service.</p>
+                    <p>We’ve got a series of <a href="#open-source">open source</a> software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for <a href="nodejs.html">node.js</a>, <a href="getting-started-with-go.html">Go</a>, <a href="dotnet.html">.NET</a>, <a href="wrapper-doc/javadoc/index.html">Java</a> and <a href="pytho27.html">Python 2.7 and 3</a>. You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.</p>
+                    <!--<p>This demo shows a car making a payment to a charging station over Wifi.</p>-->
+                    <h3>Why use it</h3>
+                    <p>You might want to use Worldpay Within if you’re a startup company that’s creating technologies relating to the Internet of Things. Or perhaps you’re a hobby developer who likes creating innovative technologies in your spare time.</p>
+                    <h3>A demonstration</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/94fm-DYtLb8" frameborder="0" allowfullscreen></iframe>
+                    <h3 id="iot">The Internet of Things</h3>
+                    <p>The Internet of Things (IoT) is an initiative to connect everyday items to the internet. It could be a car which needs to pay for an MOT or service, a fridge which needs to order some groceries.</p>
+                    <p><a href="http://www.gartner.com/newsroom/id/3165317">It is estimated</a> that there will be 6 billion devices connected to the IoT by the end of 2016 and 20 billion by 2020. Some of these devices will consume services from other devices for which a payment will be required.</p>
+                    <p>By using a set of APIs “Thing” developers will be able to integrate Worldpay Within into their IoT device, enabling the “Thing” to make and/or receive payments for services to and from other “Things”.</p>
+                    <p>Worldpay Within orchestrates smart things talking to each other and paying for services.</p>
+                    <h3>How it works</h3>
+                    <p>Imagine you want a device in your kitchen to pay for something: maybe your fridge needs to order milk from the local supermarket. With Worldpay Within, you can do that in four simple interactions:</p>
+                    <ol>
+                      <li>Discover - Machine A (shopper) broadcasts to Machine B (merchant) that it requires something.</li>
+                      <li>Select - When Machine B receives Machine A’s broadcast, it tells them the options and the shopper chooses one.</li>
+                      <li>Pay - Machine A pays.</li>
+                      <li>Release - Worldpay sends Machine B a secure token (a trusted trigger) to release the service to Machine A.</li>
+                    </ol>
+                    <h3>Hackathons</h3>
+                    <p>In 2016, Worldpay hosted the <a href="worldpay-hackathon.bemyapp.com">Payments & IOT Hackathon</a> in which we wanted to take digital payments to the next level. In 2017, we're hosting another Hackathon in which we release Worldpay Within.</p>
+                    <h3 id="open-source">It's open source</h3>
+                    <p>Worldpay Within is open source, so why not give it a go yourself? You can find the GitHub library <a href="https://github.com/WPTechInnovation/worldpay-within-sdk/issues">here.</a></p> 
+                    <p>If you'd like to contribute to the project, head over to the <a href="https://github.com/WPTechInnovation/worldpay-within-sdk/issues">Issues page</a> to see how you can help. And, of course, we'd love to see what you can come up with, so why not become a contributer?</p>
+
+    <!--                
     <div class="row">
       <div class="large-12 columns">
         <div class="callout">
+          
+  
 
-                  <div class="row">
-                    <div class="large-12 columns">
-                      <label>Search for a topic or question, and then press enter</label>
-                    </div>
-                    <div>
-                      <div>
-                   
-<script>
-  (function() {
-    var cx = '000080293992878021123:-m1v34m9wk0';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search> 
-                       </div>
-                    </div>
-                  </div>
+          <p>Worldpay Within SDK to allow payments within IoT. Written in GoLang. With wrappers for several languages, including Golang, Java, .net and Node.js. Designed for running on smart devices, including the Raspberry Pi.</p>
 
-
-              <div class="row">
-
-
-<div class="large-3 columns">
-
-                  <!--
-                                  <label>Select Wrapper Language</label>
-                                  <select>
-                                    <option value="golang">Golang</option>
-                                    <option value=".net">.net</option>
-                                    <option value="java" selected>Java</option>
-                                    <option value="nodejs">Node.js</option>
-                                  </select>
-                                -->
-
-                                  <div class="callout">
-                                    <p><a href="atdc.html">The Atlanta Fintech Hackathon</a>
-                                    <p><a href="">Introduction</a></p>
-                                    <p><a href="getting-started.html">Getting started</a></p>
-                                    <p><a href="getit.html">Get the SDK</a></p>
-                                    <p><a href="https://wpwithin-slack-in.herokuapp.com" target="_blank">Sign up to our slack</a> (ext)</p>
-                                    <hr/>
-                                    <p><a href="the-flows.html">The flows</a></p>
-
-                                    <ul>
-                                    <li><a href="the-flows.html#initConsumer">Set up a consumer</a></li>
-                                    <li><a href="the-flows.html#initProducer">Set up a producer</a></li>
-                                    <li><a href="the-flows.html#addservice">Add services to the producer</a></li>
-                                    <li><a href="the-flows.html#deviceDiscovery">Look for services (the consumer)</a></li>
-                                    <li><a href="the-flows.html#selectService">Select a service</a></li>
-                                    <li><a href="the-flows.html#makePayment">Make a payment</a></li>
-                                    <li><a href="the-flows.html#beginServiceDelivery">Consume the service</a></li>
-                                    <li><a href="the-flows.html#setup">More</a></li>
-                                    </ul>
-
-                                    <hr/>
-                                    <p><a href="api-spec.html">API specification</a>
-                                        <ul>
-                                          <li><a href="wrapper-doc/javadoc/" target="_blank">Java (Javadoc)</a></li>
-                                          <li><a href="dotnet.html" target="_blank">.NET</a></li>
-                                          <li><a href="https://godoc.org/github.com/WPTechInnovation/worldpay-within-sdk" target="_blank">Go</a></li>
-                                          <li><a href="nodejs.html" targer="_blank">Node.js</a></li>
-                                          <li><a href="python27.html" target="_blank"">Python 2.7</a></li>
-                                          <li>Python 3.0</li>
-                                        </ul>
-                                    </p>
-                                    <p><a href="architecture.html">Architecture</a></p>
-                                  </div>
-
-                    </div>
-
-                    <div class="large-9 columns">
-<!-- Insert page content below -->
-
-
-
-
-                              <h3>Introduction</h3>
-
-                              <p>It is estimated that there will be 6 billion devices connected to the Internet of Things (IoT) by the end of 2016 and 20 billion by 2020. Some of these devices will consume services from other devices for which a payment will be required.</p>
-
-                              <p>Worldpay propose to facilitate these payments by a secure payment engine “Worldpay Within” which can be deployed to devices and utilise the Worldpay Online.worldpay.com platform for IoT payments. By using a set of APIs “Thing” developers will be able to integrate Worldpay Within into their IoT device, enabling the “Thing” to make and / or receive payments for services to and from other “Things” in the IoT.</p>
-
-                              <p>The aim of the Worldpay Within SDK is to allow payments within IoT.</p>
-
-
-
-
-<p>Worldpay Within orchestrates smart things talking to each other and paying for services. It does this through 4 main services, this is between 'consumer' devices (requesting the service / consuming the service) and 'producer' devices (providing the service / producing the service):</p>
-
-<ol>
-<li>Discover - UDP broadcast from the 'producer' thing to the 'consumer' thing</li>
-<li>Negotiate - AT the moment the consumer contacts the producer using HTTPS RESTful web service, get's a menu of prices and selects a price. Wouldn't it be great if there was smart bidding?</li>
-<li>Make a payment - Online.worldpay.com or Worldpay Total (US or Securnet) are used to make a payment</li>
-<li>Release a service - Trusted trigger provides a secure token to the consumer that is used to request the service from the producer.</li>
-</ol>
-
-<p>SDK source code is in the repo (make up of the 'wrapper' which is the API layer), you then need the IOT core component, which you download from releases. This is the RPC-agent - so the IoT core component can be thought of as the engine, or the Go SDK packaged up to work with whatever API (think of the wrapper as the API) in whichever language you prefer.</p>
-
-<p>We talk about wrappers, this is the API code in the preferred language, or the rest of the rocket.</p>
-
-
-
-
-
-                              <p>The core of this SDK is written in Go with a native Go interface. Along with the native Go interface is an RPC layer (Apache Thrift) to allow communication through other languages. It is intended that we will develop a number of complementary wrapper libraries for other languages which should include C#.NET, Java, Python at a minimum.</p>
-
-<p><a href="atdc.html">Here's a quick introduction for the Atlanta Fintech Hackathon</a></p>
-<p><a href="https://wpwithin-slack-in.herokuapp.com">Sign up to our slack group, for comms, support and staying connected</a></p>
-                              <a href="getting-started.html" class="alert button">Getting started guide</a>
-                              <a href="getit.html" class="alert button">Get the SDK</a>
-                              <a href="architecture.html" class="alert button">The Worldpay Within Architecture</a>
-
-                              <h3>What is Worldpay Within and what does Worldpay within do</h3>
-
-                              <p>Worldpay is an embeddable payments agent, for the Internet of Things (IoT) that can be 'plugged' into your app for a smart device, enabling it to discover services of other devices, pay for those services, and then consume those services. Conversely it also allows your smart device to expose services to consumers, receive payments for those services, and then release services to a consumer using the idea of a 'Trusted Trigger'.</p>
-
-                              <p>It is all about enabling payments in IoT, and allowing smart devices to communicate with each other and exchange value for services in IoT</p>
-
-                              <p>So a consumer is a smart device which is looking for services, pays for services and consumes services</p>
-
-                              <p>On the other hand a producer is a smart device that is able to advertise availability of it's owner services to consumers, then negogiate a payment, take a payment, and release those services to the trusted consumer that made the payment</p>
-
-                              <div style="text-align: center;"><figure>
-                                  <img style="padding-top: 25px;" src="images/intro/what-worldpay-within-does.JPG" alt="What Worldpay Within Does"/>
-                                  <figcaption>What Worldpay Within Does.</figcaption>
-                              </figure></div>
-
-                              <p>The use case shown in the example above has a smart car looking for parking, and paying a smart parking meter for parking in it's parking bay. The smart car "wants to park", so has HCE (Host Card Emulation; card credentials), it acts as a shopper. When trying to make a payment, it will go off to the Worldpay online payments gateway and request tokenised card credentials based on the smart device it is trying to consume services from.</p>
-
-                              <p>This token is then securely passed to the parking meter. In this case the parking meter is the Producer, or is acting as the merchant, or HTE (Host Terminal Emulation, accepting payment), which then directly communicates with the online Worldlpay gateway to make a 'card on file' or 'eCommerce' type payment authorisation request. With the payment authorised it then releases the purhcased service to the consumer.</p>
-
-                              <p>The beauty of Worldpay Within is that it enables smart devices to both make payments and receive payments. In this example above the parking meter could then go on to make payments to the electricity companies smart hub which is powering it.</p>
-
-                             
-<!-- Insert page content above -->
-                    </div>
-              </div>
+          <div class="row">
+            <div class="large-4 columns">
+                <a href="https://github.com/WPTechInnovation/worldpay-within-sdk/zipball/master" class="alert button">Download .zip</a>
             </div>
-        </div>
-     </div>
+            <div class="large-4 columns">
+                <a href="https://github.com/WPTechInnovation/worldpay-within-sdk/tarball/master" class="alert button">Download .tar.gz</a>
+            </div>
+            <div class="large-4 columns">
+                <a href="https://github.com/WPTechInnovation/worldpay-within-sdk" class="alert button">View on GitHub</a>
+            </div>
+          </div>
 
 
+      </div>
+    </div>-->
 
-<!--
-
-
-
-
-        <
-
-
-
--->
-
-
-
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-91392512-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-  </body>
+                     <!-- Insert page content above -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--
+         <
+         
+         
+         
+         -->
+      <script src="js/vendor/jquery.js"></script>
+      <script src="js/vendor/what-input.js"></script>
+      <script src="js/vendor/foundation.js"></script>
+      <script src="js/app.js"></script>
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-91392512-1', 'auto');
+         ga('send', 'pageview');
+         
+      </script>
+   </body>
 </html>
