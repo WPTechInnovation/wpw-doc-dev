@@ -9,9 +9,6 @@
 
 <figcaption>The flows of the producer and consumer</figcaption>
 
-
-
-
 ## The Consumer flow
 
 !!! note
