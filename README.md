@@ -1,5 +1,5 @@
 # Worldpay Within
-New site build with MkDocs and Material UI.
+New site build with MkDocs and Material UI. Any changes will be compiled and deployed automatically on push to master branch. 
 
 ## Local Development
 

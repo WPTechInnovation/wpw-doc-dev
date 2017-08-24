@@ -68,6 +68,8 @@ markdown_extensions:
 pages:
   - Getting started: index.md
   - The Flows: the-flows.md
+  - Architecture: architecture.md
+  - The Atlanta Fintech Hackathon: atdc.md
   - Documentation: documentation.md
 
 # Google Analytics

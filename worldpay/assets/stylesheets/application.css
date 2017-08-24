@@ -343,7 +343,7 @@ kbd {
     .md-typeset table:not([class]) td:not([align]) {
       text-align: left; }
     .md-typeset table:not([class]) th {
-      min-width: 20rem;
+      min-width: 18rem;
       padding: 1.2rem 1.6rem;
       background-color: rgba(0, 0, 0, 0.8);
       color: white;
@@ -546,6 +546,9 @@ pre.\:hover .md-clipboard::before,
   margin: 0 1.6rem 2.4rem;
   padding-top: 2.4rem;
   padding-bottom: 2.4rem; }
+  .md-content__inner img {
+    display: block;
+    margin: 0 auto; }
   .md-content__inner::before {
     display: block;
     height: 0.8rem;
