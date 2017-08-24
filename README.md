@@ -3,9 +3,17 @@ New site build with MkDocs and Material UI.
 
 ## Local Development
 
-Start `gulp clean && gulp watch --no-lint`
+### Install 
+Theme requires Python, PIP and Node.
 
-Deploy `mkdocs gh-deploy`
+### Dependencies
+`yarn`
+
+### Start 
+`gulp clean && gulp watch --no-lint`
+
+### Deploy 
+`mkdocs gh-deploy`
 
 ## License
 

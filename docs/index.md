@@ -4,7 +4,6 @@
 
   What you get from the SDK you download from our git repo, is access to the API in all the supported languages (we refer this as the 'wrapper'), you will still need to get the core IoT component from the releases (we refer to this as the 'RPC-agent'). <a href="internal-structure.html">If you're interested further on the internal architectcure of the project check this out</a>.
 
-
 ## Get the SDK (software development kit) from the Github repository
   Please either download the repo, or clone the repo from Github, <a href="https://github.com/WPTechInnovation/worldpay-within-sdk">the github repo for Worldpay Within can be found here</a>
 
@@ -22,7 +21,6 @@
   You'll need to drop the core IoT component (RPC-agent file) into the appropriate place in the SDK (or wrapper directory).
 
   Follow the instructions for each supported language on where to place the core IoT component (RPC-agent file) and what to call it. The instructions will also let you know if there are any other pre-requisites to install on your device before you get started.
-
 
 <a class="md-button" href="https://github.com/WPTechInnovation/worldpay-within-sdk/tree/master/wrappers/java">Java</a>
 <a class="md-button" href="dotnet.html">.NET</a>
