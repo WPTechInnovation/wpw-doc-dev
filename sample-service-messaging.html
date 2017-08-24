@@ -54,11 +54,11 @@
 <h4>Service broadcast</h4>
 <pre style="margin: 0; line-height: 122%; border-style: solid; border-color: red; border-width: 1px; background-color: #cccccc;" >
 {
- "DeviceDescription" : "Worldpay Within Enabled Electric Car Charger",
- "Hostname" : "192.168.1.139",
- "PortNumber" : 8800,
- "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
- "UrlPrefix" : "v1/carcharge"
+   "DeviceDescription": "Worldpay Within Enabled Electric Car Charger",
+   "Hostname": "192.168.1.139",
+   "PortNumber": 8800,
+   "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
+   "UrlPrefix": "v1/carcharge"
 }
 </pre>
 <h4>Service list request</h4>
@@ -74,15 +74,17 @@
 
 <pre style="margin: 0; line-height: 122%; border-style: solid; border-color: red; border-width: 1px; background-color: #cccccc;" >
 {
-"ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
-"Services" : [{
-                        "ServiceID" : 0,
-                        "ServiceDescription" : "Car charging"
-                }, {
-                        "ServiceID" : 1,
-                        "ServiceDescription" : "Car parking"
-                }
-        ]
+   "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
+   "Services": [
+      {
+         "ServiceID": 0,
+         "ServiceDescription": "Car charging"
+      },
+      {
+         "ServiceID": 1,
+         "ServiceDescription": "Car parking"
+      }
+   ]
 }
 </pre>
 
@@ -154,13 +156,13 @@ Content:
 
 <pre style="margin: 0; line-height: 122%; border-style: solid; border-color: red; border-width: 1px; background-color: #cccccc;" >
 {
-"ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
-"ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
-"PriceID" : 1,
- "UnitsToSupply" : 8,
- "TotalPrice" : 560,
- "PaymentReferenceID" : "e7c18800-706d-4f0c-933c-19f8d5be72da",
- "MerchantClientKey" : " T_C_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "
+   "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
+   "ClientID": "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
+   "PriceID": 1,
+   "UnitsToSupply": 8,
+   "TotalPrice": 560,
+   "PaymentReferenceID": "e7c18800-706d-4f0c-933c-19f8d5be72da",
+   "MerchantClientKey": " T_C_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "
 }
 </pre>
 
@@ -179,7 +181,7 @@ Content:
 {
         "clientKey" : "T_C_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "paymentMethod" : {
-                  "cardNumber" : "1234567890124444",
+                "cardNumber" : "1234567890124444",
                 “expiryMonth" : 2,
                 "expiryYear" : 2021,
                 "name" : "Bilbo Baggins",
@@ -195,24 +197,24 @@ Content:
 
 <pre style="margin: 0; line-height: 122%; border-style: solid; border-color: red; border-width: 1px; background-color: #cccccc;" >
 {
-        "token" : "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
-        "paymentMethod" : {
-                  "type" : "ObfuscatedCard",
-                "name" : "Bilbo Baggins",
-                "expiryMonth" : 2,
-                "expiryYear" : 2021,
-                "cardType" : "MASTERCARD_CREDIT",
-                "maskedCardNumber" : "**** **** **** 4444",
-                 "cardSchemeType" : "consumer",
-                "cardSchemeName" : "MCI CREDIT",
-                "cardIssuer" : "LLOYDS BANK PLC",
-                "countryCode" : "GB",
-                "cardClass" : "credit",
-                "cardProductTypeDescNonContactless" : "MasterCard Business",
-                "cardProductTypeDescContactless" : "CL MasterCard Bus",
-                "prepaid" : "unknown"
-        },
-        "reusable" : false
+   "token": "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
+   "paymentMethod": {
+      "type": "ObfuscatedCard",
+      "name": "Bilbo Baggins",
+      "expiryMonth": 2,
+      "expiryYear": 2021,
+      "cardType": "MASTERCARD_CREDIT",
+      "maskedCardNumber": "**** **** **** 4444",
+      "cardSchemeType": "consumer",
+      "cardSchemeName": "MCI CREDIT",
+      "cardIssuer": "LLOYDS BANK PLC",
+      "countryCode": "GB",
+      "cardClass": "credit",
+      "cardProductTypeDescNonContactless": "MasterCard Business",
+      "cardProductTypeDescContactless": "CL MasterCard Bus",
+      "prepaid": "unknown"
+   },
+   "reusable": false
 }
 </pre>
 
