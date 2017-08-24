@@ -114,6 +114,93 @@ figcaption {
   display: table-row;
   height: 100%;
 
+  &.home {
+    .md-sidebar--secondary {
+      display: none;
+    }
+    .md-content { 
+      margin-right: 0;
+
+      .explainer {
+        display: flex;
+        align-items: center;
+
+        &.left {
+
+        }
+        &.right {
+          flex-direction: row-reverse;
+        }
+
+        @include break-to-device(mobile) {
+          display: block;
+        }
+
+        &.center {
+          display: block;
+          text-align: center;
+          
+          @include break-to-device(mobile) {
+            text-align: left;
+          }
+
+          div, .txt {
+            width: 100%;
+            padding: 4rem 10rem 0 10rem;
+
+            @include break-to-device(mobile) {
+              margin-top: 4rem;
+              padding: 0;
+            }
+
+            .video {
+              width: 60%;
+              min-height: 242px;
+              margin: 0 auto;
+
+              @include break-to-device(mobile) {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        div {
+          width: 60%;
+          padding: 4rem 5rem;
+
+          @include break-to-device(mobile) {
+            width: 100%;
+            padding-bottom: 2rem;
+          }
+
+          h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+          }
+
+          &.txt {
+            width: 40%;
+            padding: 0;
+
+            @include break-to-device(mobile) {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .download {
+        border-top: 1px solid $md-color-black--lightest;
+        margin-top: 5rem;
+        padding: 5rem;
+        text-align: center;
+
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
   // Increase top spacing of content area to give typography more room
   &__inner {
     min-height: 100%;

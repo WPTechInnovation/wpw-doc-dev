@@ -409,6 +409,47 @@ figcaption {
 .md-main {
   display: table-row;
   height: 100%; }
+  .md-main.home .md-sidebar--secondary {
+    display: none; }
+  .md-main.home .md-content {
+    margin-right: 0; }
+    .md-main.home .md-content .explainer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .md-main.home .md-content .explainer.right {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse; }
+      .md-main.home .md-content .explainer.center {
+        display: block;
+        text-align: center; }
+        .md-main.home .md-content .explainer.center div, .md-main.home .md-content .explainer.center .txt {
+          width: 100%;
+          padding: 4rem 10rem 0 10rem; }
+          .md-main.home .md-content .explainer.center div .video, .md-main.home .md-content .explainer.center .txt .video {
+            width: 60%;
+            min-height: 242px;
+            margin: 0 auto; }
+      .md-main.home .md-content .explainer div {
+        width: 60%;
+        padding: 4rem 5rem; }
+        .md-main.home .md-content .explainer div h1, .md-main.home .md-content .explainer div h2, .md-main.home .md-content .explainer div h3, .md-main.home .md-content .explainer div h4, .md-main.home .md-content .explainer div h5, .md-main.home .md-content .explainer div h6 {
+          margin-top: 0; }
+        .md-main.home .md-content .explainer div.txt {
+          width: 40%;
+          padding: 0; }
+    .md-main.home .md-content .download {
+      border-top: 1px solid rgba(0, 0, 0, 0.07);
+      margin-top: 5rem;
+      padding: 5rem;
+      text-align: center; }
+      .md-main.home .md-content .download h1, .md-main.home .md-content .download h2, .md-main.home .md-content .download h3, .md-main.home .md-content .download h4, .md-main.home .md-content .download h5, .md-main.home .md-content .download h6 {
+        margin-top: 0; }
   .md-main__inner {
     min-height: 100%;
     padding-top: 3rem;
@@ -1818,6 +1859,20 @@ pre.\:hover .md-clipboard::before,
         border-radius: 0; }
         .md-typeset pre > code {
           padding: 1.05rem 1.6rem; }
+        .md-main.home .md-content .explainer {
+          display: block; }
+          .md-main.home .md-content .explainer.center {
+            text-align: left; }
+            .md-main.home .md-content .explainer.center div, .md-main.home .md-content .explainer.center .txt {
+              margin-top: 4rem;
+              padding: 0; }
+              .md-main.home .md-content .explainer.center div .video, .md-main.home .md-content .explainer.center .txt .video {
+                width: 100%; }
+          .md-main.home .md-content .explainer div {
+            width: 100%;
+            padding-bottom: 2rem; }
+            .md-main.home .md-content .explainer div.txt {
+              width: 100%; }
         .md-footer-nav__link--prev .md-footer-nav__title {
           display: none; }
       .md-search-result__teaser {
