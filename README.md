@@ -1,20 +1,6 @@
 # Worldpay Within
 New site build with MkDocs and Material UI. Any changes will be compiled and deployed automatically on push to master branch. 
 
-## Local Development
-
-### Install 
-Theme requires Python, PIP and Node.
-
-### Dependencies
-`yarn`
-
-### Start 
-`gulp clean && gulp watch --no-lint`
-
-### Deploy 
-`mkdocs gh-deploy`
-
 ## License
 
 **MIT License**
