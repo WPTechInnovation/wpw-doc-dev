@@ -432,8 +432,8 @@ figcaption {
           width: 100%;
           padding: 4rem 10rem 0 10rem; }
           .md-main.home .md-content .explainer.center div .video, .md-main.home .md-content .explainer.center .txt .video {
-            width: 60%;
-            min-height: 242px;
+            width: 80%;
+            min-height: 350px;
             margin: 0 auto; }
       .md-main.home .md-content .explainer div {
         width: 60%;

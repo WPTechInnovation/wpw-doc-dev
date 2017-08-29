@@ -7,6 +7,7 @@
   <div class="txt">
     <h2> What is it </h2>
     <p> Lorem ipsum is hard to consume and I use it as a last resort. So, I'll fill random text please and you don't even have to read it. Lorem ipsum is hard to consume and I use it as a last resort. So, I'll fill to read it. </p>
+    <a class="md-button" href="dotnet.html">The Flows</a>
   </div>
 </div>
 
@@ -17,6 +18,7 @@
   <div class="txt">
     <h2> How it works </h2>
     <p> I don't know what to type here so let me fill some random text. Lorem ipsum is hard to consume and I use it as a last resort. So, I'll fill random text please and you don't even have to read it. </p>
+    <a class="md-button" href="dotnet.html">Architecture</a>
   </div>
 </div>
 
@@ -27,6 +29,7 @@
   <div class="txt">
     <h2> What is it </h2>
     <p> Lorem ipsum is hard to consume and I use it as a last resort. So, I'll fill random text please and you don't even have to read it. Lorem ipsum is hard to consume and I use it as a last resort. So, I'll fill to read it. </p>
+    <a class="md-button" href="dotnet.html">Getting Started</a>
   </div>
 </div>
 
@@ -36,7 +39,7 @@
     <p> Lorem ipsum is hard to consume and I use it as a last resort. So, I'll fill random text please and you don't even have to read it. Lorem ipsum is hard to consume and I use it as a last resort. So, I'll fill to read it. </p>
   </div>
   <div>
-    <iframe class="video" src="https://www.youtube.com/embed/QSIPNhOiMoE?controls=0&fs=0&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe class="video" src="https://www.youtube.com/embed/QSIPNhOiMoE?controls=1&fs=0&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 

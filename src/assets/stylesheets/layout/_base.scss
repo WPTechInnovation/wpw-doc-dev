@@ -154,8 +154,8 @@ figcaption {
             }
 
             .video {
-              width: 60%;
-              min-height: 242px;
+              width: 80%;
+              min-height: 350px;
               margin: 0 auto;
 
               @include break-to-device(mobile) {
