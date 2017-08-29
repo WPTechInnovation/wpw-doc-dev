@@ -23,6 +23,7 @@ site_name: Worldpay Within
 site_description: Worldpay Within website
 site_author: Worldpay Within
 site_url: http://localhost:8000/
+site_favicon: 'assets/images/favicon.ico'
 
 # Repository
 repo_name: szarych/wpw-doc-dev
