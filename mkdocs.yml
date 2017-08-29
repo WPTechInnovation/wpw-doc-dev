@@ -39,7 +39,7 @@ theme_dir: worldpay
 
 # Options
 extra:
-  logo: 'assets/images/logo.svg'
+  logo: 'assets/images/logo-a2bb347fe2.svg'
   feature:
     tabs: false
 
