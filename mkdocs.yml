@@ -23,6 +23,7 @@ site_name: Worldpay Within
 site_description: Worldpay Within website
 site_author: Worldpay Within
 site_url: http://localhost:8000/
+site_favicon: 'assets/images/favicon.ico'
 
 # Repository
 repo_name: szarych/wpw-doc-dev
@@ -38,6 +39,7 @@ theme_dir: worldpay
 
 # Options
 extra:
+#  logo: 'assets/images/logo-a2bb347fe2.svg'
   logo: 'assets/images/logo.svg'
   feature:
     tabs: false
@@ -66,8 +68,11 @@ markdown_extensions:
 
 # Page tree
 pages:
-  - Getting started: index.md
+  - Overview: index.md
+  - Getting started: getting-started.md
   - The Flows: the-flows.md
+  - Architecture: architecture.md
+  - The Atlanta Fintech Hackathon: atdc.md
   - Documentation: documentation.md
 
 # Google Analytics

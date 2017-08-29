@@ -43,6 +43,11 @@
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
 
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
     // [screen +]: Increase horizontal spacing
     @include break-from-device(screen) {
       margin-right: 2.4rem;
