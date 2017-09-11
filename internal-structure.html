@@ -62,7 +62,7 @@
 
                               <p>So a consumer is a smart device which is looking for services, pays for services and consumes services</p>
 
-                              <p>On the other hand a producer is a smart device that is able to advertise availability of it's owner services to consumers, then negogiate a payment, take a payment, and release those services to the trusted consumer that made the payment</p>
+                              <p>On the other hand a producer is a smart device that is able to advertise availability of it's owner services to consumers, then negotiate a payment, take a payment, and release those services to the trusted consumer that made the payment</p>
 
                               <div style="text-align: center;"><figure>
                                   <img style="padding-top: 25px;" src="images/intro/what-worldpay-within-does.JPG" alt="What Worldpay Within Does"/>
@@ -71,7 +71,7 @@
 
                               <p>The use case shown in the example above has a smart car looking for parking, and paying a smart parking meter for parking in it's parking bay. The smart car "wants to park", so has HCE (Host Card Emulation; card credentials), it acts as a shopper. When trying to make a payment, it will go off to the Worldpay online payments gateway and request tokenised card credentials based on the smart device it is trying to consume services from.</p>
 
-                              <p>This token is then securely passed to the parking meter. In this case the parking meter is the Producer, or is acting as the merchant, or HTE (Host Terminal Emulation, accepting payment), which then directly communicates with the online Worldlpay gateway to make a 'card on file' or 'eCommerce' type payment authorisation request. With the payment authorised it then releases the purhcased service to the consumer.</p>
+                              <p>This token is then securely passed to the parking meter. In this case the parking meter is the Producer, or is acting as the merchant, or HTE (Host Terminal Emulation, accepting payment), which then directly communicates with the online Worldpay gateway to make a 'card on file' or 'eCommerce' type payment authorisation request. With the payment authorised it then releases the purchased service to the consumer.</p>
 
                               <p>The beauty of Worldpay Within is that it enables smart devices to both make payments and receive payments. In this example above the parking meter could then go on to make payments to the electricity companies smart hub which is powering it.</p>
 
@@ -82,7 +82,7 @@
                                   <figcaption>How the Wrapper Works.</figcaption>
                               </figure></div>
 
-                              <p>On the left handside you have the SDK, on the right hand side you have the Wrapper, in this case the Java Core. The SDK in Golang has an RPC layer on top which is exposed via Thrift. The Java Core or Wrapper, is built up of the Thrift layer which does the RPC comms to the core SDK. Plus the wrapper acts as an adpater converting all the data / objects / errors into Pojos that the Java core, or the app you are building can work with.</p>
+                              <p>On the left-hand side you have the SDK, on the right-hand side you have the Wrapper, in this case the Java Core. The SDK in Golang has an RPC layer on top which is exposed via Thrift. The Java Core or Wrapper, is built up of the Thrift layer which does the RPC comms to the core SDK. Plus the wrapper acts as an adapter converting all the data / objects / errors into Pojos that the Java core, or the app you are building can work with.</p>
 
                               <p>The important thing to recognise here is that none of the Thrift layer is exposed to you as a developer, and all the RPC calls are handled for you, so essentially you are calling the Worldpay Within seamlessly, managed by the Worldpay Within Wrapper in the appropriate language you are working in</p>
 
@@ -101,7 +101,7 @@
 
                               <p>Certainly for the first release, we have open sourced the wrappers and example apps, but kept the internals of the Golang SDK closed source, however with the appropriate success of the project, we shall consider open sourcing this component too.</p>
 
-                              <p>It is useful, of course, to know exactly what is happening inside this black box, so the following details the architecure of Worldpay Within and what is happening in the internals</p>
+                              <p>It is useful, of course, to know exactly what is happening inside this black box, so the following details the architecture of Worldpay Within and what is happening in the internals</p>
 
                               <a href="architecture.html" class="alert button">The Worldpay Within Architecture</a>
 
