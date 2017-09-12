@@ -69,11 +69,8 @@ markdown_extensions:
 # Page tree
 pages:
   - Overview: index.md
-  - Getting started: getting-started.md
   - The Flows: the-flows.md
-  - Architecture: architecture.md
-  - The Atlanta Fintech Hackathon: atdc.md
-  - Documentation: documentation.md
+
 
 # Google Analytics
 google_analytics:
