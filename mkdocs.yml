@@ -76,6 +76,7 @@ pages:
   - The Flows: the-flows.md
   - API Specification: api-spec.md
   - Architecture: architecture.md
+  - Internal Structure: internal-structure.md
   - Docs: 
     - .NET: dotnet.md
     - Go: getting-started-with-go.md
