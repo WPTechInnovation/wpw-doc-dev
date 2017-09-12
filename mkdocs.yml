@@ -69,10 +69,15 @@ markdown_extensions:
 # Page tree
 pages:
   - Overview: index.md
+  - Introduction: introduction.md
+  - The Atlanta Fintech Hackathon: atdc.md
+  - Getting Started: getting-started.md
+  - Get the SDK: getit.md
+
   - The Flows: the-flows.md
 
 
-# Google Analytics
+# Google Analytics - UA-91392512-1
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
   - auto
