@@ -75,6 +75,10 @@ pages:
   - Get the SDK: getit.md
   - The Flows: the-flows.md
   - API Specification: api-spec.md
+  - Architecture: architecture.md
+  - Docs: 
+    - .NET: dotnet.md
+    - Go: getting-started-with-go.md
 
 
 # Google Analytics - UA-91392512-1
