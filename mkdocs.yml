@@ -79,6 +79,7 @@ pages:
   - Internal Structure: internal-structure.md
   - Hackathons: hackathons.md
   - Quick Start: quick-start.md
+  - Sample Service Messaging: sample-service-messaging.md
   - Docs: 
     - .NET: dotnet.md
     - Go: getting-started-with-go.md
