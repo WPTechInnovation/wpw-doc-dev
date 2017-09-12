@@ -77,9 +77,16 @@ pages:
   - API Specification: api-spec.md
   - Architecture: architecture.md
   - Internal Structure: internal-structure.md
+  - Hackathons: hackathons.md
+  - Quick Start: quick-start.md
   - Docs: 
     - .NET: dotnet.md
     - Go: getting-started-with-go.md
+    - Node.js: nodejs.md
+    - Python 2.7: python27.md
+  
+  # hide from navigation
+  # - hidden: nodejs.md
 
 
 # Google Analytics - UA-91392512-1

@@ -235,7 +235,9 @@
                   as the main headline.
                 -->
                 {% if not "\x3ch1" in page.content %}
+                {% if page.title != "hidden" %}
                   <h1>{{ page.title | default(config.site_name, true)}}</h1>
+                {% endif %}
                 {% endif %}
 
                 <!-- Content -->
