@@ -1,5 +1,3 @@
-### Getting started
-
 Worldpay Within is an open source project that provides a downloadable SDK that can be used as an API to provide a set of really cool services. For example, one device can pay for services from another.
 
 The SDK is available in a number of supported languages that we refer to as "wrappers". While these provide the development kit to make the devices work in the expected way, you still need to get the core IoT componet from the releases - we refer to this as the "RPC-agent".
