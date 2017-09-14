@@ -83,7 +83,7 @@ pages:
       - Sample service messaging: sample-service-messaging.md
       - API Spec: api-spec.md
 
-# Google Analytics - UA-91392512-1
+# Google Analytics
 google_analytics:
   - !!python/object/apply:os.getenv ["UA-77147930-12"]
   - auto
