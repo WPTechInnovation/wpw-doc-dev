@@ -15,7 +15,7 @@ The .NET implementation for the Worldpay Within IoT payment SDK. This SDK, or So
 
 The .NET Worldpay Within SDK provides a convenient entry point for application developers who wish to create applications using the Worldpay Within SDK.
 
-Currently, there are no [NuGet](https://nuget.org]) published libraries for the SDK. This issue is being tracked in [Issue #1 on GitHub](https://github.com/WPTechInnovation/wpw-sdk-dotnet/issues/1).
+Currently, there are no [NuGet](https://nuget.org) published libraries for the SDK. This issue is being tracked in [Issue #1 on GitHub](https://github.com/WPTechInnovation/wpw-sdk-dotnet/issues/1).
 
 For now, you will need to build the project yourself, by following these steps:
 
