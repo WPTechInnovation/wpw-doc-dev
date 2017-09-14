@@ -46,4 +46,4 @@ The producer device should follow this flow. These steps should map to the inter
 
 For the alpha release, we made the decision to go with four different wrappers. The documentation and API specification can be found here:
 
-[Go to Java (Javadoc)](wrapper-doc/javadoc) [Go to Python 2.7 doc](python27.html) [Go to .net / C# doc](dotnet.html) [Go to Node.js doc](nodejs.html)
+[Go to Java Javadoc [Go to Python 2.7 doc](python27.html) [Go to .net / C# doc](dotnet.html) [Go to Node.js doc](nodejs.html)

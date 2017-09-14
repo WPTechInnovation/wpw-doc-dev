@@ -1,7 +1,7 @@
 For the alpha release, we made the decision to go with four different wrappers. Their documented API can be found here:
 
 <div class="download">
-  <a class="md-button" href="wrapper-doc/javadoc">Java (Javadoc)</a>
+  <a class="md-button" href="#java">Java (Javadoc)</a>
   <a class="md-button" href="python27.md">Python 2.7 doc</a>
   <a class="md-button" href="dotnet.md">.net / C# doc</a>
   <a class="md-button" href="nodejs.md">Node.js doc</a>
