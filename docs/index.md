@@ -2,7 +2,7 @@
 
 <div class="explainer left">
   <div>
-    <img src="images/the-flows/what-it-is.jpg" alt="">
+    ![What Worldpay Within is"](images/the-flows/what-it-is.png)
   </div>
   <div class="txt">
     <h2>What it is</h2>
@@ -13,7 +13,7 @@
 
 <div class="explainer right">
   <div>
-    <img src="images/the-flows/why-use-it.jpg" alt="">
+     ![Why use Worldpay Within](images/the-flows/why-use-it.png)
   </div>
   <div class="txt">
     <h2>Why use it</h2>
@@ -23,7 +23,7 @@
 
 <div class="explainer left">
   <div>
-    <img src="images/the-flows/how-it-works.jpg" alt="">
+    ![How Worldpay Within works](images/the-flows/how-it-works.png)
   </div>
   <div class="txt">
     <h2>How it works</h2>
