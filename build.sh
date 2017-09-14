@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Copyright (c) 2016-2017 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -18,37 +20,12 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-import json
-from setuptools import setup, find_packages
+# Check if "yarn install" was executed
+if [[ ! -d "$(yarn bin)" ]]; then
+  echo "\"node_modules\" not found:"
+  echo "yarn install"
+  exit 1
+fi
 
-# Load package.json contents
-with open("package.json") as data:
-    package = json.load(data)
-
-# Load list of dependencies
-with open("requirements.txt") as data:
-    install_requires = [
-        line for line in data.read().split("\n")
-            if line and not line.startswith("#")
-    ]
-
-# Package description
-setup(
-    name = package["name"],
-    version = package["version"],
-    url = package["homepage"],
-    license = package["license"],
-    description = package["description"],
-    author = package["author"]["name"],
-    author_email = package["author"]["email"],
-    keywords = package["keywords"],
-    packages = find_packages(),
-    include_package_data = True,
-    install_requires = install_requires,
-    entry_points = {
-        "mkdocs.themes": [
-            "worldpay = worldpay",
-        ]
-    },
-    zip_safe = False
-)
+# Run command
+"$(yarn bin)"/gulp build --clean --optimize --revision "$@"

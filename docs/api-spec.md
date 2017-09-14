@@ -26,3 +26,4 @@ For the alpha release, we made the decision to go with four different wrappers. 
 |`makePayment`|Allows the consumer to request a payment to be made at the producer device, by providing the total price response object as the request. The producer will then make the payment (or attempt to) and send back a payment response detailing whether it was successful or not.|
 |`beginServiceDelivery`|Requested by the consumer, this begins the service delivery which proceeds as long as the correct information is provided to the producer. If the correct credentials are passed, the producer will start releasing the service known as a 'trusted trigger'.|
 |`endServiceDelivery`|Ends the service delivery - a request initiated by the consumer.|
+

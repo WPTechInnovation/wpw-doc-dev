@@ -9,6 +9,7 @@ We're going to build a reference application to prove the concepts and APIs outl
 #### Service broadcast
 
     !#js
+
     {
         "DeviceDescription": "Worldpay Within Enabled Electric Car Charger",
         "Hostname": "192.168.1.139",
@@ -16,6 +17,7 @@ We're going to build a reference application to prove the concepts and APIs outl
         "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "UrlPrefix": "v1/carcharge"
     }
+
 
 
 #### Service list request

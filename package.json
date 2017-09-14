@@ -23,13 +23,13 @@
     "url": "https://github.com/squidfunk/mkdocs-material.git"
   },
   "scripts": {
-    "build": "scripts/build",
+    "build": "bash build.sh",
     "clean": "scripts/clean",
     "flow": "scripts/flow",
     "help": "scripts/help",
     "lint": "scripts/lint",
     "start": "scripts/start",
-    "travis": "scripts/travis"
+    "travis": "bash travis.sh"
   },
   "dependencies": {
     "node-sass": "^3.7.0",

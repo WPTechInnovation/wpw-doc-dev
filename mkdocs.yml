@@ -26,8 +26,8 @@ site_url: http://localhost:8000/
 site_favicon: 'assets/images/favicon.ico'
 
 # Repository
-repo_name: szarych/wpw-doc-dev
-repo_url: https://github.com/szarych/wpw-doc-dev
+repo_name: WPTechInnovation/wpw-doc-dev
+repo_url: https://github.com/WPTechInnovation/wpw-doc-dev
 
 edit_uri: /edit/master/docs/
 

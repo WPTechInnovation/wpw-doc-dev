@@ -49,7 +49,6 @@ Providing a suitable service is discovered, the consumer then requests the servi
 |broadcast|`server_UUID`|Advertising services and identifying the sender|
 |request services|none|Request a list of all services|
 |services_response|`list of services`, `server_UUID`|Provide client with a list of possible services that the sender can provide|
-
 #### Service discovery messages
 
 A broadcast message that includes Thing B’s UUID is sent.
