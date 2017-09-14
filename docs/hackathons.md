@@ -1,16 +1,19 @@
 ## Payments & IoT Hackathons
 
-### Coming soon - September 2017 - Romania hackathon
+### Coming soon - November 2017 - Romania hackathon
 
-In September, we're hosting another hackthon, this time in Romania. If you want to join, email [what's the email?]
+In November, we're hosting our latest IoT and Payments hackathon, based on Worldpay Within. We're delighted to be hosting this in the beautiful Bucharest, Romania. More details will be coming soon. 
 
-So, if you love payments and the IoT, and you think this is something you'd enjoy, make you sure get registered in time. <a href="">Click here</a>
+This time it's all about Worldpay Within on Raspberry Pis, with the theme focusing on smart home, smart cities and smart living. We've got some really exciting sponsors, which we will also be announcing soon. We've also got really awesome cash prizes for the 3 winning teams. 
+
+You'll be able to register for the event soon. If you're super keen and want to hear further ahead of that time, email us at [innovation@worldpay.com](mailto:innovation@worldpay.com).
+
 
 ### February 2017 - Atlanta hackathon, featuring Worldpay Within
 
 Worldpay US was a sponsor of the ATDC Fintech Hackathon, a weekend in which 18 teams competed in a battle to demonstrate how well they integrated either Worldpay or TSYS APIs into their own applications.
 
-[Atlanta hackathon page](atdc.html)
+For more information, see [Atlanta hackathon page](atdc.html).
 
 ### September 2016 - Our Inaugral Payments & Iot hackathon
 
@@ -18,10 +21,7 @@ Worldpay's Technology Innovation team held their first Internet of Things (IoT) 
 
 Over the weekend, the participants brought to life a range of innovative concepts from building a payment system following a natural disaster, to payments apps for the sharing economy.
 
+See our press releases [here](http://www.worldpay.com/uk/about/media-centre/2016-08/worldpay-launches-internet-of-things-hackathon) and [here](http://www.worldpay.com/uk/about/media-centre/2016-09/worldpay-brings-payments-to-iot-with-first-ever-european-hackathon).
 #### Watch the video
-
+We recorded what happened at the September 2016 hackathon. You'll hear from some of the delegates, judges, mentors, sponsors and organisers, and see some of the cool tech that was brought and awesome demos that were built that weekend.
 <iframe class="video" height="315" src="https://www.youtube.com/embed/Cav8yeurtOs" frameborder="0" allowfullscreen></iframe>
-
-Bit more info about the video and press releases
-
-Link to the press releases
