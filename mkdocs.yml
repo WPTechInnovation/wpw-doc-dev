@@ -68,27 +68,20 @@ markdown_extensions:
 
 # Page tree
 pages:
-  - Overview: index.md
-  - Introduction: introduction.md
-  - The Atlanta Fintech Hackathon: atdc.md
-  - Getting Started: getting-started.md
-  - Get the SDK: getit.md
-  - The Flows: the-flows.md
-  - API Specification: api-spec.md
-  - Architecture: architecture.md
-  - Internal Structure: internal-structure.md
-  - Hackathons: hackathons.md
-  - Quick Start: quick-start.md
-  - Sample Service Messaging: sample-service-messaging.md
-  - Docs: 
+  - Home: index.md
+  - SDKs:
     - .NET: dotnet.md
     - Go: getting-started-with-go.md
     - Node.js: nodejs.md
     - Python 2.7: python27.md
-  
-  # hide from navigation
-  # - hidden: nodejs.md
-
+    - Java: python27.md 
+  - Hackathons: hackathons.md
+  - Advanced:
+      - How it works: how-it-works.md
+      - Architecure: architecture.md
+      - Internal structure: internal-structure.md
+      - Sample service messaging: sample-service-messaging.md
+      - API Spec: api-spec.md
 
 # Google Analytics
 google_analytics:
