@@ -1,4 +1,3 @@
-recursive-include material *.ico *.js *.css *.html *.svg
 recursive-include worldpay *.ico *.js *.css *.html *.svg
 recursive-exclude site *
 recursive-exclude * __pycache__
