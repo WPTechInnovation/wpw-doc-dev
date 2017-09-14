@@ -1,55 +1,27 @@
-# Copyright (c) 2016-2017 Martin Donath <martin.donath@squidfunk.com>
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to
-# deal in the Software without restriction, including without limitation the
-# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-# sell copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-# IN THE SOFTWARE.
-
 language: node_js
 sudo: false
-
-# -----------------------------------------------------------------------------
-# Regular builds
-# -----------------------------------------------------------------------------
-
-# Node.js version and necessary services
 node_js: 5
 services:
-  - docker
-
-# Limit clone depth to 5, to speed up build
+- docker
 git:
   depth: 5
-
-# Cache dependencies
 cache:
   pip: true
   yarn: true
   directories:
-    - node_modules
-
-# Install yarn as Travis doesn't support it out of the box
+  - node_modules
 before_install:
-  - npm install -g yarn@v0.22.0
-
-# Install dependencies
+- npm install -g yarn@v0.22.0
 install:
-  - yarn install --ignore-optional
-  - pip install --user -r requirements.txt
-
-# Perform build and release
+- yarn install --ignore-optional
+- pip install --user -r requirements.txt
 script:
-  - yarn run travis
+- yarn run travis
+env:
+  global:
+    secure: nbnM+8IZhRsfz2fVL9s8L9Ei7odEWqAKfetoOaMD9gn2wU4LJ/rJgyM4hpNjCjAXi9ZC3r0OldEHhuWUvDMvtfdFTOScOaIv3+pF4A37tgeoRcpOLos+QWTktImW+KEseMoTfh99m9ug1rzcBVUJ6Ik9dTnNYp8es+qMjXV1ym51OhtlxfuY57mYYL77INtdotv2rq4mlavD+LtEkoUKtMY5HlRpvlx17233bQn22AjpxtmSUbYX26XZDDeqrjfFlBPvfpx6Wzt0bajmRemBNEJ3uvZIlonvTNKD03qMs9PRhYbRcIhL8eDKkMNwJ6RbOmhV8qQm1TLxYFHpLRfX69ceYaIccimM0VH5sdlMP1pNJX2mHd+Xnsm592xCcmd8OGafH8/6YqjfFFXSREx87uAJZ5wVg9Pi9MJU31qFxWc0qtGSlS0gYVlSlOKZ/PrRTDVscicZ8L/avbZYtuo9dQ1+HRWF2WehH9r8KYmIvIviKb1VdyGVDdrMkC4ID+j9EBdr5795jkzxOev3q0ngJkaaKmKTWm5K+TBflct6IKwh8MkcoxcxVojgOpTs+fI2YxOpMbLom89+lgfHTRaRidBPnUnbQoa8lCMdPL5Ycc9yuoMHCAH0Ql5+6b/HJT/zImAoLTTGUP8RcsNcSXp0PsUruB4v+r8zWf3CID7BpVE=
+after_success:
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - node ./node_modules/grunt-cli/bin/grunt release
+
