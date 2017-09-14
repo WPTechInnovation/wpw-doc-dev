@@ -2,7 +2,7 @@
 
 <div class="explainer left">
   <div>
-    <img src="images/the-flows/what-it-is.png" />
+    <img src="images/the-flows/what-is-it.png" />
   </div>
   <div class="txt">
     <h2>What it is</h2>
