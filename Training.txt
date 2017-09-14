@@ -1,0 +1,28 @@
+Mkdocs
+- Python instead of Ruby (freedom to use any plugin)
+- Mobile First
++ Search (content tokenization)
+- Linking
+- Tooling (gulp, yarn)
+- Commands
++ CI/CD 
+- Markdown Helpers
+- Config file
++ Maintaing markdown files
++ Documentation framework is decoupled from data
+- Tech stack 
+- HTML to Markdown
+- Cross Browser Optimized
+- Worldpay Style Guide
++ Travis CI is free for open source
++ Process pull request template
+- Access to Travis
++ Perf 70KB 8 HTTP requests
++ Webpack
+
+Next Steps:
+- UI amendments
+- Sitemap
+- Content migration
+- Manual release 
+- Setup automatic releases 
