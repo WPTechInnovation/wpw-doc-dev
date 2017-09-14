@@ -1,6 +1,6 @@
 # .NET Software Development Kit (SDK)
 
-The .NET implementation for the Worldpay Within IoT payment SDK. This SDK, or Software Development Kit, enables smart devices to discover each other, negogiate a price for services, make a payment (through the Worldpay Online Payment gateway) for services, and then consume services via a **trusted trigger**. For more information see our documentation website [here]( http://www.worldpaywithin.com).
+The .NET implementation for the Worldpay Within IoT payment SDK. This SDK, or Software Development Kit, enables smart devices to discover each other, negogiate a price for services, make a payment (through the Worldpay Online Payment gateway) for services, and then consume services via a **trusted trigger**. For more information see our documentation website [here](http://www.worldpaywithin.com).
 
 ## Prerequisites
 
