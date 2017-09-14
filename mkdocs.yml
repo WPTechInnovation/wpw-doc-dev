@@ -74,7 +74,7 @@ pages:
     - Go: getting-started-with-go.md
     - Node.js: nodejs.md
     - Python 2.7: python27.md
-    - Java: ../doc-external/javadoc/index.html
+    - Java: python27.md 
   - Hackathons: hackathons.md
   - Advanced:
       - How it works: how-it-works.md
