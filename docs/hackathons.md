@@ -2,7 +2,7 @@
 
 ### Coming soon - September 2017 - Romania hackathon
 
-In September, we're hosting another hackthon, this time in Romania. If you want to join, email us.
+In September, we're hosting another hackthon, this time in Romania. If you want to join, email [what's the email?]
 
 So, if you love payments and the IoT, and you think this is something you'd enjoy, make you sure get registered in time. <a href="">Click here</a>
 

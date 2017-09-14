@@ -1,10 +1,12 @@
+## The Worldpay Within Architecture
+
 ### Quick intro
 
-To complement the architecture, we have released the Worldpay Within SDK. The intention for of the SDK is to encapsulate implementation and therefore assist third party vendors and developers in integration into their Internet of Things (IoT) solutions.
+To complement the Architecture we have released the Worldpay Within SDK. The intention for of the SDK is to encapsulate implementation and therefore assist third party vendors and developers in integration into their Internet of Things (IoT) solutions.
 
 The core of the SDK is developed in the Go programming language with wrappers created for Java, Node.JS, Python and .net(C#). Service delivery and broadcast have been implemented using TCP/IP networking.
 
-For more information about the low level service messaging, see click [here](sample-service-messaging.md).
+For more information about the low level service messaging, see click [here](sample-service-messaging.html).
 
 ### Architecture Overview
 
@@ -46,9 +48,9 @@ Providing a suitable service is discovered, the consumer then requests the servi
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
-|broadcast|`server_UUID`|Advertising services and identifying the sender|
+|broadcast|server_UUID|Advertising services and identifying the sender|
 |request services|none|Request a list of all services|
-|services_response|`list of services`, `server_UUID`|Provide client with a list of possible services that the sender can provide|
+|services_response|list of services, server_UUID|Provide client with a list of possible services that the sender can provide|
 
 #### Service discovery messages
 
@@ -69,20 +71,20 @@ Once a suitable service has been discovered, there will be a price negotiation. 
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
-|`price_request`|`service_id`|Request a list of all prices for a given service.|
-|`price_response`|`server_UUID`, list of prices, (`service_id`, `price_id`, `price_per_unit`, `unit_ID`, `unit_description`, `price_description`)|Provide the client with a list of prices for a given service. A price object contains the per unit price.|
-|`price_select`|`service_id`, `price_id`, `number_of_units`, `client_UUID`|Select a price with `price_id`, for `service_id` for a number of units.|
-|`price_select_response`|`price_id`, `number_of_units`, `total_price`, `server_UUID`, `client_UUID`, `payment_ref_ID`, `Merchant_Client_key`|Communicate the expected total price to the client.|
+|price_request|service_id|Request a list of all prices for a given service.|
+|price_response|server_UUID, list of prices, (service_id, price_id, price_per_unit, unit_ID, unit_description, price_description)|Provide the client with a list of prices for a given service. A price object contains the per unit price.|
+|price_select|service_id, price_id, number_of_units, client_UUID|Select a price with price_id, for service_id for a number of units.|
+|price_select_response|price_id, number_of_units, total_price, server_UUID, client_UUID, payment_ref_ID, Merchant_Client_key|Communicate the expected total price to the client.|
 
 #### Service negotiation messages
 
 A price request is sent containing the selected service_id.
 
-The response from Thing B contains a list of price items; each item should contain a `price_id`, per unit price, `unit_ID` and description fields of both the unit and the price.
+The response from Thing B contains a list of price items; each item should contain a price_id, per unit price, unit_ID and description fields of both the unit and the price.
 
-Thing A then selects an appropriate `price_id` by sending a request with its `client_UUID`, the selected `service_id`, the `price_id`, and the number of items required.
+Thing A then selects an appropriate price_id by sending a request with its client_UUID, the selected service_id, the price_id, and the number of items required.
 
-If the number of items falls within the correct number of items for the price selected, then Thing B responds with a price select response containing the `service_id`, `price_id`, the total price, the `service_UUID` and a reference for the payment and its Merchant Client key. Otherwise Thing B shall return the number of units it can supply along with the correct price, and additional details required to initiate the payment.
+If the number of items falls within the correct number of items for the price selected, then Thing B responds with a price select response containing the service_id, price_id, the total price, the service_UUID and a reference for the payment and its Merchant Client key. Otherwise Thing B shall return the number of units it can supply along with the correct price, and additional details required to initiate the payment.
 
 #### Payment
 
@@ -98,7 +100,7 @@ This payment process ensures that the consumer does not pass their payment crede
 
 #### Client token request
 
-The first step in the payment process is when Thing A receives the `Merchant_Client_Key` from Thing B. Thing B passes their public Client Key to Thing A as part of the `price_select_response` during the Service Negotiation phase. Upon receiving the Client Key from Thing B, Thing A connects with Worldpay to request the client token from us. This request includes Thing A’s payment credentials: Card PAN, expiry, and the `client_key` of Thing B. Worldpay will respond with a message that includes a `client_token`. This is shown in Figure 7.
+The first step in the payment process is when Thing A receives the Merchant_Client_Key from Thing B. Thing B passes their public Client Key to Thing A as part of the price_select_response during the Service Negotiation phase. Upon receiving the Client Key from Thing B, Thing A connects with Worldpay to request the client token from us. This request includes Thing A’s payment credentials: Card PAN, expiry, and the client_key of Thing B. Worldpay will respond with a message that includes a client_token. This is shown in Figure 7.
 
 ![IoT Payment process - client token request](images/architecture/paymentProcessToken.png)
 <figcaption>Figure 7\. IoT Payment process - client token request.</figcaption>
@@ -109,22 +111,22 @@ The first step in the payment process is when Thing A receives the `Merchant_Cli
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
-|`client_token_request`|`Payment_method`, `reusable_flag`, `Merchant_client_key`, `Payment_method` (`name`, `PAN`, `expiryMonth`, `expiryYear`, `type`)|Request a client token from Worldpay, whilst providing us with the payment credentials.|
-|`client_token_response`|`client_token`, `reusable_flag`, `payment_method_response` (`type`, `name`, `expiryMonth`, `expiryYear`, `card\_type`, `card\_scheme\_type`, `card\_scheme\_name`, `masked\_card\_number`, `card\_product\_type\_description\_non\_contactless`, `card\_product\_type\_description\_contactless`, `card\_issuer`, `country\_code`, `card\_class`, `pre-paid`)|Response from Worldpay containing the client_token.|
-|`Payment_request`|`client_token`, `client_UUID`, `payment_ref_ID`|The `client_token` is passed to Thing B to allow the 2^nd^ part of the transaction process to take place.|
+|client_token_request|Payment_method, reusable_flag, Merchant_client_key Payment\_method (name, PAN, expiryMonth, expiryYear, type)|Request a client token from Worldpay, whilst providing us with the payment credentials.|
+|client_token_response|client_token, reusable_flag, payment_method_response (type, name, expiryMonth, expiryYear, card\_type, card\_scheme\_type, card\_scheme\_name, masked\_card\_number, card\_product\_type\_description\_non\_contactless, card\_product\_type\_description\_contactless, card\_issuer, country\_code, card\_class, pre-paid)|Response from Worldpay containing the client_token.|
+|Payment_request|client_token, client_UUID, payment_ref_ID|The client_token is passed to Thing B to allow the 2^nd^ part of the transaction process to take place.|
 
 
-Thing A will connect to Worldpay using Transport Layer Security (TLS). It will then request a `client_token` by securely (see 2.2.1) sending a JSON message containing the `paymentMethod`, its payment credentials (PAN, expiry) to us, along with the `client_ key` from Thing B. In addition a flag indicating if the client details can be used in future is sent, for IoT this should always be set ‘reusable’:’false’ in order to force generation of a new client token for each transaction.
+Thing A will connect to Worldpay using TLS. It will then request a client_token by securely (see 2.2.1) sending a JSON message containing the paymentMethod, its payment credentials (PAN, expiry) to us, along with the client_ key from Thing B. In addition a flag indicating if the client details can be used in future is sent, for IoT this should always be set ‘reusable’:’false’ in order to force generation of a new client token for each transaction.
 
-A successful response will be an HTTP `POST` response containing fields: `client_token`, `reusable_flag` and the `payment_method_response`. Once received, the `client_token` shall be passed to Thing B.
+A successful response will be an HTTP POST response containing fields: client_token, reusable_flag and the payment_method_response. Once received, the client_token shall be passed to Thing B
 
 A sample request is shown in Appendix B: Sample Service Messaging.
 
-See [API keys](https://developer.worldpay.com/jsonapi/docs/api-keys) for documentation for `client_token_request` and `client_token_repsonse` APIs data descriptions.
+See [API keys](https://developer.worldpay.com/jsonapi/docs/api-keys) for documentation for client_token_request and client_token_repsonse APIs data descriptions.
 
 #### Payment authorisation request
 
-Thing B will process the order and request the payment from Worldpay providing its service key, `client_token`, transaction currency and payment amount. This is transmitted to Worldpay over TLS. After successful processing the payment, Worldpay will provide a payment response. Thing B shall then generate a service token, which Thing A may use in future to obtain the services that the payment has been made for. This is shown in Figure 7.
+Thing B will process the order and request the payment from Worldpay providing its Service key, client_token, transaction currency and payment amount. This is transmitted to Worldpay over TLS. After successful processing the payment, Worldpay will provide a payment response. Thing B shall then generate a service token, which Thing A may use in future to obtain the services that the payment has been made for. This is shown in Figure 7.
 
 ![Payment Authorisation Request](images/architecture/paymentAuthRequest.png)
 <figcaption>Figure 8\. Payment Authorisation Request.</figcaption>
@@ -135,22 +137,22 @@ Thing B will process the order and request the payment from Worldpay providing i
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
-|`order_request`|`client_service_key`, `client_token`, `currency_code`, `amount`, `order_description`, `customer_order_code`|Request payment from Worldpay.|
-|`order_response`|`order_code`, `client_token`, `order_description`, `amount`, `currency_code`, `payment_status`, `customer_order_code`, `environment`, `risk_score`, `payment_response` (`type`, `name`, `expiryMonth`, `expiryYear`, `card\_type`, `card\_scheme\_type`, `card\_scheme\_name`, `masked\_card\_number`, `card\_product\_type\_description\_non\_contactless`, `card\_product\_type\_description\_contactless`, `card\_issuer`, `country\_code`, `card\_class`, `pre-paid`)|Payment response indicating a successful transaction on the Worldpay platform.|
+|order_request|client_service_key, client_token, currency_code, amount, order_description, customer_order_code|Request payment from Worldpay.|
+|order_response|order_code, client_token, order_description, amount, currency_code, payment_status, customer_order_code, environment, risk_score, payment_response (type, name, expiryMonth, expiryYear, card\_type, card\_scheme\_type, card\_scheme\_name, masked\_card\_number, card\_product\_type\_description\_non\_contactless, card\_product\_type\_description\_contactless, card\_issuer, country\_code, card\_class, pre-paid)|Payment response indicating a successful transaction on the Worldpay platform.|
 
-Thing B will assemble a message to be posted to Worldpay that contains the client token, Service key, the amount, currency and transaction description. We will then perform an authorisation using the payment credentials identified by the `client_token`. A successful authorisation will result in a `payment_status` of SUCCESS being returned to Thing B.
+Thing B shall assemble a message to be posted to Worldpay that contains the client token, Service key, the amount, currency and transaction description. We will then perform an authorisation using the payment credentials identified by the client_token. A successful authorisation will result in a payment_status of SUCCESS being returned to Thing B.
 
 ##### Thing B to Thing A service token
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
-|`payment_request_response`|`service_delivery_token`, `server_UUID`, `client_UUID`, `total_paid`|`service_delivery_token` is passed to ThingB.|
+|payment_request_response|service_delivery_token, server_UUID, client_UUID, total_paid|service_delivery_token is passed to ThingB.|
 
-Thing B shall then generate a cryptographically secure `service_delivery_token`, which can be used by Thing A to request provision of services from Thing B.
+Thing B shall then generate a cryptographically secure service_delivery_token, which can be used by Thing A to request provision of services from Thing B.
 
 ### Service Delivery
 
-Once the payment has been made, Thing B shall return to broadcasting its available services. Thing A will now be able to consume the service from Thing B by providing the `service_delivery_token`. The service delivery may be in a single step, or over time. An overview of service delivery is shown in Figure 8.
+Once the payment has been made, Thing B shall return to broadcasting its available services. Thing A will now be able to consume the service from Thing B by providing the service_delivery_token. The service delivery may be in a single step, or over time. An overview of service delivery is shown in Figure 8.
 
 ![Service delivery](images/architecture/serviceDelivery.png)
 <figcaption>Figure 8\. Service delivery.</figcaption>
@@ -161,14 +163,14 @@ Once in possession of a service_token, Thing A may then request the service be p
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
-|`payment_request_response`|`service_delivery_token`, `server_UUID`, `client_UUID`, `total_paid`|`service_delivery_token` is passed to ThingB.|
-|`broadcast`|`server_UUID`|Advertising services and identifying the sender.|
-|`delivery_begin_request`|`service_delivery_token`, `client_UUID`, `number_of_units_to_supply`|Request the service item, with the `service_delivery_token` providing right to receive the service, and amount of service to be supplied.|
-|`delivery_begin_response`|`server_UUID`, `service_delivery_token`, `client_UUID`, `number_of_units_to_be_supplied`|Response for the service delivery. Confirmation of number of service units to be supplied (Allowing for less units than requested).|
-|`delivery_end`|`client_UUID`, `number_of_units_received`|Confirmation of service received.|
-|`delivery_end_response`|`server_UUID`, `service_delivery_token`, `client_UUID`, `number_of_units_just_supplied`, `number_of_units_remaining`|Service end indicating outstanding service credits and token for subsequent delivery.|
+|payment_request_response|service_delivery_token, server_UUID, client_UUID, total_paid|service_delivery_token is passed to ThingB.|
+|broadcast|server_UUID|Advertising services and identifying the sender.|
+|delivery_begin_request|service_delivery_token, client_UUID, number_of_units_to_supply|Request the service item, with the service_delivery_token providing right to receive the service, and amount of service to be supplied.|
+|delivery_begin_response|server_UUID, service_delivery_token, client_UUID, number_of_units_to_be_supplied|Response for the service delivery. Confirmation of number of service units to be supplied (Allowing for less units than requested).|
+|delivery_end|client_UUID, number_of_units_received|Confirmation of service received.|
+|delivery_end_response|server_UUID, service_delivery_token, client_UUID, number_of_units_just_supplied, number_of_units_remaining|Service end indicating outstanding service credits and token for subsequent delivery.|
 
-Thing A sends a message with the `service_delivery_token` to Thing B, along with the amount of service it wishes to consume. The response shall confirm the amount of service units that Thing B can supply to Thing A at that time. Once the service has been delivered, Thing A shall confirm the amount of service units it has received, with Thing B responding, stating the number of units still remaining to Thing A, if any.
+Thing A sends a message with the service_delivery_token to Thing B, along with the amount of service it wishes to consume. The response shall confirm the amount of service units that Thing B can supply to Thing A at that time. Once the service has been delivered, Thing A shall confirm the amount of service units it has received, with Thing B responding, stating the number of units still remaining to Thing A, if any.
 
 ## Useful terms
 

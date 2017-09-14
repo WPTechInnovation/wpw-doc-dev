@@ -9,7 +9,7 @@
 
 Don't get this confused with the global/european system, for this hackathon you can view the transactions through the virtual terminal here: [terminal.demo.securenet.com](https://terminal.demo.securenet.com) - login credentials from Clint
 
-### Android wrapper?
+### Android wrapper ?
 
 We have not developed an Android wrapper, however there is one in development on the 'native-interface' branch, which allows you to call into the RPC-agent/SDC by going directly without need for RPC. This partially works, and is not certified, and is on older code, but you are free to experiment with this.
 
@@ -18,7 +18,7 @@ Probably better is to use a 'proxy' Pi as your consumer, and expose each step / 
 ### Self provision the Raspberry Pi
 
 1.  Get the Pi to the provisioning team so they can get it on the Connectify network, or choose Connectify with password: wpt1c123
-2.  You should now be able to do the rest yourself, by ssh-ing to the device at `ssh pi@wppi##` e.g. for the Pi number 40: `ssh pi@wppi40`˜∏
+2.  You should now be able to do the rest yourself, by ssh-ing to the device at `ssh pi@wppi##` e.g. for the Pi number 40: `ssh pi@wppi40`
 3.  Change to the directory with the Worldpay Within SDK in it: `~/go/src/github.com/wptechinnovation/worldpay-within-sdk/`
 4.  Change to the develop branch `git checkout develop`
 5.  Pull the latest code `git pull`
@@ -34,16 +34,16 @@ Probably better is to use a 'proxy' Pi as your consumer, and expose each step / 
 6.  Test run it with `./rpc-agent -port 9018`, then close it using ctrl-C and make sure it is killed using `ps -e | grep rpc-agent` and if it's still running do a `Kill <process-id>`
 7.  You're now ready to provision your device with your securenet credentials, and the run the example apps
 
-Click [here](/python27.md) for more information about the Python wrapper.
+[More info about the python 2.7 wrapper](./python27.html)
 
 #### How to setup the other wrappers
 
 If you want to use the Java, Node.js, Python 3 or .Net wrappers then here is further information about the setup:
 
 1.  Java wrapper - talk to Conor or Kevin, you'll need to setup a project with the source and pull in the libs
-2.  [Node.js](./nodejs.md) - or talk to Conor
+2.  [Node.js](./nodejs.html) - or talk to Conor
 3.  Python 3 - talk to Kevin (HINT: once you've got this wrapper, theres a self contained setup.py)
-4.  [.net wrapper](./dotnet.md) - or talk to Conor or Kevin
+4.  [.net wrapper](./dotnet.html) - or talk to Conor or Kevin
 
 ### Environment variables for accessing RPC-agent
 
@@ -51,7 +51,7 @@ Note that with various support on the wrappers (2.7 python does not yet support)
 
 Set the environmental variable `WPW_HOME` which is the path to the WPWithin Home. Binaries should go in the $WPW_HOME/bin directory.
 
-For the node.js and Java wrappers, first check if `$WPW_HOME` is set. If so, the wrappers launch the appropriately named rpc-agent from `$WPW_HOME/bin/`. If not then look for the RPC agent in the `./rpc-agent-bin/` directory. E.g. for Mac OS (go with it that it's called amd64...):
+For the node.js and Java wrappers, first check if $WPW_HOME is set. If so the wrappers launch the appropriately named rpc-agent from $WPW_HOME/bin/. If not then look for the RPC agent in the ./rpc-agent-bin/ directory. E.g. for Mac OS (go with it that it's called amd64...):
 
 *   `$WPW_HOME/bin/rpc-agent-darwin-amd64`
 *   `./rpc-agent-bin/rpc-agent-darwin-amd64`

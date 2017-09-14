@@ -1,15 +1,11 @@
 ## Python Software Development Kit (SDK)
 
-The Python implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For more information see our documentation website here: [Worldpay Within](http://www.worldpaywithin.com).
+The Python implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a 'trusted trigger'. For more information see our documentation website here: [Worldpay Within](http://www.worldpaywithin.com).
 
 ### Prerequisites
 
 *   Before you get started, you should have Python installed on your system. We've built the SDK to work with version 2.7 and 3.
 *   You should create an account with [Worldpay Online](https://online.worldpay.com) so that you're able to generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
-
-!!! warning
-
-    Make sure you only use test API keys.
 
 ### Get started
 
