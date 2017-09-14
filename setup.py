@@ -47,7 +47,7 @@ setup(
     install_requires = install_requires,
     entry_points = {
         "mkdocs.themes": [
-            "material = material",
+            "worldpay = worldpay",
         ]
     },
     zip_safe = False

@@ -24,11 +24,11 @@
 set -e
 
 # Run build and terminate on error
-"$(yarn bin)"/gulp build --clean --optimize --revision
+"$(yarn bin)"/gulp build --clean --optimize --revision --no-lint
 
 # Deploy documentation to GitHub pages
 if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_PULL_REQUEST" == "false" ]; then
-  REMOTE="https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material"
+  REMOTE="https://${GH_TOKEN}@github.com/szarych/wpw-doc-dev"
 
   # Set configuration for repository and deploy documentation
   git config --global user.name "${GH_NAME}"
@@ -41,11 +41,10 @@ fi
 echo "$TRAVIS_BRANCH" | grep -qvE "^[0-9.]+$" && exit 0; :;
 
 # Install dependencies for release build
-pip install wheel twine
+pip install --user wheel twine
 
 # Build and install theme and Docker image
 python setup.py build sdist bdist_wheel --universal
-python setup.py install 2>/dev/null
 docker build -t $TRAVIS_REPO_SLUG .
 
 # Prepare build regression test
