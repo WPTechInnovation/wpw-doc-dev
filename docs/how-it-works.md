@@ -22,9 +22,9 @@ The producer device should follow this flow. These steps should map to the inter
 
 For the alpha release, we decided to go with four different wrappers. The documentation and API specification can be found here:
 <div class="download">
-  <a class="md-button" href="nodejs">Node.js</a>
-  <a class="md-button" href="python27">Python</a>
+  <a class="md-button" href="nodejs.md">Node.js</a>
+  <a class="md-button" href="python27.md">Python</a>
   <a class="md-button" href="java">Java</a>
-  <a class="md-button" href="dotnet">.NET</a>
-  <a class="md-button" href="getting-started-with-go">Go</a>
+  <a class="md-button" href="dotnet.md">.NET</a>
+  <a class="md-button" href="getting-started-with-go.md">Go</a>
 </div>

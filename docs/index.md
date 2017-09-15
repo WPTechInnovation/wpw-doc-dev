@@ -59,15 +59,16 @@ Driven by the [Internet of Things](#iot) (IoT), Worldpay is keen to demonstrate 
 
 We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs),[Python 2.7 and 3](python27), [Java](java), [.NET](dotnet) and [Go](getting-started-with-go). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
 
-## Why use it
 <a name="why-use-it"></a>
+## Why use it
 
 You might want to use Worldpay Within if you’re a startup company that’s creating technologies relating to the Internet of Things. Or perhaps you’re a hobby developer who likes creating innovative technologies in your spare time.
 
 Worldpay Within provides you with the functionality and the SDKs to explore how the Internet of Things allows you to test the interaction between two devices and see how devices can make and receive payments.
 
-## How it works
 <a name="how-it-works"></a>
+## How it works
+
 There are four simple interactions that take place with Worldpay Within: **Discover**, **Select**, **Pay** and **Release**.
 
 Imagine that a car needs some fuel. It stops by a petrol station and broadcasts that it needs fuel. The petrol station receives this signal, informs the car of how much fuel costs and what options are available, and once the shopper has made a choice, Worldpay will process the payment and inform the petrol station that it can fuel the car.
@@ -100,7 +101,7 @@ Want to find out more? Head over to the [Hackathons](hackathons) page.
 <a name="open-source"></a>
 ## It's open source
 
-Worldpay Within is open source, so why not give it a go yourself? You can find the GitHub library [here](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
+Worldpay Within is open source, so why not give it a go yourself? You can find the GitHub library [here](https://github.com/WPTechInnovation/worldpay-within-sdk).
 
 It's still an alpha based experiment, but we're actively building new features (and bug fixes) and are concurrently working on evolving the security architecture so we can take real payments.
 
@@ -111,11 +112,11 @@ We'd love to see what you can come up with, so why not become a contributor? Hea
 Worldpay Within's SDK is written in GoLang and runs on smart devices, including Raspberry Pi. It lets you make and receive payments within the IoT. We've got wrappers in these languages:
 
 <div class="download">
-  <a class="md-button" href="nodejs">Node.js</a>
-  <a class="md-button" href="python27">Python</a>
-  <a class="md-button" href="java">Java</a>
-  <a class="md-button" href="dotnet">.NET</a>
-  <a class="md-button" href="getting-started-with-go">Go</a>
+  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/nodejs/">Node.js</a>
+  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/python27/">Python</a>
+  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/python27/">Java</a>
+  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/dotnet/">.NET</a>
+  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/getting-started-with-go/">Go</a>
 </div>
 
 ## Contact us
