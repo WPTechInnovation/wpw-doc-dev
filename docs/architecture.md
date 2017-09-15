@@ -168,20 +168,3 @@ Once in possession of a service_token, Thing A may then request the service be p
 |`delivery_end_response`|`server_UUID`, `service_delivery_token`, `client_UUID`, `number_of_units_just_supplied`, `number_of_units_remaining`|Service end indicating outstanding service credits and token for subsequent delivery.|
 
 Thing A sends a message with the `service_delivery_token` to Thing B, along with the amount of service it wishes to consume. The response shall confirm the amount of service units that Thing B can supply to Thing A at that time. Once the service has been delivered, Thing A shall confirm the amount of service units it has received, with Thing B responding, stating the number of units still remaining to Thing A, if any.
-
-## Useful terms
-
-A few useful terms we're making quite a lot of use of, and if you are new to the world of payments these may be unfamiliar to you!
-
-|**Term**|**Definition**|
-| ------------- | ------------- |
-|API|Application Programming Interface|
-|Worldpay|Worldpay Open Payment API, [https://online.worldpay.com/](https://online.worldpay.com/)|
-|HCE|Host Card Emulation|
-|HTE|Host Terminal Emulation|
-|HTTPS|HyperText Transfer Protocol Secure|
-|IoT|Internet of Things|
-|P2PE|Point to Point Encryption|
-|TLS|Transport Layer Security|
-|UUID|Universally Unique Identifier|
-|RPC|Remote Procedure Call|
