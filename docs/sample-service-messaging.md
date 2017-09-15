@@ -11,8 +11,8 @@ We're going to build a reference application to prove the concepts and APIs outl
     ``` json
     {
         "DeviceDescription": "Worldpay Within Enabled Electric Car Charger",
-        "Hostname": "192.168.1.139",
-        "PortNumber": 8800,
+        "Hostname": "[Your hostname]",
+        "PortNumber": [Your port number],
         "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "UrlPrefix": "v1/carcharge"
     }
@@ -23,7 +23,7 @@ We're going to build a reference application to prove the concepts and APIs outl
 
 In order to build the URL, use the hostname and the port number, then concatenate the URL with “service/discover”.
 
-http://192.168.1.139:8800/v1/carcharge/service/discover
+http://[Your hostname]:[Your port number]/v1/carcharge/service/discover
 
     {
     } 
@@ -56,7 +56,7 @@ http://192.168.1.139:8800/v1/carcharge/service/discover
 
 In order to build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with “service ID” and then “prices”.
 
-http://192.168.1.139:8800/v1/carcharge/service/0/prices
+http://[Your hostname]:[Your port number]/v1/carcharge/service/0/prices
 
     {
     } 
@@ -98,7 +98,7 @@ Note: body content empty. URL includes the serviceID (i.e. 0) for the prices bei
 
 In order to build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with “service ID” and then “requestTotal”.
 
-http://192.168.1.139:8800/v1/carcharge/service/0/requestTotal
+http://[Your hostname]:[Your port number]/v1/carcharge/service/0/requestTotal
 Content: 
 
     ``` json
@@ -168,7 +168,7 @@ HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
 
 #### Payment request
 
-HTTP POST to http://192.168.1.139:8800/v1/carcharge/payment
+HTTP POST to http://[Your hostname]:[Your port number]/v1/carcharge/payment
 
     ``` json
     {
@@ -240,7 +240,7 @@ HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Mercha
 
 #### Begin Service Delivery request
 
-HTTP POST to http://192.168.1.139:8800/v1/carcharge/service/0/delivery/begin
+HTTP POST to http://[Your hostname]:[Your port number]/v1/carcharge/service/0/delivery/begin
 
 URL encodes the serviceID being requested
 
@@ -265,7 +265,7 @@ URL encodes the serviceID being requested
 
 #### End Service Delivery request
 
-HTTP POST to http://192.168.1.139:8800/v1/carcharge/service/0/delivery/end)
+HTTP POST to http://[Your hostname]:[Your port number]/v1/carcharge/service/0/delivery/end)
 
 URL encodes the serviceID being requested
 

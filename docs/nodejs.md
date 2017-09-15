@@ -1,4 +1,4 @@
-## Node.js Software Development Kit (SDK)
+## Node.js
 The Node.js implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For more information, see [Home](index).
 
 ### Prerequisites
@@ -58,10 +58,10 @@ If you're still having trouble, you can contact us at [Innovation@Worldpay.com](
 
 ### So what's happening?
 
-![The Worldpay Within puzzle piece](images/architecture/serviceOverview.png)
+![The Worldpay Within puzzle piece](images/architecture/Architecture1.png)
 <figcaption>The Worldpay Within Flows sequence diagram</figcaption>
 
-You can see there are four phases; **Discover**, **Negotiation**, **Payment**, and **Service delivery**. For more information, see [Worldpay Within](http://www.worldpaywithin.com).
+You can see there are four phases; **Discover**, **Select**, **Pay**, and **Release**. For more information, see [Worldpay Within](http://www.worldpaywithin.com).
 
 ## What IoT devices can I run this on?
 

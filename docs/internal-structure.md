@@ -15,11 +15,11 @@ A producer (merchant) is a smart device that is able to advertise availability o
 ![What Worldpay Within Does](images/the-flows/car-fuel-flow.png)
 <figcaption>What Worldpay Within Does</figcaption>
 
-The example above has a smart car looking for parking, and paying a smart parking meter for parking in it's bay. The smart car "wants to park", so has HCE (Host Card Emulation; card credentials) - it acts as a shopper. When trying to make a payment, it will connect to the Worldpay online payments gateway and request tokenised card credentials based on the smart device it is trying to consume services from.
+The above example has a smart car looking for petrol and then paying for the service from the petrol station. The smart car "wants petrol", so has HCE (Host Card Emulation; card credentials) - it acts as a Shopper. When trying to make a payment, it will connect to the Worldpay online payments gateway and request tokenised card credentials based on the smart device it is trying to consume services from.
 
-This token is then securely passed to the parking meter. In this case the parking meter is the Producer, or is acting as the merchant, or HTE (Host Terminal Emulation, accepting payment), which then directly communicates with the Worldpay gateway to make a 'card on file' or 'eCommerce' type payment authorisation request. With the payment authorised it then releases the purchased service to the consumer.
+This token is then securely passed to the petrol pump. In this case the petrol station is the Producer, or is acting as the merchant, or HTE (Host Terminal Emulation, accepting payment), which then directly communicates with the Worldpay gateway to make a 'card on file' or 'eCommerce' type payment authorisation request. With the payment authorised it then releases the purchased service to the consumer.
 
-The beauty of Worldpay Within is that it enables smart devices to both make payments and receive payments. In the example above the parking meter could then go on to make payments to the electricity companies smart hub which is powering it.
+The beauty of Worldpay Within is that it enables smart devices to both make and receive payments. In the example above the petrol station could then go on to make payments to the oil company's smart hub which is providing the petrol.
 
 ### How the Wrapper works
 

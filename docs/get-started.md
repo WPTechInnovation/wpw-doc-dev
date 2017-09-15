@@ -11,13 +11,14 @@ If you're new to Worldpay Within, you can download the four wrappers and begin t
 
 ## An experienced user
 If you're familiar with how Worldpay Within works, and have used the SDKs before, why not find out more in our Advanced section:
-1. [How it works](how-it-works)
-1. [Architecture](architecture)
-1. [Internal structure](internal-structure)
-1. [Sample service messaging](sample-service-messaging)
-1. [API Specification](api-spec)
 
-##Useful terms
+1. [How it works](how-it-works)
+2. [Architecture](architecture)
+3. [Internal structure](internal-structure)
+4. [Sample service messaging](sample-service-messaging)
+5. [API Specification](api-spec)
+
+## Useful terms
 There's quite a few terms we're using in the SDKs and the other documentation, so it's worth knowing what they are and what they mean.
 
 |**Term**|**Definition**|
