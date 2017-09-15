@@ -18,7 +18,7 @@
   <div class="txt">
     <h2>Why use it</h2>
     <p>You can make or take payments from an IoT device. Maybe your car is running out of fuel and it broadcasts a need for petrol; perhaps you're a petrol station that has a service to offer.</p>
-    <a class="md-button" href="why-use-it">Find out more</a>
+    <a class="md-button" href="#why-use-it">Find out more</a>
 
   </div>
 </div>
@@ -40,7 +40,7 @@
     <p>  </p>
   </div>
   <div>
-    <iframe class="video" src="https://www.youtube.com/embed/QSIPNhOiMoE?controls=1&fs=0&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/94fm-DYtLb8" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 <!--
@@ -60,14 +60,14 @@ Driven by the [Internet of Things](#iot) (IoT), Worldpay is keen to demonstrate 
 We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs), [Go](getting-started-with-go), [.NET](dotnet), Java and [Python 2.7 and 3](python27). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
 
 ### Why use it
-<a href="why-use-it"></a>
+<a name="why-use-it"></a>
 
 You might want to use Worldpay Within if you’re a startup company that’s creating technologies relating to the Internet of Things. Or perhaps you’re a hobby developer who likes creating innovative technologies in your spare time.
 
 Worldpay Within provides you with the functionality and the SDKs to explore how the Internet of Things allows you to test the interaction between two devices and see how devices can make and receive payments.
 
 ### How it works
-<a href="how-it-works"></a>
+<a name="how-it-works"></a>
 There are four simple interactions that take place with Worldpay Within: **Discover**, **Select**, **Pay** and **Release**.
 
 Imagine that a car needs some fuel. It stops by a petrol station and broadcasts that it needs fuel. The petrol station receives this signal, informs the car of how much fuel costs and what options are available, and once the shopper has made a choice, Worldpay will process the payment and inform the petrol station that it can fuel the car.
@@ -82,7 +82,7 @@ Imagine that a car needs some fuel. It stops by a petrol station and broadcasts 
 
 
 ### The Internet of Things
-<a href="#iot"></a> 
+<a name="iot"></a> 
 The Internet of Things (IoT) is an initiative to connect everyday items to the internet. It could be a car which needs to pay for fuel or some repairs, or a fridge which needs to order some groceries.
 
 [It is estimated](http://www.gartner.com/newsroom/id/3165317) that there will be 6 billion devices connected to the IoT by the end of 2016 and 20 billion by 2020\. Some of these devices will consume services from other devices for which a payment will be required.
@@ -97,8 +97,8 @@ In 2016, Worldpay hosted the [Payments & IOT Hackathon](http://worldpay-hackatho
 
 Want to find out more? Head over to the [Hackathons](hackathons) page.
 
-<a href="#open-source"></a>
 ### It's open source
+<a name="open-source"></a>
 
 Worldpay Within is open source, so why not give it a go yourself? You can find the GitHub library [here](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
 
@@ -111,13 +111,14 @@ We'd love to see what you can come up with, so why not become a contributor? Hea
 Worldpay Within's SDK is written in GoLang and runs on smart devices, including Raspberry Pi. It lets you make and receive payments within the IoT. We've got wrappers in these languages:
 
 <div class="download">
-  <a class="md-button" href="#java">Java</a>
-  <a class="md-button" href="dotnet">.NET</a>
-  <a class="md-button" href="python27">Python</a>
   <a class="md-button" href="nodejs">Node.js</a>
+  <a class="md-button" href="python27">Python</a>
+  <a class="md-button" href="java">Java</a>
+  <a class="md-button" href="dotnet">.NET</a>
+  <a class="md-button" href="getting-started-with-go">Go</a>
 </div>
 
 ### Contact us
 
 If you've got any questions, or if you want to find out more, why not give us a shout at [Innovation@Worldpay.com](mailto:innovation@worldpay.com).
-You can also 
+You can also contribute to our [GitHub repository](https://github.com/WPTechInnovation/worldpay-within-sdk) by [looking at our issues](https://github.com/WPTechInnovation/worldpay-within-sdk/issues) or becoming a contributor.

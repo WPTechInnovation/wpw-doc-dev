@@ -12,8 +12,8 @@ A consumer (shopper) is a smart device which is looking for services, pays for s
 A producer (merchant) is a smart device that is able to advertise availability of it's owner services to consumers, take a payment, and release those services to the trusted consumer that made the payment.
 
 ###How could I use it?
-![What Worldpay Within Does](images/intro/what-worldpay-within-does.JPG)
-<figcaption>What Worldpay Within Does.</figcaption>
+![What Worldpay Within Does](images/the-flows/car-fuel-flow.png)
+<figcaption>What Worldpay Within Does</figcaption>
 
 The example above has a smart car looking for parking, and paying a smart parking meter for parking in it's bay. The smart car "wants to park", so has HCE (Host Card Emulation; card credentials) - it acts as a shopper. When trying to make a payment, it will connect to the Worldpay online payments gateway and request tokenised card credentials based on the smart device it is trying to consume services from.
 

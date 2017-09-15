@@ -8,7 +8,7 @@ We're going to build a reference application to prove the concepts and APIs outl
 
 #### Service broadcast
 
-    ```json
+    ``` json
     {
         "DeviceDescription": "Worldpay Within Enabled Electric Car Charger",
         "Hostname": "192.168.1.139",
@@ -34,7 +34,7 @@ http://192.168.1.139:8800/v1/carcharge/service/discover
 
 #### Service list response
 
-    ```json
+    ``` json
     {
     "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
     "Services": [
@@ -65,7 +65,7 @@ Note: body content empty. URL includes the serviceID (i.e. 0) for the prices bei
 
 #### Service price response
 
-    ```json
+    ``` json
     {
         "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "Prices" : [{
@@ -101,7 +101,7 @@ In order to build the URL, use the hostname, with the port number, the url prefi
 http://192.168.1.139:8800/v1/carcharge/service/0/requestTotal
 Content: 
 
-    ```json
+    ``` json
     {
         "ClientID":"54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "SelectedNumberOfUnits":8,
@@ -111,7 +111,7 @@ Content:
 
 #### Get Total price response
 
-    ```json
+    ``` json
     {
         "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "ClientID": "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
@@ -127,7 +127,7 @@ Content:
 
 HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
 
-    ```json
+    ``` json
     {
         "clientKey" : "T_C_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "paymentMethod" : {
@@ -143,7 +143,7 @@ HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
 
 #### Token response content from Online.worldpay.com
 
-    ```json
+    ``` json
     {
         "token": "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
         "paymentMethod": {
@@ -170,7 +170,7 @@ HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
 
 HTTP POST to http://192.168.1.139:8800/v1/carcharge/payment
 
-    ```json
+    ``` json
     {
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "ClientToken" : "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy ",
@@ -182,7 +182,7 @@ HTTP POST to http://192.168.1.139:8800/v1/carcharge/payment
 
 HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Merchant's Service Key (Private)
 
-    ```json
+    ``` json
     {
         "amount" : 560,
         "currencyCode" : "GBP",
@@ -194,7 +194,7 @@ HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Mercha
 
 #### Order response content from Online.worldpay.com
 
-    ```json
+    ``` json
     {
         "orderCode" : "4d22cb5d-5dfb-43ce-9108-dfe230151429",
         "token" : "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy ",
@@ -228,7 +228,7 @@ HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Mercha
 
 #### Payment request response
 
-    ```json
+    ``` json
     {
         "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
@@ -244,7 +244,7 @@ HTTP POST to http://192.168.1.139:8800/v1/carcharge/service/0/delivery/begin
 
 URL encodes the serviceID being requested
 
-    ```json
+    ``` json
     {
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "ServiceDeliveryToken" : "3e7b4c25-157d-4b47-999c-e4faba086590",
@@ -254,7 +254,7 @@ URL encodes the serviceID being requested
 
 #### Begin Service Delivery response content:
 
-    ```json
+    ``` json
     {
         "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
@@ -269,7 +269,7 @@ HTTP POST to http://192.168.1.139:8800/v1/carcharge/service/0/delivery/end)
 
 URL encodes the serviceID being requested
 
-    ```json
+    ``` json
     {
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "ServiceDeliveryToken" : "3e7b4c25-157d-4b47-999c-e4faba086590",
@@ -279,7 +279,7 @@ URL encodes the serviceID being requested
 
 #### End Service Delivery response content
 
-    ```json
+    ``` json
     {
         "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",

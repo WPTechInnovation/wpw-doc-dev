@@ -1,10 +1,11 @@
-For the alpha release, we made the decision to go with four different wrappers. Their documented API can be found here:
+For the alpha release, we made the decision to go with five different wrappers. Their documented API can be found here:
 
 <div class="download">
-  <a class="md-button" href="#java">Java (Javadoc)</a>
-  <a class="md-button" href="python27">Python</a>
-  <a class="md-button" href="dotnet">.net / C#</a>
   <a class="md-button" href="nodejs">Node.js</a>
+  <a class="md-button" href="python27">Python</a>
+  <a class="md-button" href="java">Java</a>
+  <a class="md-button" href="dotnet">.NET</a>
+  <a class="md-button" href="getting-started-with-go">Go</a>
 </div>
 
 ## Specification
