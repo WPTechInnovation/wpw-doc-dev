@@ -55,7 +55,7 @@
 
 ### What it is
 
-Driven by the [Internet of Things](#iot), Worldpay is keen to demonstrate how you can integrate payments into everyday objects. So we created Worldpay Within.
+Driven by the [Internet of Things](#iot) (IoT), Worldpay is keen to demonstrate how you can integrate payments into everyday objects. So we created Worldpay Within.
 
 We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs), [Go](getting-started-with-go), [.NET](dotnet), Java and [Python 2.7 and 3](python27). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
 
@@ -111,7 +111,6 @@ We'd love to see what you can come up with, so why not become a contributor? Hea
 Worldpay Within's SDK is written in GoLang and runs on smart devices, including Raspberry Pi. It lets you make and receive payments within the IoT. We've got wrappers in these languages:
 
 <div class="download">
-  <a class="md-button" href="getting-started-with-go">Go</a>
   <a class="md-button" href="#java">Java</a>
   <a class="md-button" href="dotnet">.NET</a>
   <a class="md-button" href="python27">Python</a>
@@ -121,3 +120,4 @@ Worldpay Within's SDK is written in GoLang and runs on smart devices, including 
 ### Contact us
 
 If you've got any questions, or if you want to find out more, why not give us a shout at [Innovation@Worldpay.com](mailto:innovation@worldpay.com).
+You can also 
