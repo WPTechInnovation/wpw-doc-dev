@@ -6,8 +6,8 @@
   </div>
   <div class="txt">
     <h2>What it is</h2>
-    <p>Worldpay Within is an embeddable payments agent that can be 'plugged' into an app or smart device. It then lets you discover other devices and pay for that device’s service. We've got four wrappers you can use: <a href="python27.md">Python</a>, <a href="dotnet.md">.NET</a>, <a href="nodejs.md">Node.js</a> and <a href="python27.md">Java</a>.</p>
-    <a class="md-button" href="api-spec.md">API Spec</a>
+    <p>Worldpay Within is an embeddable payments agent that can be 'plugged' into an app or smart device. It then lets you discover other devices and pay for that device’s service. We've got four wrappers you can use: <a href="python27">Python</a>, <a href="dotnet">.NET</a>, <a href="nodejs">Node.js</a> and <a href="python27">Java</a>.</p>
+    <a class="md-button" href="#demo">Watch the demo</a>
   </div>
 </div>
 
@@ -18,6 +18,8 @@
   <div class="txt">
     <h2>Why use it</h2>
     <p>You can make or take payments from an IoT device. Maybe your car is running out of fuel and it broadcasts a need for petrol; perhaps you're a petrol station that has a service to offer.</p>
+    <a class="md-button" href="why-use-it">Find out more</a>
+
   </div>
 </div>
 
@@ -34,7 +36,7 @@
 
 <div class="explainer center">
   <div class="txt">
-    <h2>A demonstration</h2>
+    <h2 id="demo">A demonstration</h2>
     <p>  </p>
   </div>
   <div>
@@ -58,13 +60,14 @@ Driven by the [Internet of Things](#iot), Worldpay is keen to demonstrate how yo
 We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs), [Go](getting-started-with-go), [.NET](dotnet), Java and [Python 2.7 and 3](python27). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
 
 ### Why use it
+<a href="why-use-it"></a>
 
 You might want to use Worldpay Within if you’re a startup company that’s creating technologies relating to the Internet of Things. Or perhaps you’re a hobby developer who likes creating innovative technologies in your spare time.
 
 Worldpay Within provides you with the functionality and the SDKs to explore how the Internet of Things allows you to test the interaction between two devices and see how devices can make and receive payments.
 
 ### How it works
-
+<a href="how-it-works"></a>
 There are four simple interactions that take place with Worldpay Within: **Discover**, **Select**, **Pay** and **Release**.
 
 Imagine that a car needs some fuel. It stops by a petrol station and broadcasts that it needs fuel. The petrol station receives this signal, informs the car of how much fuel costs and what options are available, and once the shopper has made a choice, Worldpay will process the payment and inform the petrol station that it can fuel the car.
