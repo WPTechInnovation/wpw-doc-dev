@@ -1,3 +1,7 @@
+[![Travis][travis-image]][travis-link]
+
+  [travis-image]: https://travis-ci.org/WPTechInnovation/wpw-doc-dev.svg?branch=master
+
 # Worldpay Within
 New site build with MkDocs and Material UI. 
 
