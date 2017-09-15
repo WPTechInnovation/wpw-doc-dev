@@ -69,7 +69,7 @@ markdown_extensions:
 # Page tree
 pages:
   - Home: index.md
-  - SDKs:
+  - Get started: get-started.md
     - .NET: dotnet.md
     - Go: getting-started-with-go.md
     - Node.js: nodejs.md
