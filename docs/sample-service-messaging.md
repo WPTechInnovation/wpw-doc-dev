@@ -8,8 +8,7 @@ We're going to build a reference application to prove the concepts and APIs outl
 
 #### Service broadcast
 
-    !#js
-
+    ```json
     {
         "DeviceDescription": "Worldpay Within Enabled Electric Car Charger",
         "Hostname": "192.168.1.139",
@@ -17,7 +16,7 @@ We're going to build a reference application to prove the concepts and APIs outl
         "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "UrlPrefix": "v1/carcharge"
     }
-
+    ```
 
 
 #### Service list request
@@ -35,7 +34,7 @@ http://192.168.1.139:8800/v1/carcharge/service/discover
 
 #### Service list response
 
-    !#js
+    ```json
     {
     "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
     "Services": [
@@ -49,6 +48,7 @@ http://192.168.1.139:8800/v1/carcharge/service/discover
         }
     ]
     }
+    ```
 
 ### Service negotiation messages
 
@@ -65,7 +65,7 @@ Note: body content empty. URL includes the serviceID (i.e. 0) for the prices bei
 
 #### Service price response
 
-    !#js
+    ```json
     {
         "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "Prices" : [{
@@ -92,6 +92,7 @@ Note: body content empty. URL includes the serviceID (i.e. 0) for the prices bei
         }
         ]
     }
+    ```
 
 #### Get Total price request
 
@@ -100,16 +101,17 @@ In order to build the URL, use the hostname, with the port number, the url prefi
 http://192.168.1.139:8800/v1/carcharge/service/0/requestTotal
 Content: 
 
-    !#js
+    ```json
     {
         "ClientID":"54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "SelectedNumberOfUnits":8,
         "SelectedPriceID":1
     }
+    ```
 
 #### Get Total price response
 
-    !#js
+    ```json
     {
         "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "ClientID": "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
@@ -119,12 +121,13 @@ Content:
         "PaymentReferenceID": "e7c18800-706d-4f0c-933c-19f8d5be72da",
         "MerchantClientKey": " T_C_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "
     }
+    ```
 
 #### Token request for Online.worldpay.com
 
 HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
 
-    !#js
+    ```json
     {
         "clientKey" : "T_C_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "paymentMethod" : {
@@ -136,10 +139,11 @@ HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
         },
         "reusable" : false
     }
+    ```
 
 #### Token response content from Online.worldpay.com
 
-    !#js
+    ```json
     {
         "token": "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
         "paymentMethod": {
@@ -160,23 +164,25 @@ HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
         },
         "reusable": false
     }
+    ```
 
 #### Payment request
 
 HTTP POST to http://192.168.1.139:8800/v1/carcharge/payment
 
-    !#js
+    ```json
     {
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "ClientToken" : "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy ",
         "PaymentReferenceID" : "e7c18800-706d-4f0c-933c-19f8d5be72da"
     }
+    ```
 
 #### Order request for Online.worldpay.com
 
 HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Merchant's Service Key (Private)
 
-    !#js
+    ```json
     {
         "amount" : 560,
         "currencyCode" : "GBP",
@@ -184,10 +190,11 @@ HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Mercha
         "orderDescription" : "Car charging payment",
         "token" : "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy "
     }
+    ```
 
 #### Order response content from Online.worldpay.com
 
-    !#js
+    ```json
     {
         "orderCode" : "4d22cb5d-5dfb-43ce-9108-dfe230151429",
         "token" : "TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy ",
@@ -217,10 +224,11 @@ HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Mercha
             "value" : "1"
         }
     }
+    ```
 
 #### Payment request response
 
-    !#js
+    ```json
     {
         "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
@@ -228,6 +236,7 @@ HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Mercha
         "ServiceDeliveryToken" : "3e7b4c25-157d-4b47-999c-e4faba086590",
         "client-uuid":"719D329B-8909-4A8B-B352-E449C3132074"
     }
+    ```
 
 #### Begin Service Delivery request
 
@@ -235,22 +244,24 @@ HTTP POST to http://192.168.1.139:8800/v1/carcharge/service/0/delivery/begin
 
 URL encodes the serviceID being requested
 
-    !#js
+    ```json
     {
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "ServiceDeliveryToken" : "3e7b4c25-157d-4b47-999c-e4faba086590",
         "UnitsToSupply" : 8
     }
+    ```
 
 #### Begin Service Delivery response content:
 
-    !#js
+    ```json
     {
         "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "ServiceDeliveryToken" : "3e7b4c25-157d-4b47-999c-e4faba086590",
         "UnitsToSupply" : 8
     }
+    ```
 
 #### End Service Delivery request
 
@@ -258,16 +269,17 @@ HTTP POST to http://192.168.1.139:8800/v1/carcharge/service/0/delivery/end)
 
 URL encodes the serviceID being requested
 
-    !#js
+    ```json
     {
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
         "ServiceDeliveryToken" : "3e7b4c25-157d-4b47-999c-e4faba086590",
         "UnitsReceived" : 8
     }
+    ```
 
 #### End Service Delivery response content
 
-    !#js
+    ```json
     {
         "ServerID" : "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
         "ClientID" : "54560ba2-87c0-4172-a904-67a9b7a5e1ee",
@@ -275,3 +287,4 @@ URL encodes the serviceID being requested
         "UnitsJustSupplied" : 8,
         "UnitsRemaining" : 0
     }
+    ```

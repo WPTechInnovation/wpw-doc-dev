@@ -13,7 +13,7 @@ You'll be able to register for the event soon. If you're super keen and want to 
 
 Worldpay US was a sponsor of the ATDC Fintech Hackathon, a weekend in which 18 teams competed in a battle to demonstrate how well they integrated either Worldpay or TSYS APIs into their own applications.
 
-For more information, see [Atlanta hackathon page](atdc.html).
+For more information, see [Atlanta hackathon page](atdc).
 
 ### September 2016 - Our Inaugral Payments & Iot hackathon
 

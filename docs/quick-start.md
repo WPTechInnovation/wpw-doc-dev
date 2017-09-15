@@ -10,7 +10,7 @@ The devices are not synchronised by the SDK, so you'll need to ensure that the S
 
 ![The flows of the producer and consumer](images/the-flows/flows-mockup.png)
 <figcaption>The flows of the producer and consumer.</figcaption>
-
+<a href="#steps"></a>
 ##### The Consumer flow
 
 The consumer device should follow this flow. These steps should map to the interface either in Go, or in your chosen SDK wrapper.

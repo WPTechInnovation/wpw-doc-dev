@@ -2,7 +2,7 @@
 
 ### What is Worldpay Within and what does it do
 
-Worldpay Within is an embeddable payments agent for the Internet of Things (IoT) that can be 'plugged' into your smart device app, enabling it to discover, pay for, and consume the services of other devices. Conversely it also allows your smart device to expose services to consumer devices, receive payments for those services, and then release services to a consumer using the idea of a **'Trusted Trigger'.**
+Worldpay Within is an embeddable payments agent for the Internet of Things (IoT) that can be 'plugged' into your smart device app, enabling it to discover, pay for, and consume the services of other devices. Conversely it also allows your smart device to expose services to consumer devices, receive payments for those services, and then release services to a consumer using the idea of a **Trusted Trigger**.
 
 It is all about enabling payments in IoT, allowing smart devices to communicate with each other and exchange value for services.
 

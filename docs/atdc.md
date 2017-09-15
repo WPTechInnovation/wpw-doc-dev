@@ -34,16 +34,16 @@ Probably better is to use a 'proxy' Pi as your consumer, and expose each step / 
 6.  Test run it with `./rpc-agent -port 9018`, then close it using ctrl-C and make sure it is killed using `ps -e | grep rpc-agent` and if it's still running do a `Kill <process-id>`
 7.  You're now ready to provision your device with your securenet credentials, and the run the example apps
 
-Click [here](/python27.md) for more information about the Python wrapper.
+Click [here](python27) for more information about the Python wrapper.
 
 #### How to setup the other wrappers
 
 If you want to use the Java, Node.js, Python 3 or .Net wrappers then here is further information about the setup:
 
 1.  Java wrapper - talk to Conor or Kevin, you'll need to setup a project with the source and pull in the libs
-2.  [Node.js](./nodejs.md) - or talk to Conor
+2.  [Node.js](nodejs) - or talk to Conor
 3.  Python 3 - talk to Kevin (HINT: once you've got this wrapper, theres a self contained setup.py)
-4.  [.net wrapper](./dotnet.md) - or talk to Conor or Kevin
+4.  [.net wrapper](dotnet) - or talk to Conor or Kevin
 
 ### Environment variables for accessing RPC-agent
 

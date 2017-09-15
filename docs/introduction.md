@@ -2,7 +2,7 @@
 
 Driven by the [Internet of Things](#iot), Worldpay is keen to demonstrate how you can integrate payments into everyday objects. So we created Worldpay Within - an embeddable payments agent that can be 'plugged' into your app or a smart device. It then lets you discover other devices and pay for that device’s service.
 
-We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs.html), [Go](getting-started-with-go.html), [.NET](dotnet.html), Java and [Python 2.7 and 3](python27.html). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
+We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs), [Go](getting-started-with-go), [.NET](dotnet), Java and [Python 2.7 and 3](python27). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
 
 ### Why use it
 

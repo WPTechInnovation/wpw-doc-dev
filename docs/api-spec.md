@@ -2,9 +2,9 @@ For the alpha release, we made the decision to go with four different wrappers. 
 
 <div class="download">
   <a class="md-button" href="#java">Java (Javadoc)</a>
-  <a class="md-button" href="python27.md">Python 2.7 doc</a>
-  <a class="md-button" href="dotnet.md">.net / C# doc</a>
-  <a class="md-button" href="nodejs.md">Node.js doc</a>
+  <a class="md-button" href="python27">Python</a>
+  <a class="md-button" href="dotnet">.net / C#</a>
+  <a class="md-button" href="nodejs">Node.js</a>
 </div>
 
 ## Specification

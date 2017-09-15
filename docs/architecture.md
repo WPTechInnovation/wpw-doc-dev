@@ -4,7 +4,7 @@ To complement the architecture, we have released the Worldpay Within SDK. The in
 
 The core of the SDK is developed in the Go programming language with wrappers created for Java, Node.JS, Python and .net(C#). Service delivery and broadcast have been implemented using TCP/IP networking.
 
-For more information about the low level service messaging, see click [here](sample-service-messaging.md).
+For more information about the low level service messaging, see click [here](sample-service-messaging).
 
 ### Architecture Overview
 
@@ -109,11 +109,11 @@ The first step in the payment process is when Thing A receives the `Merchant_Cli
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
 |`client_token_request`|`Payment_method`, `reusable_flag`, `Merchant_client_key`, `Payment_method` (`name`, `PAN`, `expiryMonth`, `expiryYear`, `type`)|Request a client token from Worldpay, whilst providing us with the payment credentials.|
-|`client_token_response`|`client_token`, `reusable_flag`, `payment_method_response` (`type`, `name`, `expiryMonth`, `expiryYear`, `card\_type`, `card\_scheme\_type`, `card\_scheme\_name`, `masked\_card\_number`, `card\_product\_type\_description\_non\_contactless`, `card\_product\_type\_description\_contactless`, `card\_issuer`, `country\_code`, `card\_class`, `pre-paid`)|Response from Worldpay containing the client_token.|
+|`client_token_response`|`client_token`, `reusable_flag`, `payment_method_response` (`type`, `name`, `expiryMonth`, `expiryYear`, `card_type`, `card_scheme\_type`, `card_scheme_name`, `masked_card_number`, `card_product_type_description_non_contactless`, `card_product_type_description_contactless`, `card_issuer`, `country_code`, `card_class`, `pre-paid`)|Response from Worldpay containing the client_token.|
 |`Payment_request`|`client_token`, `client_UUID`, `payment_ref_ID`|The `client_token` is passed to Thing B to allow the 2^nd^ part of the transaction process to take place.|
 
 
-Thing A will connect to Worldpay using Transport Layer Security (TLS). It will then request a `client_token` by securely (see 2.2.1) sending a JSON message containing the `paymentMethod`, its payment credentials (PAN, expiry) to us, along with the `client_ key` from Thing B. In addition a flag indicating if the client details can be used in future is sent, for IoT this should always be set ‘reusable’:’false’ in order to force generation of a new client token for each transaction.
+Thing A will connect to Worldpay using Transport Layer Security (TLS). It will then request a `client_token` by securely (see 2.2.1) sending a JSON message containing the `paymentMethod`, its payment credentials (PAN, expiry) to us, along with the `client_key` from Thing B. In addition a flag indicating if the client details can be used in future is sent, for IoT this should always be set ‘reusable’:’false’ in order to force generation of a new client token for each transaction.
 
 A successful response will be an HTTP `POST` response containing fields: `client_token`, `reusable_flag` and the `payment_method_response`. Once received, the `client_token` shall be passed to Thing B.
 
@@ -135,7 +135,7 @@ Thing B will process the order and request the payment from Worldpay providing i
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
 |`order_request`|`client_service_key`, `client_token`, `currency_code`, `amount`, `order_description`, `customer_order_code`|Request payment from Worldpay.|
-|`order_response`|`order_code`, `client_token`, `order_description`, `amount`, `currency_code`, `payment_status`, `customer_order_code`, `environment`, `risk_score`, `payment_response` (`type`, `name`, `expiryMonth`, `expiryYear`, `card\_type`, `card\_scheme\_type`, `card\_scheme\_name`, `masked\_card\_number`, `card\_product\_type\_description\_non\_contactless`, `card\_product\_type\_description\_contactless`, `card\_issuer`, `country\_code`, `card\_class`, `pre-paid`)|Payment response indicating a successful transaction on the Worldpay platform.|
+|`order_response`|`order_code`, `client_token`, `order_description`, `amount`, `currency_code`, `payment_status`, `customer_order_code`, `environment`, `risk_score`, `payment_response` (`type`, `name`, `expiryMonth`, `expiryYear`, `card_type`, `card_scheme_type`, `card_scheme_name`, `masked_card_number`, `card_product_type_description_non_contactless`, `card_product_type_description_contactless`, `card_issuer`, `country_code`, `card_class`, `pre-paid`)|Payment response indicating a successful transaction on the Worldpay platform.|
 
 Thing B will assemble a message to be posted to Worldpay that contains the client token, Service key, the amount, currency and transaction description. We will then perform an authorisation using the payment credentials identified by the `client_token`. A successful authorisation will result in a `payment_status` of SUCCESS being returned to Thing B.
 

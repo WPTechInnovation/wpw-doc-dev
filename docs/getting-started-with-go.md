@@ -1,13 +1,13 @@
 ### Getting started
 
-To code against the raw Go SDK, you will need to install Go and the Goland SDK. Alternatively, you can code against one of the multiple language wrappers, which give access to the SDK. 
+To code against the raw Go SDK, you will need to install Go and the Golang SDK. Alternatively, you can code against one of the multiple language wrappers, which give access to the SDK. 
 
 The Golang SDK communicates with these other languages using RPC calls (in both directions), and the wrappers in the background interface using Thrift. This is not exposed to you as a developer; you work with the Interface layer in your language of choice. We've got SDKs in the following languages:
 <div class="download">
   <a class="md-button" href="#java">Java (Javadoc)</a>
-  <a class="md-button" href="python27.md">Python 2.7 doc</a>
-  <a class="md-button" href="dotnet.md">.net / C# doc</a>
-  <a class="md-button" href="nodejs.md">Node.js doc</a>
+  <a class="md-button" href="python27">Python 2.7 doc</a>
+  <a class="md-button" href="dotnet">.net / C# doc</a>
+  <a class="md-button" href="nodejs">Node.js doc</a>
 </div>
 
 ### The binaries (if you don't want to build from source)
@@ -16,7 +16,7 @@ Please see the [Releases](https://github.com/WPTechInnovation/worldpay-within-sd
 
 While the RPC Agent can be run from anywhere, it makes sense to add it to the directory of the application which will call it. The reason for this is that each application needs it own running instance of the RPC Agent and it can easily get confusing when there are multiple applications and agents deployed.
 
-Please see the examples in both the Java and [Node.JS](nodejs.md) wrappers. these examples currently hold binaries for MacOS x64\. I suggest replacing that binary with an alternate build, if required.
+Please see the examples in both the Java and [Node.JS](nodejs) wrappers. these examples currently hold binaries for MacOS x64\. I suggest replacing that binary with an alternate build, if required.
 
 The dev client can really be run from anywhere as it is not coupled with anything else.
 
@@ -38,7 +38,7 @@ The dev client can really be run from anywhere as it is not coupled with anythin
 
 The RPC client takes command line flags e.g. `-port 9091` but it can also take the flag `-configfile 'conf.json'` so you can specify the configuration in a config file. For example:
 
-    !#go 
+    ``` json
     {
         "WorldpayWithinConfig": {
             "BufferSize" : 100,
@@ -52,6 +52,7 @@ The RPC client takes command line flags e.g. `-port 9091` but it can also take t
             "Secure": false
         }
     }
+    ```
 
 ### Tutorial on running two example apps on one machine
 

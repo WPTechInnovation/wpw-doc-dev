@@ -1,10 +1,15 @@
 ## Node.js Software Development Kit (SDK)
+The Node.js implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For more information, see [Home](index).
 
 ### Prerequisites
 
 *   Before you get started, you should have [Node.js](https://nodejs.org/en/) installed on your system. We've tested this wrapper with version 6.11.1.
 *   You should also have [npm](https://npmjs.com/) installed on your machine too.
-*   You should create an account with [Worldpay Online](https://online.worldpay.com) so that you're able to generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. **Warning: Make sure you only use test API keys.**
+*   You should create an account with [Worldpay Online](https://online.worldpay.com) so that you're able to generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. 
+
+!!! warning
+	
+	Make sure you only use test API keys.
 
 ### Get started
 
@@ -64,6 +69,6 @@ Hopefully any. We've only tested this on RPi - Raspberry Pis at the moment, but 
 
 ### Want to contribute?
 
-If you want to contribute, clone the repository and create a branch. Once you've made your changes, create a pull request. We'll review your code, and if accepted it will be merged into the code base. It's worth checkout out the [Internal Structure of Worldpay Within](internal-structure.html) and [Sample Service Messaging](sample-service-messaging.html) pages if you want to learn more about how Worldpay Within works.
+If you want to contribute, clone the repository and create a branch. Once you've made your changes, create a pull request. We'll review your code, and if accepted it will be merged into the code base. It's worth checkout out the [Internal Structure of Worldpay Within](internal-structure) and [Sample Service Messaging](sample-service-messaging) pages if you want to learn more about how Worldpay Within works.
 
 You can also [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues), or contact us directly at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). You can also reach out to us on our [Slack channel](iotpay.slack.com).
