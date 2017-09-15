@@ -22,7 +22,7 @@
 site_name: Worldpay Within
 site_description: Worldpay Within website
 site_author: Worldpay Within
-site_url: http://localhost:8000/
+site_url: https://wptechinnovation.github.io/wpw-doc-dev/
 site_favicon: 'assets/images/favicon.ico'
 
 # Repository
