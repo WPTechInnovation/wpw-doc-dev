@@ -70,6 +70,7 @@ markdown_extensions:
 pages:
   - Home: index.md
   - Get started: get-started.md
+  - SDK:
     - Node.js: nodejs.md
     - Python 2.7: python27.md
     - Java: python27.md 
