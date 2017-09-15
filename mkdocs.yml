@@ -75,13 +75,14 @@ pages:
     - Node.js: nodejs.md
     - Python 2.7: python27.md
     - Java: python27.md 
-  - Hackathons: hackathons.md
-  - Advanced:
+    - Advanced:
       - How it works: how-it-works.md
       - Architecure: architecture.md
       - Internal structure: internal-structure.md
       - Sample service messaging: sample-service-messaging.md
       - API Spec: api-spec.md
+    - Hackathons: hackathons.md
+    - Contact us: home.md
 
 # Google Analytics
 google_analytics:
