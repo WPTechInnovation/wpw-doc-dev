@@ -73,7 +73,7 @@ pages:
   - SDK:
     - Node.js: nodejs.md
     - Python: python27.md
-    - Java: python27.md 
+    - Java: java.md 
     - .NET: dotnet.md
     - Go: getting-started-with-go.md
   - Advanced:
