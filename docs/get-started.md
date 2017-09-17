@@ -24,7 +24,7 @@ There's quite a few terms we're using in the SDKs and the other documentation, s
 |**Term**|**Definition**|
 | ------------- | ------------- |
 |API|Application Programming Interface|
-|Worldpay|Worldpay Open Payment API, [https://online.worldpay.com/](https://online.worldpay.com/)|
+|Worldpay|Worldpay Online Payment API, [https://online.worldpay.com/](https://online.worldpay.com/)|
 |HCE|Host Card Emulation|
 |HTE|Host Terminal Emulation|
 |HTTPS|HyperText Transfer Protocol Secure|
