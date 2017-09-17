@@ -2,11 +2,11 @@
 ## New to Worldpay Within
 If you're new to Worldpay Within, you can download the four wrappers and begin testing the SDKs. We've got:
 <div class="download">
-  <a class="md-button" href="nodejs.md">Node.js</a>
-  <a class="md-button" href="python27.md">Python</a>
-  <a class="md-button" href="java">Java</a>
-  <a class="md-button" href="dotnet.md">.NET</a>
-  <a class="md-button" href="getting-started-with-go.md">Go</a>
+  <a class="md-button" href="../nodejs/">Node.js</a>
+  <a class="md-button" href="../python27/">Python</a>
+  <a class="md-button" href="../java/">Java</a>
+  <a class="md-button" href="../dotnet/">.NET</a>
+  <a class="md-button" href="../getting-started-with-go/">Go</a>
 </div>
 
 ## An experienced user

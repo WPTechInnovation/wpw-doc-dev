@@ -19,6 +19,7 @@
 # IN THE SOFTWARE.
 
 # macOS internals
+/.DS_Store
 .DS_Store
 
 # NPM-related
