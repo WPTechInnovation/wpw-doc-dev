@@ -14,7 +14,7 @@ The Java implementation for the Worldpay Within IoT payment SDK. This SDK enable
 ## Get started
 
 1. Download the [repository](https://github.com/WPTechInnovation/wpw-sdk-java).
-2. Get the dependenet repos by typing 'git submodule update --recursive --remote'
+2. Get the dependenet repos by typing `git submodule update --recursive --remote`
  
 ## Run the examples
 
