@@ -16,7 +16,7 @@ Please see the [Releases](https://github.com/WPTechInnovation/worldpay-within-sd
 
 While the RPC Agent can be run from anywhere, it makes sense to add it to the directory of the application which will call it. The reason for this is that each application needs it own running instance of the RPC Agent and it can easily get confusing when there are multiple applications and agents deployed.
 
-Please see the examples in both the [Java](java) and [Node.JS](nodejs) wrappers. these examples currently hold binaries for MacOS x64\. I suggest replacing that binary with an alternate build, if required.
+Please see the examples in both the [Java](java) and [Node.JS](nodejs) wrappers. These examples currently hold binaries for MacOS x64\. I suggest replacing that binary with an alternate build, if required.
 
 The dev client can really be run from anywhere as it is not coupled with anything else.
 
