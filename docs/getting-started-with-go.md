@@ -40,17 +40,17 @@ The RPC client takes command line flags e.g. `-port 9091` but it can also take t
 
 ``` json
 {
- "WorldpayWithinConfig": {
- "BufferSize" : 100,
- "Buffered": false,
- "Framed": false,
- "Host": "127.0.0.1",
- "Logfile": "worldpayWithin.log",
- "Loglevel": "warn",
- "Port": 9081,
- "Protocol": "binary",
- "Secure": false
- }
+	"WorldpayWithinConfig": {
+		"BufferSize" : 100,
+		"Buffered": false,
+		"Framed": false,
+		"Host": "127.0.0.1",
+		"Logfile": "worldpayWithin.log",
+		"Loglevel": "warn",
+		"Port": 9081,
+		"Protocol": "binary",
+ 		"Secure": false
+	}
 }
 ```
 

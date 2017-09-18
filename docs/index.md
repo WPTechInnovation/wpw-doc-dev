@@ -43,21 +43,12 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/94fm-DYtLb8" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
-<!--
-<div class="download">
-  <h2>API docs</h2>
-  <a class="md-button" href="https://github.com/WPTechInnovation/worldpay-within-sdk/tree/master/wrappers/java">Java</a>
-  <a class="md-button" href="dotnet.html">.NET</a>
-  <a class="md-button" href="getting-started-with-go.html">Go</a>
-  <a class="md-button" href="nodejs.html">Node.js</a>
-  <a class="md-button" href="python27.html">Python (2.7)</a>
-</div>-->
 
 ## What it is
 
 Driven by the [Internet of Things](#iot) (IoT), Worldpay is keen to demonstrate how you can integrate payments into everyday objects. So we created Worldpay Within.
 
-We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs), [Python](python27), [Java](java), [.NET](dotnet) and [Go](getting-started-with-go). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
+We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [Node.js](nodejs), [Python](python27), [Java](java), [.NET](dotnet) and [Go](getting-started-with-go). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
 
 <a name="why-use-it"></a>
 ## Why use it
@@ -112,11 +103,11 @@ We'd love to see what you can come up with, so why not become a contributor? Hea
 Worldpay Within's SDK is written in GoLang and runs on smart devices, including Raspberry Pi. It lets you make and receive payments within the IoT. We've got wrappers in these languages:
 
 <div class="download">
-  <a class="md-button" href="../nodejs/">Node.js</a>
-  <a class="md-button" href="../python27/">Python</a>
-  <a class="md-button" href="../java/">Java</a>
-  <a class="md-button" href="../dotnet/">.NET</a>
-  <a class="md-button" href="../getting-started-with-go/">Go</a>
+  <a class="md-button" href="../nodejs">Node.js</a>
+  <a class="md-button" href="../python27">Python</a>
+  <a class="md-button" href="../java">Java</a>
+  <a class="md-button" href="../dotnet">.NET</a>
+  <a class="md-button" href="../getting-started-with-go">Go</a>
 </div>
 
 ## Contact us
