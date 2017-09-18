@@ -6,7 +6,7 @@
   </div>
   <div class="txt">
     <h2>What it is</h2>
-    <p>Worldpay Within is an embeddable payments agent that can be 'plugged' into an app or smart device. It then lets you discover other devices and pay for that device’s service. We've got five wrappers you can use: <a href="python27">Python</a>, <a href="dotnet">.NET</a>, <a href="nodejs">Node.js</a> and <a href="python27">Java</a>.</p>
+    <p>Worldpay Within is an embeddable payments agent that can be 'plugged' into an app or smart device. It then lets you discover other devices and pay for that device's service(s). We've got the SDK in five languages: <a href="python27">Python</a>, <a href="dotnet">.NET</a>, <a href="nodejs">Node.js</a> and <a href="python27">Java</a>.</p>
     <a class="md-button" href="#demo">Watch the demo</a>
   </div>
 </div>
@@ -25,7 +25,7 @@
 
 <div class="explainer left">
   <div>
-    <img src="images/the-flows/how-it-works.png" />
+    <img src="images/the-flows/how-it-works-news.png" />
   </div>
   <div class="txt">
     <h2>How it works</h2>
@@ -57,7 +57,7 @@
 
 Driven by the [Internet of Things](#iot) (IoT), Worldpay is keen to demonstrate how you can integrate payments into everyday objects. So we created Worldpay Within.
 
-We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs), [Python 2.7 and 3](python27), [Java](java), [.NET](dotnet) and [Go](getting-started-with-go). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
+We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [node.js](nodejs), [Python](python27), [Java](java), [.NET](dotnet) and [Go](getting-started-with-go). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
 
 <a name="why-use-it"></a>
 ## Why use it
@@ -114,7 +114,7 @@ Worldpay Within's SDK is written in GoLang and runs on smart devices, including 
 <div class="download">
   <a class="md-button" href="nodejs/">Node.js</a>
   <a class="md-button" href="python27/">Python</a>
-  <a class="md-button" href="python27/">Java</a>
+  <a class="md-button" href="java/">Java</a>
   <a class="md-button" href="dotnet/">.NET</a>
   <a class="md-button" href="getting-started-with-go/">Go</a>
 </div>

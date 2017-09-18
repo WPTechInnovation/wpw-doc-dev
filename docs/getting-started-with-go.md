@@ -1,4 +1,4 @@
-### Getting started with Go
+## Getting started with Go
 
 To code against the raw Go SDK, you will need to install Go and the Golang SDK. Alternatively, you can code against one of the multiple language wrappers, which give access to the SDK. 
 
@@ -8,24 +8,23 @@ The Golang SDK communicates with these other languages using RPC calls (in both 
   <a class="md-button" href="python27">Python</a>
   <a class="md-button" href="java">Java</a>
   <a class="md-button" href="dotnet">.NET</a>
-  <a class="md-button" href="getting-started-with-go">Go</a>
 </div>
 
-### The binaries (if you don't want to build from source)
+## The binaries (if you don't want to build from source)
 
 Please see the [Releases](https://github.com/WPTechInnovation/worldpay-within-sdk/releases) section of GitHub for access to pre-built binaries of the RPC Agent and Dev Client apps. Both of the apps have been built for 32bit and 64bit architectures on Windows, MacOS, Linux and Linux (ARM).
 
 While the RPC Agent can be run from anywhere, it makes sense to add it to the directory of the application which will call it. The reason for this is that each application needs it own running instance of the RPC Agent and it can easily get confusing when there are multiple applications and agents deployed.
 
-Please see the examples in both the Java and [Node.JS](nodejs) wrappers. these examples currently hold binaries for MacOS x64\. I suggest replacing that binary with an alternate build, if required.
+Please see the examples in both the [Java](java) and [Node.JS](nodejs) wrappers. these examples currently hold binaries for MacOS x64\. I suggest replacing that binary with an alternate build, if required.
 
 The dev client can really be run from anywhere as it is not coupled with anything else.
 
-#### Usage
+### Usage
 
 *   RPC Agent `./rpc-agent -configfile <filename></filename>`. Please see explanation of rpc-agent config file for further info.*   Dev Client `./dev-client`
 
-### Install - if you want to go from the Go source files!
+## Install - if you want to go from the Go source files!
 
 1.  Install Go command line
 2.  Set up the environmental variables correctly; you only need to set `$GOPATH`, and that should be set as `//`, where is wherever you want the code, is `/src/innovation.worldpay.com`
@@ -35,7 +34,7 @@ The dev client can really be run from anywhere as it is not coupled with anythin
 6.  Get the dependencies: `go get github.com/nu7hatch/gouuid`
 7.  Get the dependencies: `go get git.apache.org/thrift.git/lib/go/thrift`
 
-### Configuration file versus command line flags
+## Configuration file versus command line flags
 
 The RPC client takes command line flags e.g. `-port 9091` but it can also take the flag `-configfile 'conf.json'` so you can specify the configuration in a config file. For example:
 

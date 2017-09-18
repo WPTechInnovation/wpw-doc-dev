@@ -1,5 +1,3 @@
-# .NET 
-
 The .NET implementation for the Worldpay Within IoT payment SDK. This SDK, or Software Development Kit, enables smart devices to discover each other, negogiate a price for services, make a payment (through the Worldpay Online Payment gateway) for services, and then consume services via a **trusted trigger**. For more information, see [Home](index).
 
 ## Prerequisites
@@ -63,7 +61,7 @@ Re-run the sample application and you should see the payments coming through on 
 ![The Worldpay Within puzzle piece](images/architecture/Architecture1.png)
 <figcaption>The Worldpay Within Flows sequence diagram</figcaption>
 
-You can see there are four phases; **Discover**, **Select**, **Pay**, and **Release**. For more information, see [Worldpay Within](http://www.worldpaywithin.com).
+You can see there are four phases; **Discover**, **Select**, **Pay**, and **Release**. For more information, see [Home](index).
 
 ## Introduction to the different .NET projects
 
@@ -97,3 +95,9 @@ To use Worldpay Within, add the following DLLs to your project path:
 1. `Logging Framework` - whatever logging framework we're going to use.
 
 To run a Worldpay Within application, the Thrift RPC code will need to be able to talk to an RPC Agent. The RPC Agent is a standalone application that manages the communication with remote third parties (for example, if you are creating a Consumer then the SDK code communicates with a local RPC Agent using the Thrift protocol, which then talks via HTTP to a remote RPC Agent, which then talks to a local Producer via the Thrift protocol).
+
+## Want to contribute?
+
+If you want to contribute, clone the repository and create a branch. Once you've made your changes, create a pull request. We'll review your code, and if accepted it will be merged into the code base. It's worth checking out the [Internal Structure of Worldpay Within](internal-structure) and [Sample Service Messaging](sample-service-messaging) pages if you want to learn more about how Worldpay Within works.
+
+You can also [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues), or contact us directly at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). You can also reach out to us on our [Slack channel](http://iotpay.slack.com).
