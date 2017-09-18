@@ -7,7 +7,7 @@
 
 ### How to see my transactions on Worldpay total?
 
-Don't get this confused with the global/european system, for this hackathon you can view the transactions through the virtual terminal here: [terminal.demo.securenet.com](https://terminal.demo.securenet.com) - login credentials from Clint
+Don't get this confused with the global/european system, for this hackathon you can view the transactions through the virtual terminal here: [terminal.demo.securenet.com](https://terminal.demo.securenet.com) - login credentials from Clint.
 
 ### Android wrapper?
 

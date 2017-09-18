@@ -4,10 +4,10 @@ To code against the raw Go SDK, you will need to install Go and the Golang SDK. 
 
 The Golang SDK communicates with these other languages using RPC calls (in both directions), and the wrappers in the background interface using Thrift. This is not exposed to you as a developer; you work with the Interface layer in your language of choice. We've got SDKs in the following languages:
 <div class="download">
-  <a class="md-button" href="nodejs">Node.js</a>
-  <a class="md-button" href="python27">Python</a>
-  <a class="md-button" href="java">Java</a>
-  <a class="md-button" href="dotnet">.NET</a>
+  <a class="md-button" href="../nodejs">Node.js</a>
+  <a class="md-button" href="../python27">Python</a>
+  <a class="md-button" href="../java">Java</a>
+  <a class="md-button" href="../dotnet">.NET</a>
 </div>
 
 ## The binaries (if you don't want to build from source)
@@ -38,21 +38,21 @@ The dev client can really be run from anywhere as it is not coupled with anythin
 
 The RPC client takes command line flags e.g. `-port 9091` but it can also take the flag `-configfile 'conf.json'` so you can specify the configuration in a config file. For example:
 
-    ``` json
-    {
-        "WorldpayWithinConfig": {
-            "BufferSize" : 100,
-            "Buffered": false,
-            "Framed": false,
-            "Host": "127.0.0.1",
-            "Logfile": "worldpayWithin.log",
-            "Loglevel": "warn",
-            "Port": 9081,
-            "Protocol": "binary",
-            "Secure": false
-        }
-    }
-    ```
+``` json
+{
+ "WorldpayWithinConfig": {
+ "BufferSize" : 100,
+ "Buffered": false,
+ "Framed": false,
+ "Host": "127.0.0.1",
+ "Logfile": "worldpayWithin.log",
+ "Loglevel": "warn",
+ "Port": 9081,
+ "Protocol": "binary",
+ "Secure": false
+ }
+}
+```
 
 ### Tutorial on running two example apps on one machine
 

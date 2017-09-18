@@ -43,5 +43,4 @@ For the first release we have open sourced the wrappers and example apps, but ke
 
 It is of course useful to know exactly what is happening inside this black box, so the below page details the architecture of Worldpay Within and what is happening in the internals.
 
-
-[The Worldpay Within Architecture](architecture.html)
+Click [here](architecture) for more information about the Worldpay Within architecture.
