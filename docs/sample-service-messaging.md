@@ -8,15 +8,15 @@ We're going to build a reference application to prove the concepts and APIs outl
 
 ### Service broadcast
 
-    ``` json
-    {
-    "DeviceDescription": "Worldpay Within Enabled Electric Car Charger",
-    "Hostname": "[Your hostname]",
-    "PortNumber": [Your port number],
-    "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
-    "UrlPrefix": "v1/carcharge"
-    }
-    ```
+``` json
+{
+  "DeviceDescription": "Worldpay Within Enabled Electric Car Charger",
+  "Hostname": "[Your hostname]",
+  "PortNumber": [Your port number],
+  "ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
+  "UrlPrefix": "v1/carcharge"
+}
+```
 
 
 ### Service list request
