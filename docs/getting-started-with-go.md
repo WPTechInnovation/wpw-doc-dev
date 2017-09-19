@@ -63,6 +63,7 @@ The RPC client takes command line flags e.g. `-port 9091` but it can also take t
 <figcaption>Showing the payment in online.worldpay.com.</figcaption>
 
 In the example, we're using two different ports:
+
 *   Java - 9090 - Producer
 *   Node.js - 9091 - Consumer
 

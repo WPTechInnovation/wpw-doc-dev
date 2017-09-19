@@ -57,7 +57,10 @@ You can see there are four phases; **Discover**, **Select**, **Pay**, and **Rele
 
 ## What IoT devices can I run this on?
 
-Hopefully any. We've only tested this on RPi - Raspberry Pis at the moment, but we welcome experiments on all other kinds of devices! Note that they will need to be on the same network - and that network should allow for UDP broadcast traffic. Most mobile hotspots allow this; a lot of corporate networks do not...
+Hopefully any. We've only tested this on RPi - Raspberry Pis - at the moment, but we welcome experiments on all other kinds of devices! 
+!!! note
+	
+	The devices need to be on the same network - and that network should allow for UDP broadcast traffic. Most mobile hotspots allow this; a lot of corporate networks do not...
 
 ## Want to contribute?
 

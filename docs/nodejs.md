@@ -17,17 +17,20 @@ Once you've got Node.js and npm.js, you should be good to go.
 1.  Clone or download [the repository](https://github.com/WPTechInnovation/wpw-sdk-nodejs).
 2.  Change to the folder `cd wpw-sdk-nodejs` (if using linux / unix).
 3.  Run the following command: `npm install thrift sleep`.  
-    Note: If you are using a different package manager than npm, please adjust the command accordingly.  
-    (If there are issues about access rights, add sudo in front of the above command)
+    
+!!! note
+		
+	If you are using a different package manager than npm, please adjust the command accordingly.  
+	(If there are issues about access rights, add `sudo` in front of the above command)
 
 ## Run the examples
 
 Once you've got the repository and have changed to the right folder, you can start testing to see if it works. We'd recommend using your own test API keys for this. We've left our ones in the code, but you won't be able to see the payments with our keys.
 
-1.  In one terminal / cmd (or on one device) run: `node example-producer-callbacks.js`.  
+1.  In one terminal/cmd (or on one device) run: `node example-producer-callbacks.js`.  
     (You can run `node example-producer.js` but this does not recall the producer, once it times out)
-2.  In another terminal / cmd, (or on another device, on the same network) run: `node example-consumer.js`.
-3.  A payment should happen. If you see the serviceDeliveryToken returned within the producer terminal/cmd, you will know that the payment was complete.
+2.  In another terminal/cmd, (or on another device, on the same network) run: `node example-consumer.js`.
+3.  A payment should happen. If you see the `serviceDeliveryToken` returned within the producer terminal/cmd, you will know that the payment was complete.
 
 ## See the payments
 
@@ -49,9 +52,9 @@ Once the devices have successfully communicated with each other to make a paymen
 
 If you get some odd error messages talking about a 'rpc-agent':
 
-*   Try typing the following command: 'ps -e | grep rpc' to get the pid(s) of rpc-agents that are running.
-*   Then do kill <pid> e.g. kill 13249234 to kill these processes.
-*   Try re-running the examples
+*   Try typing the following command: `ps -e | grep rpc` to get the pid(s) of rpc-agents that are running.
+*   Then do `kill <pid>` e.g. `kill 13249234` to kill these processes.
+*   Try re-running the examples.
 
 If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
 
@@ -64,7 +67,10 @@ You can see there are four phases; **Discover**, **Select**, **Pay**, and **Rele
 
 ## What IoT devices can I run this on?
 
-Hopefully any. We've only tested this on RPi - Raspberry Pis at the moment, but we welcome experiments on all other kinds of devices! Note that they will need to be on the same network - and that network should allow for UDP broadcast traffic. Most mobile hotspots allow this; a lot of corporate networks do not...
+Hopefully any. We've only tested this on RPi - Raspberry Pis - at the moment, but we welcome experiments on all other kinds of devices! 
+!!! note
+	
+	The devices need to be on the same network - and that network should allow for UDP broadcast traffic. Most mobile hotspots allow this; a lot of corporate networks do not...
 
 ## Want to contribute?
 
