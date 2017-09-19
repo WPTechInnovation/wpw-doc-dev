@@ -1,12 +1,12 @@
-To complement the architecture, we have released the Worldpay Within SDK. The intention for of the SDK is to encapsulate implementation and therefore assist third party vendors and developers in integration into their Internet of Things (IoT) solutions.
+To complement the architecture, we have released the Worldpay Within SDK. The intention for the SDK is to encapsulate implementation and therefore help third party vendors and developers integration into their Internet of Things (IoT) solutions.
 
-The core of the SDK is developed in the Go programming language with wrappers created for Java, Node.JS, Python and .net(C#). Service delivery and broadcast have been implemented using TCP/IP networking.
+The core of the SDK is developed in the Go programming language with wrappers created for Java, Node.js, Python and .NET. Service delivery and broadcast have been implemented using TCP/IP networking.
 
-For more information about the low level service messaging, see click [here](sample-service-messaging).
+For more information about the low level service messaging, click [here](sample-service-messaging).
 
 ## Architecture Overview
 
-In the IoT, each Thing will perform the function it is designed for be it acting as a sensor, a controller or both. In order for the Thing to be able to make and receive payments for services they can provide to other Things, they need to add the payments functionality contained in Worldpay Within.
+In the IoT, each Thing will perform the function it is designed for, be it acting as a sensor, a controller or both. In order for the Thing to be able to make and receive payments for services they can provide to other Things, they need to add the payments functionality contained in Worldpay Within.
 
 ![Worldpay Within Pluggable agent](images/architecture/worldpayWithinFig1.png)
 <figcaption>Figure 1\. Worldpay Within Pluggable agent.</figcaption>
@@ -16,7 +16,7 @@ Things in the IoT will be implemented on dedicated low cost processor systems. T
 ![Logical Overview](images/architecture/logicalOverview.png)
 <figcaption>Figure 2\. Worldpay Within Logical Overview.</figcaption>
 
-In order to make and receive payments in the IoT, a Thing must be able to perform the roles of consumer (shopper), to make a payment for services, and the producer (merchant) to receive a payment for provision of services. In the Worldpay Within IoT architecture, the “consumer” pays for services by supporting Host Card Emulation (HCE). The “merchant” or "producer" receives payments for services by supporting Host Terminal Emulation (HTE). Worldpay Within contains both an HCE Brain & HTE Brain functionalities, ensuring a Thing can both consume and supply services. These services are provided through a series of public APIs, described within this document.
+In order to make and receive payments in the IoT, a Thing must be able to perform the roles of consumer (shopper), to make a payment for services, and the producer (merchant) to receive a payment for provision of services. In the Worldpay Within IoT architecture, the “consumer” pays for services by supporting Host Card Emulation (HCE). The “merchant” or "producer" receives payments for services by supporting Host Terminal Emulation (HTE). Worldpay Within contains both an HCE Brain and HTE Brain functionalities, ensuring a Thing can both consume and supply services. These services are provided through a series of public APIs, described within this document.
 
 HCE and HTE require the secure storage and use of the credentials during the payments process. This requires the use of secure processing within the Thing in a “Secure Execution Environment”.
 

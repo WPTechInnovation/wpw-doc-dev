@@ -62,17 +62,18 @@ The RPC client takes command line flags e.g. `-port 9091` but it can also take t
 ![Showing the payment in online.worldpay.com](images/get-started/order-details-onlineworldpaycom.png)
 <figcaption>Showing the payment in online.worldpay.com.</figcaption>
 
+In the example, we're using two different ports:
 *   Java - 9090 - Producer
-*   Node.js - 9091 - consumer
+*   Node.js - 9091 - Consumer
 
-1.  Each app needs to run on it's own instance of the RPC service, so run one on 9090 and the other on 9091
-2.  So we're running Java off of 9090 and running node.js off of 9091
-3.  Open two terminal windows
-4.  Configure the rpc agent in each terminal window to run on each of the ports. 
-  * In the producer window run the RPC on port 9090
-  * In the consumer window run the RPC on port 9091
-5.  Configure the Java app to run on 9090 (run as the producer)
-6.  Configure the Node.js app to run on 9091 - in `createClient` in example code (run as the consumer)
-7.  Run the Java producer app so we're broadcasting. The RPC agent broadcasting will continue to run in the background while the Java program has exited
-8.  Run the Node.js consumer app immediately.
-9.  The **Discover**, **Select**, **Pay** and **Release** flows will all be triggered, as you can see above.
+Follow these steps to run two apps on one machine:
+
+1.  Open two terminal windows.
+2.  Configure the rpc agent in each terminal window to run on each of the ports. 
+  * In the producer window run the RPC on port **9090**.
+  * In the consumer window run the RPC on port **9091**.
+3.  Configure the Java app to run as the producer on **9090**.
+4.  Configure the Node.js app to run as the consumer on **9091**, by changing the `createClient` in the example code.
+5.  Run the Java producer app so we're broadcasting. The RPC agent broadcasting will continue to run in the background while the Java program has exited.
+6.  Run the Node.js consumer app immediately.
+7.  The **Discover**, **Select**, **Pay** and **Release** flows will all be triggered, as you can see above.

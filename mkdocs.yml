@@ -83,6 +83,7 @@ pages:
     - Sample service messaging: sample-service-messaging.md
     - API Spec: api-spec.md
   - Hackathons: hackathons.md
+  - hidden: atdc.md
 
 # Google Analytics
 google_analytics:

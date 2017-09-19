@@ -7,20 +7,20 @@ The devices are not synchronised by the SDK, so you'll need to ensure that the S
 ### Worldpay Within flow
 
 #### The Consumer (Shopper) flow
+The consumer device should follow this flow. These steps should map to the interface either in Go, or in your chosen SDK wrapper.
 
 ![The flows of the producer and consumer](images/the-flows/consumer-flow.png)
 <figcaption>The consumer flow.</figcaption>
-The consumer device should follow this flow. These steps should map to the interface either in Go, or in your chosen SDK wrapper.
 
 #### The Producer (Merchant) flow
+The producer device should follow this flow. These steps should map to the interface either in Go, or in your chosen SDK wrapper.
 
 ![The flows of the producer and consumer](images/the-flows/producer-flow.png)
 <figcaption>The producer flow.</figcaption>
-The producer device should follow this flow. These steps should map to the interface either in Go, or in your chosen SDK wrapper.
 
 ## 2\. Choose your SDK
 
-For the alpha release, we decided to go with four different wrappers. The documentation and API specification can be found here:
+For the alpha release, we ecided to go with five languages. The documentation and API specification can be found here:
 <div class="download">
   <a class="md-button" href="../nodejs">Node.js</a>
   <a class="md-button" href="../python27">Python</a>

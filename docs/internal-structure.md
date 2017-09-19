@@ -21,7 +21,7 @@ The beauty of Worldpay Within is that it enables smart devices to both make and 
 
 ## How the Wrapper works
 
-![How the Wrapper Works](images/the-flows/internal-structure-2.png)
+![How the Wrapper Works](images/the-flows/how-the-wrapper-works.png)
 <figcaption>How the Wrapper Works.</figcaption>
 
 On the left-hand side you have the SDK, on the right-hand side you have the Wrapper, in this case the Java Core. The SDK in Golang has an RPC layer on top which is exposed via Thrift. The Java Core or Wrapper, is built up of the Thrift layer which does the RPC comms to the core SDK. The wrapper also acts as an adapter converting all the data / objects / errors into Pojos that the Java core, or the app you are building can work with.

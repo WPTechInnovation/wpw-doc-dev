@@ -4,7 +4,7 @@ For the alpha release, we decided to go with five different languages. Their doc
   <a class="md-button" href="../nodejs/">Node.js</a>
   <a class="md-button" href="../python27/">Python</a>
   <a class="md-button" href="../java/">Java</a>
-  <a class="md-button" href="../dotnet>.NET</a>
+  <a class="md-button" href="../dotnet/">.NET</a>
   <a class="md-button" href="../getting-started-with-go/">Go</a>
 </div>
 

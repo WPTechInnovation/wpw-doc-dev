@@ -23,7 +23,7 @@ We're going to build a reference application to prove the concepts and APIs outl
 
 In order to build the URL, use the hostname and the port number, then concatenate the URL with “service/discover”.
 
-http://[Your hostname]:[Your port number]/v1/carcharge/service/discover
+`http://[Your hostname]:[Your port number]/v1/carcharge/service/discover`
     
 ``` json
  {
@@ -40,14 +40,14 @@ http://[Your hostname]:[Your port number]/v1/carcharge/service/discover
 {
 	"ServerID": "58d8f9fb-b3e9-45bc-b701-fcdd295bc265",
  	"Services": [
- 	{
- 		"ServiceID": 0,
- 		"ServiceDescription": "Car charging"
- 	},
- 	{
- 		"ServiceID": 1,
- 		"ServiceDescription": "Car parking"
- 	}
+ 		{
+ 			"ServiceID": 0,
+ 			"ServiceDescription": "Car charging"
+ 		},
+ 		{
+ 			"ServiceID": 1,
+ 			"ServiceDescription": "Car parking"
+ 		}
  	]
 }
 ```
@@ -58,7 +58,7 @@ http://[Your hostname]:[Your port number]/v1/carcharge/service/discover
 
 In order to build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with “service ID” and then “prices”.
 
-http://[Your hostname]:[Your port number]/v1/carcharge/service/0/prices
+`http://[Your hostname]:[Your port number]/v1/carcharge/service/0/prices`
 
 ``` json
 {
@@ -103,8 +103,7 @@ Note: body content empty. URL includes the serviceID (i.e. 0) for the prices bei
 
 In order to build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with “service ID” and then “requestTotal”.
 
-http://[Your hostname]:[Your port number]/v1/carcharge/service/0/requestTotal
-Content: 
+`http://[Your hostname]:[Your port number]/v1/carcharge/service/0/requestTotal`
 
 ``` json
 {
@@ -130,7 +129,7 @@ Content:
 
 ### Token request for Online.worldpay.com
 
-HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
+HTTP POST to `https://api.worldpay.com/v1/tokens`. No custom HTTP headers used.
 
 ``` json
 {
@@ -173,7 +172,7 @@ HTTP POST to https://api.worldpay.com/v1/tokens. No custom HTTP headers used.
 
 ### Payment request
 
-HTTP POST to http://[Your hostname]:[Your port number]/v1/carcharge/payment
+HTTP POST to `http://[Your hostname]:[Your port number]/v1/carcharge/payment`
 
 ``` json
 {
@@ -185,7 +184,7 @@ HTTP POST to http://[Your hostname]:[Your port number]/v1/carcharge/payment
 
 ### Order request for Online.worldpay.com
 
-HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Merchant's Service Key (Private)
+HTTP POST to `https://api.worldpay.com/v1/orders`. HTTP header includes the Merchant's Service Key (Private)
 
 ``` json
 {
@@ -245,9 +244,9 @@ HTTP POST to https://api.worldpay.com/v1/orders. HTTP header includes the Mercha
 
 ### Begin Service Delivery request
 
-HTTP POST to http://[Your hostname]:[Your port number]/v1/carcharge/service/0/delivery/begin
+HTTP POST to `http://[Your hostname]:[Your port number]/v1/carcharge/service/0/delivery/begin`
 
-URL encodes the serviceID being requested
+URL encodes the `serviceID` being requested
 
 ``` json
 {
@@ -270,9 +269,9 @@ URL encodes the serviceID being requested
 
 ### End Service Delivery request
 
-HTTP POST to http://[Your hostname]:[Your port number]/v1/carcharge/service/0/delivery/end)
+HTTP POST to `http://[Your hostname]:[Your port number]/v1/carcharge/service/0/delivery/end`
 
-URL encodes the serviceID being requested
+URL encodes the `serviceID` being requested
 
 ``` json
 {
