@@ -1,4 +1,4 @@
-To complement the architecture, we have released the Worldpay Within SDK. The intention for the SDK is to encapsulate implementation and therefore help third party vendors and developers integration into their Internet of Things (IoT) solutions.
+To complement the architecture, we have released the Worldpay Within SDK. The intention for the SDK is to encapsulate implementation and help third party vendors and developers integration into their Internet of Things (IoT) solutions.
 
 The core of the SDK is developed in the Go programming language with wrappers created for Java, Node.js, Python and .NET. Service delivery and broadcast have been implemented using TCP/IP networking.
 
@@ -31,7 +31,7 @@ The provision of a service within the Worldpay IoT system is performed in 4 phas
 ![The 4 phases of Worldpay Within](images/architecture/Architecture1.png)
 <figcaption>Figure 3\. The 4 phases of Worldpay Within.</figcaption>
 
-## Service Discovery
+## Discover
 
 Each Thing that offers services, the service ‘supplier’ shall broadcast it’s list of available services, as shown in Figure 4 below. When a potential ‘consumer’ of the service connects with ‘supplier’ it can request details of the services offered.
 
@@ -56,14 +56,14 @@ Upon receiving the message Thing A connects to Thing B and requests the list of 
 
 Thing B responds with a list identifying the services available.
 
-## Service Negotiation
+## Select
 
-Once a suitable service has been discovered, there will be a price negotiation. The provider may offer the same service at different rates depending on the number of units of service to be purchased. The process is outlined in Figure 5\. The outcome of the process is an agreement to purchase an amount of service and a total price for the service to be provided. The service provider can then request payment for the agreed service and price.
+Once a suitable service has been discovered, the shopper will select the choice. The provider may offer the same service at different rates depending on the number of units of service to be purchased. The process is outlined in Figure 5\. The outcome of the process is an agreement to purchase an amount of service and a total price for the service to be provided. The service provider can then request payment for the agreed service and price.
 
 ![IoT Service Negotiation](images/architecture/Architecture3.png)
 <figcaption>Figure 5\. IoT Service Negotiation.</figcaption>
 
-### Service Negotiation APIs
+### Service selection APIs
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
@@ -72,7 +72,7 @@ Once a suitable service has been discovered, there will be a price negotiation. 
 |`price_select`|`service_id`, `price_id`, `number_of_units`, `client_UUID`|Select a price with `price_id`, for `service_id` for a number of units.|
 |`price_select_response`|`price_id`, `number_of_units`, `total_price`, `server_UUID`, `client_UUID`, `payment_ref_ID`, `Merchant_Client_key`|Communicate the expected total price to the client.|
 
-### Service negotiation messages
+### Service selection messages
 
 A price request is sent containing the selected `service_id`.
 
@@ -82,7 +82,7 @@ Thing A then selects an appropriate `price_id` by sending a request with its `cl
 
 If the number of items falls within the correct number of items for the price selected, then Thing B responds with a price select response containing the `service_id`, `price_id`, the total price, the `service_UUID` and a reference for the payment and its Merchant Client key. Otherwise Thing B shall return the number of units it can supply along with the correct price, and additional details required to initiate the payment.
 
-## Payment
+## Pay
 
 The payment process with Worldpay is a two stage process, split between the consumer and merchant Things involved in the transaction, these stages are:
 
@@ -146,7 +146,7 @@ Thing B will assemble a message to be posted to Worldpay that contains the clien
 
 Thing B shall then generate a cryptographically secure `service_delivery_token`, which can be used by Thing A to request provision of services from Thing B.
 
-## Service Delivery
+## Delivery
 
 Once the payment has been made, Thing B shall return to broadcasting its available services. Thing A will now be able to consume the service from Thing B by providing the `service_delivery_token`. The service delivery may be in a single step, or over time. An overview of service delivery is shown in Figure 8.
 

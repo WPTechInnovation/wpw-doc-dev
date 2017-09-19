@@ -45,7 +45,7 @@ Once the devices have successfully communicated with each other to make a paymen
 If you get some odd error messages talking about a rpc-agent:
 
 *   Try typing the following command: `ps -e | grep rpc` to get the pid(s) of rpc-agents that are running.
-*   Then do `kill <pid>` e.g. `kill 13249234` to kill these processes.
+*   Then do `kill <pid>`, such as `kill 13249234` to kill these processes.
 *   Try re-running the examples.
 
 If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
