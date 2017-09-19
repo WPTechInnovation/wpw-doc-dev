@@ -1,5 +1,3 @@
-# Python
-
 The Python implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For more information, see [Home](index).
 
 ## Prerequisites
@@ -22,9 +20,9 @@ The Python implementation for the Worldpay Within IoT payment SDK. This SDK enab
 
 You can try the examples by running the examples in two different console windows. Or, if you're installing on two separate devices, they must be one the same network that allows UDP broadcast traffic. Make sure you're using rhw Online Worldpay (OWP) files rather than the Worldpay Total (WT) ones.
 
-*   In the first window, run `python runConsumerOWP.py`
-*   In the second window, run `python runProducerOWP.py` OR `python runProducerCallbacksOWP.py`
-*   The two smart devices should communicate with each other and make a payment
+*   In the first window, run `python runConsumerOWP.py`.
+*   In the second window, run `python runProducerOWP.py` OR `python runProducerCallbacksOWP.py`.
+*   The two smart devices should communicate with each other and make a payment.
 
 ## See the payments
 
@@ -48,9 +46,9 @@ If you get some odd error messages talking about a rpc-agent:
 
 *   Try typing the following command: `ps -e | grep rpc` to get the pid(s) of rpc-agents that are running.
 *   Then do `kill <pid>` e.g. `kill 13249234` to kill these processes.
-*   Try re-running the examples
+*   Try re-running the examples.
 
-If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com) or reach out to us on our [Slack channel](iotpay.slack.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
+If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
 
 ## So what's happening?
 
@@ -61,10 +59,13 @@ You can see there are four phases; **Discover**, **Select**, **Pay**, and **Rele
 
 ## What IoT devices can I run this on?
 
-Hopefully any. We've only tested this on RPi - Raspberry Pis at the moment, but we welcome experiments on all other kinds of devices! Note that they will need to be on the same network - and that network should allow for UDP broadcast traffic. Most mobile hotspots allow this; a lot of corporate networks do not...
+Hopefully any. We've only tested this on RPi - Raspberry Pis - at the moment, but we welcome experiments on all other kinds of devices! 
+!!! note
+	
+	The devices need to be on the same network - and that network should allow for UDP broadcast traffic. Most mobile hotspots allow this; a lot of corporate networks do not...
 
 ## Want to contribute?
 
-If you want to contribute, clone the repository and create a branch. Once you've made your changes, create a pull request. We'll review your code, and if accepted it will be merged into the code base. It's worth checkout out the [Internal Structure of Worldpay Within](internal-structure) and [Sample Service Messaging](sample-service-messaging) pages if you want to learn more about how Worldpay Within works.
+If you want to contribute, clone the repository and create a branch. Once you've made your changes, create a pull request. We'll review your code, and if accepted it will be merged into the code base. It's worth checking out the [Internal Structure of Worldpay Within](internal-structure) and [Sample Service Messaging](sample-service-messaging) pages if you want to learn more about how Worldpay Within works.
 
-You can also [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues), or contact us directly at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). You can also reach out to us on our [Slack channel](iotpay.slack.com).
+You can also [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues), or contact us directly at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). 

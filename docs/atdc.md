@@ -1,3 +1,6 @@
+# Atlanta Fintech Hackathon
+Here you'll find information about what technology we used during the Atlanta Fintech Hackathon. It includes how to set up your Raspberry Pi, how to see your transactions on Worldpay Total, and how to set up the Python wrapper.
+
 ## Setting up your Pi for Worldpay Within @ ATDC hackathon
 
 ### Quick start
@@ -5,15 +8,15 @@
 1.  Get a pre-provisioned SD card, which should put you on the 'Connectify' network
 2.  The go, and RPi Python wrapper should be ready to go, the RPC agent is available for you to provision the other wrappers too. Speak to Conor or Kevin for help with this
 
-### How to see my transactions on Worldpay total?
+### How to see my transactions on Worldpay Total?
 
-Don't get this confused with the global/european system, for this hackathon you can view the transactions through the virtual terminal here: [terminal.demo.securenet.com](https://terminal.demo.securenet.com) - login credentials from Clint
+Don't get this confused with the Global/European system. For this hackathon you can view the transactions through the virtual terminal here: [terminal.demo.securenet.com](https://terminal.demo.securenet.com) - login credentials from Clint.
 
 ### Android wrapper?
 
 We have not developed an Android wrapper, however there is one in development on the 'native-interface' branch, which allows you to call into the RPC-agent/SDC by going directly without need for RPC. This partially works, and is not certified, and is on older code, but you are free to experiment with this.
 
-Probably better is to use a 'proxy' Pi as your consumer, and expose each step / feature as a simple RESTful api, which the Android can call to orchestrate the flow, the business logic can then all be included in the Android app, with the Worldpay Within SDK running on the Pi. Please discuss with Conor for any more help on this topic
+It is probably better to use a 'proxy' Pi as your consumer, and expose each step/feature as a simple RESTful api, which the Android can call to orchestrate the flow. The business logic can then be included in the Android app, with the Worldpay Within SDK running on the Pi. Please discuss with Conor for any more help on this topic.
 
 ### Self provision the Raspberry Pi
 
@@ -24,7 +27,7 @@ Probably better is to use a 'proxy' Pi as your consumer, and expose each step / 
 5.  Pull the latest code `git pull`
 6.  Get the latest RPC-agent for Raspberry pi `wget http://bit.ly/wpwlinarm32`
 
-#### How to setup the python 2.7 wrapper
+#### How to setup the Python 2.7 wrapper
 
 1.  If you want to use the 2.7 python wrapper, then download apache thrift 0.10.0 (latest version)
 2.  Extract it and change to the `lib/py/` directory

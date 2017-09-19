@@ -1,6 +1,5 @@
-# Get started
 ## New to Worldpay Within
-If you're new to Worldpay Within, you can download the four wrappers and begin testing the SDKs. We've got:
+If you're new to Worldpay Within, you can download the SDK in any of these languages and begin testing:
 <div class="download">
   <a class="md-button" href="../nodejs/">Node.js</a>
   <a class="md-button" href="../python27/">Python</a>

@@ -1,14 +1,12 @@
-### Quick intro
+To complement the architecture, we have released the Worldpay Within SDK. The intention for the SDK is to encapsulate implementation and therefore help third party vendors and developers integration into their Internet of Things (IoT) solutions.
 
-To complement the architecture, we have released the Worldpay Within SDK. The intention for of the SDK is to encapsulate implementation and therefore assist third party vendors and developers in integration into their Internet of Things (IoT) solutions.
+The core of the SDK is developed in the Go programming language with wrappers created for Java, Node.js, Python and .NET. Service delivery and broadcast have been implemented using TCP/IP networking.
 
-The core of the SDK is developed in the Go programming language with wrappers created for Java, Node.JS, Python and .net(C#). Service delivery and broadcast have been implemented using TCP/IP networking.
+For more information about the low level service messaging, click [here](sample-service-messaging).
 
-For more information about the low level service messaging, see click [here](sample-service-messaging).
+## Architecture Overview
 
-### Architecture Overview
-
-In the IoT, each Thing will perform the function it is designed for be it acting as a sensor, a controller or both. In order for the Thing to be able to make and receive payments for services they can provide to other Things, they need to add the payments functionality contained in Worldpay Within.
+In the IoT, each Thing will perform the function it is designed for, be it acting as a sensor, a controller or both. In order for the Thing to be able to make and receive payments for services they can provide to other Things, they need to add the payments functionality contained in Worldpay Within.
 
 ![Worldpay Within Pluggable agent](images/architecture/worldpayWithinFig1.png)
 <figcaption>Figure 1\. Worldpay Within Pluggable agent.</figcaption>
@@ -18,7 +16,7 @@ Things in the IoT will be implemented on dedicated low cost processor systems. T
 ![Logical Overview](images/architecture/logicalOverview.png)
 <figcaption>Figure 2\. Worldpay Within Logical Overview.</figcaption>
 
-In order to make and receive payments in the IoT, a Thing must be able to perform the roles of consumer (shopper), to make a payment for services, and the producer (merchant) to receive a payment for provision of services. In the Worldpay Within IoT architecture, the “consumer” pays for services by supporting Host Card Emulation (HCE). The “merchant” or "producer" receives payments for services by supporting Host Terminal Emulation (HTE). Worldpay Within contains both an HCE Brain & HTE Brain functionalities, ensuring a Thing can both consume and supply services. These services are provided through a series of public APIs, described within this document.
+In order to make and receive payments in the IoT, a Thing must be able to perform the roles of consumer (shopper), to make a payment for services, and the producer (merchant) to receive a payment for provision of services. In the Worldpay Within IoT architecture, the “consumer” pays for services by supporting Host Card Emulation (HCE). The “merchant” or "producer" receives payments for services by supporting Host Terminal Emulation (HTE). Worldpay Within contains both an HCE Brain and HTE Brain functionalities, ensuring a Thing can both consume and supply services. These services are provided through a series of public APIs, described within this document.
 
 HCE and HTE require the secure storage and use of the credentials during the payments process. This requires the use of secure processing within the Thing in a “Secure Execution Environment”.
 
@@ -26,21 +24,21 @@ For HCE Things, these credentials include the details of the “card” which th
 
 As well as the provision of the payment for the services, Worldpay Within provides for the generation and validation of secure service tokens, which allow for services to be consumed in part or together, but separately from the payments functionality.
 
-### Worldpay Within IoT Service Architecture
+## Worldpay Within IoT Service Architecture
 
-The provision of a service within the Worldpay IoT system is performed in 4 phases, as shown in Figure 4, these being: Service Discovery, Service Negotiation, Payment, and Service Delivery. Each of these phases are described in the following sections.
+The provision of a service within the Worldpay IoT system is performed in 4 phases, as shown in Figure 3, these being:  **Discover**, **Select**, **Pay**, and **Release**. Each of these phases are described in the following sections.
 
 ![The 4 phases of Worldpay Within](images/architecture/Architecture1.png)
-<figcaption>Figure 4\. The 4 phases of Worldpay Within.</figcaption>
+<figcaption>Figure 3\. The 4 phases of Worldpay Within.</figcaption>
 
-#### Service Discovery
+## Service Discovery
 
 Each Thing that offers services, the service ‘supplier’ shall broadcast it’s list of available services, as shown in Figure 4 below. When a potential ‘consumer’ of the service connects with ‘supplier’ it can request details of the services offered.
 
 Providing a suitable service is discovered, the consumer then requests the service from the supplier, and price negotiations can begin.
 
 ![IoT Service discovery](images/architecture/Architecture2.png)
-<figcaption>Figure 5\. IoT Service discovery.</figcaption>
+<figcaption>Figure 4\. IoT Service discovery.</figcaption>
 
 ### Service Discovery APIs
 
@@ -49,7 +47,8 @@ Providing a suitable service is discovered, the consumer then requests the servi
 |broadcast|`server_UUID`|Advertising services and identifying the sender|
 |request services|none|Request a list of all services|
 |services_response|`list of services`, `server_UUID`|Provide client with a list of possible services that the sender can provide|
-#### Service discovery messages
+
+### Service discovery messages
 
 A broadcast message that includes Thing B’s UUID is sent.
 
@@ -62,9 +61,9 @@ Thing B responds with a list identifying the services available.
 Once a suitable service has been discovered, there will be a price negotiation. The provider may offer the same service at different rates depending on the number of units of service to be purchased. The process is outlined in Figure 5\. The outcome of the process is an agreement to purchase an amount of service and a total price for the service to be provided. The service provider can then request payment for the agreed service and price.
 
 ![IoT Service Negotiation](images/architecture/Architecture3.png)
-<figcaption>Figure 6\. IoT Service Negotiation.</figcaption>
+<figcaption>Figure 5\. IoT Service Negotiation.</figcaption>
 
-#### Service Negotiation APIs
+### Service Negotiation APIs
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |
@@ -73,9 +72,9 @@ Once a suitable service has been discovered, there will be a price negotiation. 
 |`price_select`|`service_id`, `price_id`, `number_of_units`, `client_UUID`|Select a price with `price_id`, for `service_id` for a number of units.|
 |`price_select_response`|`price_id`, `number_of_units`, `total_price`, `server_UUID`, `client_UUID`, `payment_ref_ID`, `Merchant_Client_key`|Communicate the expected total price to the client.|
 
-#### Service negotiation messages
+### Service negotiation messages
 
-A price request is sent containing the selected service_id.
+A price request is sent containing the selected `service_id`.
 
 The response from Thing B contains a list of price items; each item should contain a `price_id`, per unit price, `unit_ID` and description fields of both the unit and the price.
 
@@ -83,7 +82,7 @@ Thing A then selects an appropriate `price_id` by sending a request with its `cl
 
 If the number of items falls within the correct number of items for the price selected, then Thing B responds with a price select response containing the `service_id`, `price_id`, the total price, the `service_UUID` and a reference for the payment and its Merchant Client key. Otherwise Thing B shall return the number of units it can supply along with the correct price, and additional details required to initiate the payment.
 
-#### Payment
+## Payment
 
 The payment process with Worldpay is a two stage process, split between the consumer and merchant Things involved in the transaction, these stages are:
 
@@ -95,12 +94,12 @@ During the first stage, the consumer sends Worldpay their payment credentials an
 
 This payment process ensures that the consumer does not pass their payment credentials to the merchant, only to Worldpay.
 
-#### Client token request
+### Client token request
 
-The first step in the payment process is when Thing A receives the `Merchant_Client_Key` from Thing B. Thing B passes their public Client Key to Thing A as part of the `price_select_response` during the Service Negotiation phase. Upon receiving the Client Key from Thing B, Thing A connects with Worldpay to request the client token from us. This request includes Thing A’s payment credentials: Card PAN, expiry, and the `client_key` of Thing B. Worldpay will respond with a message that includes a `client_token`. This is shown in Figure 7.
+The first step in the payment process is when Thing A receives the `Merchant_Client_Key` from Thing B. Thing B passes their public Client Key to Thing A as part of the `price_select_response` during the Service Negotiation phase. Upon receiving the Client Key from Thing B, Thing A connects with Worldpay to request the client token from us. This request includes Thing A’s payment credentials: Card PAN, expiry, and the `client_key` of Thing B. Worldpay will respond with a message that includes a `client_token`. This is shown in Figure 6.
 
 ![IoT Payment process - client token request](images/architecture/Architecture4.png)
-<figcaption>Figure 7\. IoT Payment process - client token request.</figcaption>
+<figcaption>Figure 6\. IoT Payment process - client token request.</figcaption>
 
 #### Client token request APIs
 
@@ -126,7 +125,7 @@ See [API keys](https://developer.worldpay.com/jsonapi/docs/api-keys) for documen
 Thing B will process the order and request the payment from Worldpay providing its service key, `client_token`, transaction currency and payment amount. This is transmitted to Worldpay over TLS. After successful processing the payment, Worldpay will provide a payment response. Thing B shall then generate a service token, which Thing A may use in future to obtain the services that the payment has been made for. This is shown in Figure 7.
 
 ![Payment Authorisation Request](images/architecture/Architecture5.png)
-<figcaption>Figure 8\. Payment Authorisation Request.</figcaption>
+<figcaption>Figure 7\. Payment Authorisation Request.</figcaption>
 
 #### Payment authorisation request APIs
 
@@ -147,7 +146,7 @@ Thing B will assemble a message to be posted to Worldpay that contains the clien
 
 Thing B shall then generate a cryptographically secure `service_delivery_token`, which can be used by Thing A to request provision of services from Thing B.
 
-### Service Delivery
+## Service Delivery
 
 Once the payment has been made, Thing B shall return to broadcasting its available services. Thing A will now be able to consume the service from Thing B by providing the `service_delivery_token`. The service delivery may be in a single step, or over time. An overview of service delivery is shown in Figure 8.
 
@@ -156,7 +155,7 @@ Once the payment has been made, Thing B shall return to broadcasting its availab
 
 Once in possession of a service_token, Thing A may then request the service be provided. The service could be consumed in one session, or in several sessions over time, depending on the nature of the service and number of units purchased. Thing A may repeatedly send service delivery requests until Thing B indicates that the service has been delivered.
 
-#### Service Delivery APIs
+### Service Delivery APIs
 
 |**Key**|**Parameters**|**Purpose**|
 | ------------- | ------------- | ----- |

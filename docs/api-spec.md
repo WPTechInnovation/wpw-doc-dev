@@ -1,11 +1,11 @@
-For the alpha release, we made the decision to go with five different wrappers. Their documented API can be found here:
+For the alpha release, we decided to go with five different languages. Their documented API can be found here:
 
 <div class="download">
-  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/nodejs/">Node.js</a>
-  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/python27/">Python</a>
-  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/python27/">Java</a>
-  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/dotnet/">.NET</a>
-  <a class="md-button" href="https://wptechinnovation.github.io/wpw-doc-dev/getting-started-with-go/">Go</a>
+  <a class="md-button" href="../nodejs/">Node.js</a>
+  <a class="md-button" href="../python27/">Python</a>
+  <a class="md-button" href="../java/">Java</a>
+  <a class="md-button" href="../dotnet/">.NET</a>
+  <a class="md-button" href="../getting-started-with-go/">Go</a>
 </div>
 
 ## Specification
@@ -22,7 +22,7 @@ For the alpha release, we made the decision to go with five different wrappers. 
 |`stopServiceBroadcast`|Stops the SDK from broadcasting the current service messages that it is broadcasting.|
 |`deviceDiscovery`|Enables the consumer device to discover other devices (producers) on the network that are UDP broadcasting.|
 |`requestServices`|Gets a list of services that are available from the broadcasting device.|
-|`getServicePrices`|Used by the consumer to get the list of prices associated with a particular `serviceId`|
+|`getServicePrices`|Used by the consumer to get the list of prices associated with a particular `serviceId`.|
 |`selectService`|Performed by the consumer, this provides details of the service, the amount and at what price point it wants to purchase the service.|
 |`makePayment`|Allows the consumer to request a payment to be made at the producer device, by providing the total price response object as the request. The producer will then make the payment (or attempt to) and send back a payment response detailing whether it was successful or not.|
 |`beginServiceDelivery`|Requested by the consumer, this begins the service delivery which proceeds as long as the correct information is provided to the producer. If the correct credentials are passed, the producer will start releasing the service known as a 'trusted trigger'.|

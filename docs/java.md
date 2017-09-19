@@ -1,5 +1,3 @@
-# Java 
-
 The Java implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For more information, see [Home](index).
 
 ## Prerequisites
@@ -35,7 +33,7 @@ Once the devices have successfully communicated with each other to make a paymen
 
 ### If you've used Worldpay's own test API keys
 
-1.  Login to [Worldpay Online](http://online.worldpay.com).
+1.  Login to [Worldpay Online](https://online.worldpay.com).
 2.  Got to **Settings > API keys** and get your test keys.
 3.  Replace the keys in the producer python files.
 4.  Re-run the examples and you should see the payments coming through on the Worldpay Online payments dashboard.
@@ -48,7 +46,7 @@ If you get some odd error messages talking about a rpc-agent:
 *   Then do `kill <pid>` e.g. `kill 13249234` to kill these processes.
 *   Try re-running the examples
 
-If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com) or reach out to us on our [Slack channel](iotpay.slack.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
+If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
 
 ## So what's happening?
 
@@ -59,10 +57,13 @@ You can see there are four phases; **Discover**, **Select**, **Pay**, and **Rele
 
 ## What IoT devices can I run this on?
 
-Hopefully any. We've only tested this on RPi - Raspberry Pis at the moment, but we welcome experiments on all other kinds of devices! Note that they will need to be on the same network - and that network should allow for UDP broadcast traffic. Most mobile hotspots allow this; a lot of corporate networks do not...
+Hopefully any. We've only tested this on RPi - Raspberry Pis - at the moment, but we welcome experiments on all other kinds of devices! 
+!!! note
+	
+	The devices need to be on the same network - and that network should allow for UDP broadcast traffic. Most mobile hotspots allow this; a lot of corporate networks do not...
 
 ## Want to contribute?
 
-If you want to contribute, clone the repository and create a branch. Once you've made your changes, create a pull request. We'll review your code, and if accepted it will be merged into the code base. It's worth checkout out the [Internal Structure of Worldpay Within](internal-structure) and [Sample Service Messaging](sample-service-messaging) pages if you want to learn more about how Worldpay Within works.
+If you want to contribute, clone the repository and create a branch. Once you've made your changes, create a pull request. We'll review your code, and if accepted it will be merged into the code base. It's worth checking out the [Internal Structure of Worldpay Within](internal-structure) and [Sample Service Messaging](sample-service-messaging) pages if you want to learn more about how Worldpay Within works.
 
-You can also [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues), or contact us directly at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). You can also reach out to us on our [Slack channel](iotpay.slack.com).
+You can also [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues), or contact us directly at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). 

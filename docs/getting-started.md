@@ -25,9 +25,9 @@ You'll need to drop the core IoT component (RPC-agent file) into the appropriate
 Follow the instructions for each supported language on where to place the core IoT component (RPC-agent file) and what to call it. The instructions will also let you know if there are any other pre-requisites to install on your device before you get started.
 
 <div class="download">
-  <a class="md-button" href="nodejs">Node.js</a>
-  <a class="md-button" href="python27">Python</a>
-  <a class="md-button" href="java">Java</a>
-  <a class="md-button" href="dotnet">.NET</a>
-  <a class="md-button" href="getting-started-with-go">Go</a>
+  <a class="md-button" href="../nodejs">Node.js</a>
+  <a class="md-button" href="../python27">Python</a>
+  <a class="md-button" href="../java">Java</a>
+  <a class="md-button" href="../dotnet">.NET</a>
+  <a class="md-button" href="../getting-started-with-go">Go</a>
 </div>
