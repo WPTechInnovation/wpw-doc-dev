@@ -22,6 +22,10 @@
 
 {% import "partials/language.html" as lang %}
 
+{% if "(hidden) " in page.title %}
+{% set title = page.title | replace("(hidden) ", "") %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ lang.t('language') }}" class="no-js">
   <head>
@@ -70,13 +74,18 @@
 
     <!-- Block: site title -->
     {% block htmltitle %}
+    {% if title %}
+      <title>{{ title }} - {{ config.site_name }}</title>
+    {% else %}
       {% if page and page.meta.title %}
-        <title>{{ page.meta.title | first }}</title>
+      <title>{{ page.meta.title | first }}</title>
       {% elif page and page.title and not page.is_homepage %}
         <title>{{ page.title }} - {{ config.site_name }}</title>
       {% else %}
         <title>{{ config.site_name }}</title>
       {% endif %}
+    {% endif %}
+
     {% endblock %}
 
     <!-- Block: JavaScript libraries -->
@@ -235,7 +244,7 @@
                   as the main headline.
                 -->
                 {% if not "\x3ch1" in page.content %}
-                {% if page.title != "hidden" %}
+                {% if not title %}
                   <h1>{{ page.title | default(config.site_name, true)}}</h1>
                 {% endif %}
                 {% endif %}
