@@ -23,7 +23,7 @@ We're going to build a reference application to prove the concepts and APIs outl
 
 In order to build the URL, use the hostname and the port number, then concatenate the URL with “service/discover”.
 
-`http://==[Your hostname]==:==[Your port number]==/v1/carcharge/service/discover`
+`http://[Your hostname]:[Your port number]/v1/carcharge/service/discover`
     
 ``` json
  {

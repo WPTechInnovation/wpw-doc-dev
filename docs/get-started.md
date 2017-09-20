@@ -18,7 +18,7 @@ If you're familiar with how Worldpay Within works, and have used the SDKs before
 5. [API Specification](api-spec)
 
 ## Useful terms
-There's quite a few terms we're using in the SDKs and the rest of our documentation, so it's worth knowing what they are and what they mean.
+There's quite a few terms we're using in these SDKs and the rest of our documentation, so it's worth knowing what they are and what they mean.
 
 |**Term**|**Definition**|
 | ------------- | ------------- |

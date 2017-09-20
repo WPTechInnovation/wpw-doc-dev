@@ -94,13 +94,13 @@ Want to find out more? Head over to the [Hackathons](hackathons) page.
 
 Worldpay Within is open source, so why not give it a go yourself? You can find the GitHub library [here](https://github.com/WPTechInnovation/worldpay-within-sdk).
 
-It's still an alpha based experiment, but we're actively building new features (and bug fixes) and are concurrently working on evolving the security architecture so we can take real payments.
+It's still an alpha-based experiment, but we're actively building new features (and bug fixes) and are concurrently working on evolving the security architecture so we can take real payments.
 
 We'd love to see what you can come up with, so why not become a contributor? Head over to the [Issues page](https://github.com/WPTechInnovation/worldpay-within-sdk/issues) to see how you can help. 
 
 ## Get the SDKs
 
-Worldpay Within's SDK is written in GoLang and runs on smart devices, including Raspberry Pi. It lets you make and receive payments within the IoT. We've got wrappers in these languages:
+Worldpay Within's SDK is written in GoLang and runs on smart devices, including Raspberry Pi. It lets you make and receive payments within the IoT. You can download the SDK in any of these languages and begin testing:
 <div class="download">
   <a class="md-button" href="nodejs">Node.js</a>
   <a class="md-button" href="python27">Python</a>
