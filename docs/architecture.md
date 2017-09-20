@@ -8,12 +8,12 @@ For more information about the low level service messaging, click [here](sample-
 
 In the IoT, each Thing will perform the function it is designed for, be it acting as a sensor, a controller or both. In order for the Thing to be able to make and receive payments for services they can provide to other Things, they need to add the payments functionality contained in Worldpay Within.
 
-![Worldpay Within Pluggable agent](images/architecture/worldpayWithinFig1.png)
+![Worldpay Within Pluggable agent](images/architecture/architecture-overview-1.png)
 <figcaption>Figure 1\. Worldpay Within Pluggable agent.</figcaption>
 
 Things in the IoT will be implemented on dedicated low cost processor systems. The Thing and Worldpay Within must co-exist and operate on the resources provided by these devices, as demonstrated in Figure 2.
 
-![Logical Overview](images/architecture/logicalOverview.png)
+![Logical Overview](images/architecture/architecture-overview-2.png)
 <figcaption>Figure 2\. Worldpay Within Logical Overview.</figcaption>
 
 In order to make and receive payments in the IoT, a Thing must be able to perform the roles of consumer (shopper), to make a payment for services, and the producer (merchant) to receive a payment for provision of services. In the Worldpay Within IoT architecture, the “consumer” pays for services by supporting Host Card Emulation (HCE). The “merchant” or "producer" receives payments for services by supporting Host Terminal Emulation (HTE). Worldpay Within contains both an HCE Brain and HTE Brain functionalities, ensuring a Thing can both consume and supply services. These services are provided through a series of public APIs, described within this document.

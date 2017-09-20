@@ -46,13 +46,15 @@ The sample application produces lots of logging, you can control this by editing
 Once the devices have successfully communicated with each other to make a payment, you'll want to check to make sure that your devices are successfully making and receiving payments.
 
 If you used your own test API keys:
-1. Login to [Worldpay Online](https://online.worldpay.com).
-1. You'll see your dashboard. Scroll down and you should see the payment within your **Recent Orders**.
 
-If you've used Worldpay's own test API keys
 1. Login to [Worldpay Online](https://online.worldpay.com).
-1. Got to **Settings > API keys** and get your test keys.
-1. Replace the keys in `SimpleProducer.cs`.
+2. You'll see your dashboard. Scroll down and you should see the payment within your **Recent Orders**.
+
+If you've used Worldpay's own test API keys:
+
+1. Login to [Worldpay Online](https://online.worldpay.com).
+2. Got to **Settings > API keys** and get your test keys.
+3. Replace the keys in `SimpleProducer.cs`.
 
 Re-run the sample application and you should see the payments coming through on the Worldpay Online payments dashboard.
 

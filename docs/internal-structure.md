@@ -39,8 +39,6 @@ In this scenario, the producer is UDP broadcasting a service message, which incl
 
 ## What's happening inside the SDK
 
-For the first release, we have open sourced the wrappers and example apps, but kept the internals of the Golang SDK closed source. As the project goes on we'll consider open sourcing this component too.
-
-It is of course useful to know exactly what is happening inside this black box, so the below page details the architecture of Worldpay Within and what is happening in the internals.
+We have open sourced the wrappers, example apps, and the Golang SDK. For more information, see [Home](home).
 
 Click [here](architecture) for more information about the Worldpay Within architecture.
