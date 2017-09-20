@@ -32,6 +32,9 @@
 
         <!-- Link to previous page -->
         {% if page.previous_page %}
+        {% if "(hidden) " in page.previous_page.title %}
+        {% set prev = page.previous_page.title | replace("(hidden) ", "") %}
+        {% endif %}
           <a href="{{ page.previous_page.url }}"
               title="{{ page.previous_page.title }}"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
@@ -46,7 +49,11 @@
                 <span class="md-footer-nav__direction">
                   {{ lang.t("footer.previous") }}
                 </span>
-                {{ page.previous_page.title }}
+                {% if prev %}
+                  {{ prev }}
+                {% else %}
+                  {{ page.previous_page.title }}
+                {% endif %}
               </span>
             </div>
           </a>
@@ -54,6 +61,9 @@
 
         <!-- Link to next page -->
         {% if page.next_page %}
+        {% if "(hidden) " in page.next_page.title %}
+        {% set next = page.next_page.title | replace("(hidden) ", "") %}
+        {% endif %}
           <a href="{{ page.next_page.url }}" title="{{ page.next_page.title }}"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
@@ -63,7 +73,11 @@
                 <span class="md-footer-nav__direction">
                   {{ lang.t("footer.next") }}
                 </span>
-                {{ page.next_page.title }}
+                {% if next %}
+                  {{ next }}
+                {% else %}
+                  {{ page.next_page.title }}
+                {% endif %}
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

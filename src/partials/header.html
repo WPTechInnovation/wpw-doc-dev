@@ -23,6 +23,10 @@
 <!-- Application header -->
 <header class="md-header" data-md-component="header">
 
+  {% if "(hidden) " in page.title %}
+  {% set title = page.title | replace("(hidden) ", "") %}
+  {% endif %}
+
   <!-- Top-level navigation -->
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
@@ -55,14 +59,18 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <span class="md-flex__ellipsis md-header-nav__title">
           {% block site_name %}
-            {% if page %}
-              {% for parent in page.ancestors %}
-                <span class="md-header-nav__parent">
-                  {{ parent.title }}
-                </span>
-              {% endfor %}
+            {% if title %}
+              {{ title }}
+            {% else %}
+              {% if page %}
+                {% for parent in page.ancestors %}
+                  <span class="md-header-nav__parent">
+                    {{ parent.title }}
+                  </span>
+                {% endfor %}
+              {% endif %}
+              {{ page.title | default(config.site_name, true) }}
             {% endif %}
-            {{ page.title | default(config.site_name, true) }}
           {% endblock %}
         </span>
       </div>

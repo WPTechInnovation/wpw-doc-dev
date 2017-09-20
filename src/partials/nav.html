@@ -46,7 +46,7 @@
   <!-- Render item list -->
   <ul class="md-nav__list" data-md-scrollfix>
     {% for nav_item in nav %}
-      {% if nav_item.title != "hidden" %}
+      {% if not "(hidden) " in nav_item.title %}
       {% set path = "nav-" + loop.index | string %}
       {% set level = 1 %}
       {% include "partials/nav-item.html" %}
