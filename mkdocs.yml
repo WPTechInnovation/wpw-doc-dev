@@ -78,7 +78,7 @@ pages:
     - Go: getting-started-with-go.md
   - Advanced:
     - How it works: how-it-works.md
-    - Architecure: architecture.md
+    - Architecture: architecture.md
     - Internal structure: internal-structure.md
     - Sample service messaging: sample-service-messaging.md
     - API Spec: api-spec.md
