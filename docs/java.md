@@ -1,9 +1,11 @@
-The Java implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For more information, see [Home](index).
+The Java implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For an overview, see [Home](index).
 
 ## Prerequisites
 
-*   Before you get started, you should have the Java SDK installed on your system. And prefereably a Java IDE (Integrated Development Environment) - our dev's love Netbeans, Eclipse and IntelliJ, but it's your choice; we've provided a maven script to build everything. 
-*   You should create an account with [Worldpay Online](https://online.worldpay.com) so that you're able to generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
+Before you get started:
+
+*   Install the Java SDK on your system, and prefereably a Java IDE (Integrated Development Environment) - our dev's love Netbeans, Eclipse and IntelliJ, but it's your choice; we've provided a maven script to build everything. 
+*   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
 
 !!! warning
 
@@ -16,7 +18,7 @@ The Java implementation for the Worldpay Within IoT payment SDK. This SDK enable
  
 ## Run the examples
 
-You can try the examples by running the examples in two different console windows. Or, if you're installing on two separate devices, they must be one the same network that allows UDP broadcast traffic. Make sure you're using rhw Online Worldpay (OWP) files rather than the Worldpay Total (WT) ones.
+You can try the examples by running them in two different console windows. Or, if you're installing on two separate devices, they must be one the same network that allows UDP broadcast traffic. Make sure you're using rhw Online Worldpay (OWP) files rather than the Worldpay Total (WT) ones.
 
 *   In the first window, run the consumer JAR
 *   In the second window, run the producer JAR
@@ -24,7 +26,7 @@ You can try the examples by running the examples in two different console window
 
 ## See the payments
 
-Once the devices have successfully communicated with each other to make a payment, you'll want to check to make sure that your devices are successfully making and receiving payments.
+Once the devices have successfully communicated with each other to make a payment, you can check to make sure that your devices are successfully making and receiving payments.
 
 ### If you used your own test API keys
 

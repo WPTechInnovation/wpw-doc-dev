@@ -1,9 +1,11 @@
-The Python implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For more information, see [Home](index).
+The Python implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For an overview, see [Home](index).
 
 ## Prerequisites
 
-*   Before you get started, you should have Python installed on your system. We've built the SDK to work with version 2.7 and 3.
-*   You should create an account with [Worldpay Online](https://online.worldpay.com) so that you're able to generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
+Before you get started:
+
+*   Install Python on your system. We've built the SDK to work with version 2.7 and 3.
+*   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
 
 !!! warning
 
@@ -14,19 +16,19 @@ The Python implementation for the Worldpay Within IoT payment SDK. This SDK enab
 1.  Download the [repository](https://github.com/WPTechInnovation/wpw-sdk-python).
 2.  Download the latest version of Apache Thrift (currently 0.10.0).
 3.  Extract the repository and change to the **lib/py/** directory.
-4.  Run the following command: `sudo python setup.py` install.
+4.  Run: `sudo python setup.py` install.
 
 ## Run the examples
 
-You can try the examples by running the examples in two different console windows. Or, if you're installing on two separate devices, they must be one the same network that allows UDP broadcast traffic. Make sure you're using rhw Online Worldpay (OWP) files rather than the Worldpay Total (WT) ones.
+You can try the examples by running them in two different console windows. Or, if you're installing on two separate devices, they must be on the same network that allows UDP broadcast traffic. Make sure you're using rhw Online Worldpay (OWP) files rather than the Worldpay Total (WT) ones.
 
-*   In the first window, run `python runConsumerOWP.py`.
-*   In the second window, run `python runProducerOWP.py` OR `python runProducerCallbacksOWP.py`.
+*   In the first window, run: `python runConsumerOWP.py`.
+*   In the second window, run: `python runProducerOWP.py` OR `python runProducerCallbacksOWP.py`.
 *   The two smart devices should communicate with each other and make a payment.
 
 ## See the payments
 
-Once the devices have successfully communicated with each other to make a payment, you'll want to check to make sure that your devices are successfully making and receiving payments.
+Once the devices have successfully communicated with each other to make a payment, you can check to make sure that your devices are successfully making and receiving payments.
 
 ### If you used your own test API keys
 

@@ -1,10 +1,12 @@
-The Node.js implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For more information, see [Home](index).
+The Node.js implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For an overview, see [Home](index).
 
 ## Prerequisites
 
-*   Before you get started, you should have [Node.js](https://nodejs.org/en/) installed on your system. We've tested this wrapper with version 6.11.1.
-*   You should also have [npm](https://npmjs.com/) installed on your machine too.
-*   You should create an account with [Worldpay Online](https://online.worldpay.com) so that you're able to generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. 
+Before you get started:
+
+*   Install [Node.js](https://nodejs.org/en/) on your system. We've tested this wrapper with version 6.11.1.
+*   Install [npm](https://npmjs.com/) on your machine.
+*   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. 
 
 !!! warning
 	
@@ -16,7 +18,7 @@ Once you've got Node.js and npm.js, you should be good to go.
 
 1.  Clone or download [the repository](https://github.com/WPTechInnovation/wpw-sdk-nodejs).
 2.  Change to the folder `cd wpw-sdk-nodejs` (if using linux / unix).
-3.  Run the following command: `npm install thrift sleep`.  
+3.  Run: `npm install thrift sleep`.  
     
 !!! note
 		
@@ -25,16 +27,16 @@ Once you've got Node.js and npm.js, you should be good to go.
 
 ## Run the examples
 
-Once you've got the repository and have changed to the right folder, you can start testing to see if it works. We'd recommend using your own test API keys for this. We've left our ones in the code, but you won't be able to see the payments with our keys.
+Now you can start testing to see if it works. We'd recommend using your own test API keys for this. We've left ours in the code, but you won't be able to see the payments with our keys.
 
-1.  In one terminal/cmd (or on one device) run: `node example-producer-callbacks.js`.  
+1.  In one terminal/cmd (or on one device) run: `node example-producer-callbacks.js`.
     (You can run `node example-producer.js` but this does not recall the producer, once it times out)
 2.  In another terminal/cmd, (or on another device, on the same network) run: `node example-consumer.js`.
-3.  A payment should happen. If you see the `serviceDeliveryToken` returned within the producer terminal/cmd, you will know that the payment was complete.
+3.  A payment should fire. If you see the `serviceDeliveryToken` returned within the producer terminal/cmd, you'll know that the payment was complete.
 
 ## See the payments
 
-Once the devices have successfully communicated with each other to make a payment, you'll want to check to make sure that your devices are successfully making and receiving payments.
+Once the devices have successfully communicated with each other to make a payment, you can check to make sure that your devices are successfully making and receiving payments.
 
 ### If you used your own test API keys
 

@@ -4,7 +4,7 @@
 
 ## Service discovery messages
 
-We're going to build a reference application to prove the concepts and APIs outlined above. This reference application will be implemented on the current range of platforms aimed at providing IoT services. These boards are typically running ‘M’ class processors which as yet do not contain an SE. Currently only the application processors (A class such as A57 Cortex) contain SEs. However developments are being made in the IoT platform space, for example ARM has released a new M architecture with does contain an SE, although there will be delay before boards using these processors and compiler tools become mainstream. This document requires these more secure platforms to be available.
+We're going to build a reference application to prove the concepts and APIs outlined above. This reference application will be implemented on the current range of platforms aimed at providing IoT services. These boards are typically running ‘M’ class processors which as yet do not contain an SE. Currently only the application processors (A class such as A57 Cortex) contain SEs. However developments are being made in the IoT platform space, for example ARM has released a new M architecture with does contain an SE, although there will be a delay before boards using these processors and compiler tools become mainstream. This document requires these more secure platforms to be available.
 
 ### Service broadcast
 
@@ -21,7 +21,7 @@ We're going to build a reference application to prove the concepts and APIs outl
 
 ### Service list request
 
-In order to build the URL, use the hostname and the port number, then concatenate the URL with “service/discover”.
+To build the URL, use the hostname and the port number, then concatenate the URL with “service/discover”.
 
 `http://[Your hostname]:[Your port number]/v1/carcharge/service/discover`
     
@@ -56,7 +56,7 @@ In order to build the URL, use the hostname and the port number, then concatenat
 
 ### Service price request
 
-In order to build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with “service ID” and then “prices”.
+To build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with “service ID” and then “prices”.
 
 `http://[Your hostname]:[Your port number]/v1/carcharge/service/0/prices`
 
@@ -103,7 +103,7 @@ In order to build the URL, use the hostname, with the port number, the url prefi
 
 ### Get Total price request
 
-In order to build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with `service ID` and then `requestTotal`.
+To build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with `service ID` and then `requestTotal`.
 
 `http://[Your hostname]:[Your port number]/v1/carcharge/service/0/requestTotal`
 
