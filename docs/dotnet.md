@@ -3,7 +3,7 @@ The .NET implementation for the Worldpay Within IoT payment SDK. This SDK, or So
 ## Prerequisites
 
 * Before you get started, you should have the .NET 4.5 framework and Visual Studio 2017 (any edition) installed on your system. We've tested this wrapper with Visual 2017 Community Edition.
-* You should create an account with Worldpay Online so that you're able to generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. 
+* You should create an account with [Worldpay Online](https://online.worldpay.com) so that you're able to generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. 
 
 !!! warning
 
@@ -39,11 +39,11 @@ The sample application is a Windows console application. To make a simple paymen
 1. Select option 1 **Start Simple Producer**. This will start a local RPC Agent and register a separate producer with it. Ths producer has a very simple service declaration.
 1. Select option 3 **Consume Purchase**. This will start another RPC Agent and attempt to consume the first product of the first service it finds on the network. (This will most likely be your producer.)
 
-The sample application produces lots of logging, you can control this by editing the `App.config` file in the root of the sample project directory.
+The sample application produces lots of logging; you can control this by editing the `App.config` file in the root of the sample project directory.
 
 ## See the payments
 
-Once the devices have successfully communicated with each other to make a payment, you'll want to check to make sure that your devices are successfully making and receiving payments.
+Once the devices have successfully communicated with each other to make a payment, you'll want to make sure that your devices are successfully making and receiving payments.
 
 If you used your own test API keys:
 

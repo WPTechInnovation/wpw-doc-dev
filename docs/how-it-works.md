@@ -20,7 +20,7 @@ The producer device should follow this flow. These steps should map to the inter
 
 ## 2\. Choose your SDK
 
-For the alpha release, we ecided to go with five languages. The documentation and API specification can be found here:
+For the alpha release, we decided to go with five languages. The documentation and API specification can be found here:
 <div class="download">
   <a class="md-button" href="../nodejs">Node.js</a>
   <a class="md-button" href="../python27">Python</a>

@@ -50,13 +50,11 @@ Driven by the [Internet of Things](#iot) (IoT), Worldpay is keen to demonstrate 
 
 We’ve got a series of [open source](#open-source) software development kits (SDKs) that let you make and accept payments from a range of devices. We’ve got SDKs for [Node.js](nodejs), [Python](python27), [Java](java), [.NET](dotnet) and [Go](getting-started-with-go). You can download these SDKs, get playing, configure your setup, and recommend changes to our open source libraries.
 
-
 ## <a name="why-use-it"></a> Why use it
 
 You might want to use Worldpay Within if you’re a startup company that’s creating technologies relating to the Internet of Things. Or perhaps you’re a hobby developer who likes creating innovative technologies in your spare time.
 
 Worldpay Within provides you with the functionality and the SDKs to explore how the Internet of Things allows you to test the interaction between two devices and see how devices can make and receive payments.
-
 
 ## <a name="how-it-works"></a> How it works
 
@@ -75,7 +73,7 @@ Imagine that a car needs some fuel. It stops by a petrol station and broadcasts 
 
 ## <a name="iot"></a> The Internet of Things
 
-The Internet of Things (IoT) is an initiative to connect everyday items to the internet. It could be a car which needs to pay for fuel or some repairs, or a fridge which needs to order some groceries.
+The Internet of Things (IoT) is an initiative to connect everyday items to the internet. It could be a car which needs to pay for fuel or repairs, or a fridge which needs to order some groceries.
 
 [It is estimated](http://www.gartner.com/newsroom/id/3165317) that there will be 6 billion devices connected to the IoT by the end of 2016 and 20 billion by 2020\. Some of these devices will consume services from other devices for which a payment will be required.
 
@@ -88,7 +86,6 @@ Worldpay Within orchestrates smart things talking to each other and paying for s
 In 2016, Worldpay hosted the [Payments & IOT Hackathon](http://worldpay-hackathon.bemyapp.com) in which we wanted to take digital payments to the next level. In 2017, we're hosting another Hackathon in Romania, in which we release Worldpay Within.
 
 Want to find out more? Head over to the [Hackathons](hackathons) page.
-
 
 ## <a name="open-source"></a> It's open source
 

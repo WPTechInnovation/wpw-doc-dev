@@ -13,14 +13,14 @@ For the alpha release, we decided to go with five different languages. Their doc
 |**Parameter**|**Description**|
 | ------------- | -----|
 |`setup`|Sets up the wrapper to be able to start communicating with the underlying SDK.|
-|`addService`|Adds a service of type WWService to the producer (merchant). Used if the device you are operating on is a producer. If added to a device you intend as a consumer (shopper), this will give that device producer functionality.|
+|`addService`|Adds a WWService service type to the producer (merchant). Used if the device you are operating on is a producer. If added to a device you intend as a consumer (shopper), this will give that device producer functionality.|
 |`removeService`|Removes the service from the producer.|
 |`initConsumer`|Initiates the device as a consumer, which enables it to find services, choose prices, make payments and receive services.|
 |`initProducer`|Initiates the device as a producer / or initialises the producer capability.|
 |`getDevice`|Provides details of the the current device that the SDK is running on, and its credentials / information.|
 |`startServiceBroadcast`|Enables the producer device to start broadcasting itself via UDP broadcast over the network to notify devices it is available to be consumed.|
-|`stopServiceBroadcast`|Stops the SDK from broadcasting the current service messages that it is broadcasting.|
-|`deviceDiscovery`|Enables the consumer device to discover other devices (producers) on the network that are UDP broadcasting.|
+|`stopServiceBroadcast`|Stops the SDK from broadcasting the messages that it is broadcasting.|
+|`deviceDiscovery`|Enables the consumer device to discover other devices broadcasting on the same UDP network.|
 |`requestServices`|Gets a list of services that are available from the broadcasting device.|
 |`getServicePrices`|Used by the consumer to get the list of prices associated with a particular `serviceId`.|
 |`selectService`|Performed by the consumer, this provides details of the service, the amount and at what price point it wants to purchase the service.|
