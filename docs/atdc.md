@@ -5,8 +5,8 @@ Here you'll find information about what technology we used during the Atlanta Fi
 
 ### Quick start
 
-1.  Get a pre-provisioned SD card, which should put you on the 'Connectify' network
-2.  The go, and RPi Python wrapper should be ready to go, the RPC agent is available for you to provision the other wrappers too. Speak to Conor or Kevin for help with this
+1.  Get a pre-provisioned SD card, which should put you on the 'Connectify' network.
+2.  The go, and RPi Python wrapper should be ready to go, the RPC agent is available for you to provision the other wrappers too. Speak to Conor or Kevin for help with this.
 
 ### How to see my transactions on Worldpay Total?
 
@@ -43,10 +43,10 @@ Click [here](python27) for more information about the Python wrapper.
 
 If you want to use the Java, Node.js, Python 3 or .Net wrappers then here is further information about the setup:
 
-1.  [Java](java) wrapper - talk to Conor or Kevin, you'll need to setup a project with the source and pull in the libs
-2.  [Node.js](nodejs) - or talk to Conor
-3.  [Python 3](python) - talk to Kevin (HINT: once you've got this wrapper, theres a self contained setup.py)
-4.  [.net wrapper](dotnet) - or talk to Conor or Kevin
+1.  [Java](java) wrapper - or talk to Conor or Kevin, you'll need to setup a project with the source and pull in the libs.
+2.  [Node.js](nodejs) - or talk to Conor.
+3.  [Python 3](python27) - talk to Kevin (HINT: once you've got this wrapper, theres a self-contained setup.py).
+4.  [.net wrapper](dotnet) - or talk to Conor or Kevin.
 
 ### Environment variables for accessing RPC-agent
 !!! note
