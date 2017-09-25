@@ -87,5 +87,5 @@ pages:
 
 # Google Analytics
 google_analytics:
-  - !!python/object/apply:os.getenv ["UA-77147930-12"]
+  - "UA-77147930-12"
   - auto
