@@ -19,14 +19,10 @@ Currently, there are no [NuGet](https://nuget.org) published libraries for the S
 
 For now you'll need to build the project yourself, by following these steps:
 
-1. Clone or download the repository by typing `git clone git@github.com:WPTechInnovation/wpw-sdk-dotnet.git` in a terminal or console. See the [project homepage](https://github.com/WPTechInnovation/wpw-sdk-dotnet) on GitHub for more options.
-1. Open up the solution file in Visual Studio 2017 (community edition or better).
-1. Build the solution.  Note that you must be connected to the Internet for NuGet dependencies to be downloaded:
-    * ApacheThrift 0.10.0
-    * Common.Logging 3.3.1
-    * Common.Logging.Core 3.3.1
-1. Download the RPC Agent binary build for your platform. The RPC Agents can be downloaded from [the wpw-sdk-iot-core](https://github.com/WPTechInnovation/wpw-sdk-iot-core/tree/master/bin) project.
-    * To configure the .NET SDK to find the agent, download the agent in to a directory named **bin** and set a `WPW_HOME` environment variable to point to the directory above it. For example, if `rpc-agent-windows-386.exe ` is installed in `C:\users\Andy\wpw\bin`, then set `WPW_HOME` to `C:\users\Andy\wpw`.
+1. 	Clone or download the repository by typing `git clone https://github.com/WPTechInnovation/wpw-sdk-java.git` in a terminal or console. See the [project homepage](https://github.com/WPTechInnovation/wpw-sdk-dotnet) on GitHub for more options.
+2. 	Change directory: `cd wpw-sdk-dotnet`.
+3. 	Run `git submodule update --init --recursive`.
+4.	Open the Worldpay.Within.sln project in Visual Studio 2017.
 
 ## Run the examples
 

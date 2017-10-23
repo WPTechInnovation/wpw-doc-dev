@@ -4,7 +4,8 @@ The Java implementation for the Worldpay Within IoT payment SDK. This SDK enable
 
 Before you get started:
 
-*   Install the Java SDK on your system, and prefereably a Java IDE (Integrated Development Environment) - our dev's love Netbeans, Eclipse and IntelliJ, but it's your choice; we've provided a maven script to build everything. 
+* 	Install Java JDK 1.8 on your systems
+* 	Install Apache Maven and add it to PATH (https://maven.apache.org/)
 *   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
 
 !!! warning
@@ -12,17 +13,18 @@ Before you get started:
     Make sure you only use test API keys.
 
 ## Get started
+1. 	Clone the repository: `git clone https://github.com/WPTechInnovation/wpw-sdk-java.git`.
+2. 	Change directory: `cd wpw-sdk-java`.
+3. 	Run `git submodule update --init --recursive`.
+4. 	Then run `mvm`.
 
-1. Download the [repository](https://github.com/WPTechInnovation/wpw-sdk-java).
-2. Get the dependent repos by typing `git submodule init` and then `git submodule update --recursive --remote`
- 
 ## Run the examples
 
 You can try the examples by running them in two different console windows. Or, if you're installing on two separate devices, they must be one the same network that allows UDP broadcast traffic. Make sure you're using rhw Online Worldpay (OWP) files rather than the Worldpay Total (WT) ones.
 
-*   In the first window, run the consumer JAR
-*   In the second window, run the producer JAR
-*   The two smart devices should communicate with each other and make a payment
+1.   In the first window, run the consumer JAR.
+2.   Simultaneously run the producer JAR.
+3.   The two smart devices should communicate with each other and make a payment.
 
 ## See the payments
 
@@ -42,13 +44,7 @@ Once the devices have successfully communicated with each other to make a paymen
 
 ## Debugging
 
-If you get some odd error messages talking about a rpc-agent:
-
-*   Try typing the following command: `ps -e | grep rpc` to get the pid(s) of rpc-agents that are running.
-*   Then do `kill <pid>`, such as `kill 13249234` to kill these processes.
-*   Try re-running the examples
-
-If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
+If you're having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
 
 ## So what's happening?
 

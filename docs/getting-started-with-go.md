@@ -27,33 +27,15 @@ The dev client can be run from anywhere as it is not coupled with anything else.
 
 ## Install - if you want to go from the Go source files
 
-1.  Install the Go command line
-2.  Set up the environmental variables correctly; you only need to set `$GOPATH`, and that should be set as `//` where you want the code, for example: `/src/innovation.worldpay.com`
-3.  Clone the repo to `$GOPATH/src/innovation.worldpay.com`
-4.  Get the dependencies: `go get github.com/Sirupsen/logrus`
-5.  Get the dependencies: `go get github.com/gorilla/mux`
-6.  Get the dependencies: `go get github.com/nu7hatch/gouuid`
-7.  Get the dependencies: `go get git.apache.org/thrift.git/lib/go/thrift`
+1.  Install the [Go command line](https://golang.org/doc/install#install).
+2. 	Create a $GOPATH environment variable (for example, `export GOPATH=/home/pi/go`).
+3. 	Get the SDK: `go get https://github.com/WPTechInnovation/wpw-sdk-go.git.` This wil cause some Thrift errors, which we'll address in the next steps.
+4. 	Change directory (for example, `cd $GOPATH/src/git.apache.org/thrift/git/`)
+5. 	Do `git checkout 0.10.0`
 
-## Configuration file versus command line flags
-
-The RPC client takes command line flags, for example `-port 9091`. It can also take the flag `-configfile 'conf.json'`, so you can specify the configuration in a config file. For example:
-
-``` json
-{
-	"WorldpayWithinConfig": {
-		"BufferSize" : 100,
-		"Buffered": false,
-		"Framed": false,
-		"Host": "127.0.0.1",
-		"Logfile": "worldpayWithin.log",
-		"Loglevel": "warn",
-		"Port": 9081,
-		"Protocol": "binary",
- 		"Secure": false
-	}
-}
-```
+Now you've got everything set up, you're able to build the examples inside: `$GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples`. For example:
+1. `cd $GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples/sample-consumer`
+2. Run the examples: `go run main.go` or `go build main.go`.
 
 ### How to run two example apps on one machine
 
@@ -79,3 +61,7 @@ Follow these steps to run two apps on one machine:
 5.  Run the Java producer app so we're broadcasting. The RPC agent broadcasting will continue to run in the background while the Java program has exited.
 6.  Run the Node.js consumer app immediately.
 7.  The **Discover**, **Select**, **Pay** and **Release** flows will all be triggered, as you can see above.
+
+## Debugging
+
+If you're having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).

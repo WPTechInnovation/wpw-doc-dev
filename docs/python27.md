@@ -5,6 +5,8 @@ The Python implementation for the Worldpay Within IoT payment SDK. This SDK enab
 Before you get started:
 
 *   Install Python on your system. We've built the SDK to work with version 2.7 and 3.
+*	Install setup tools (for example, `sudo apt install python-setuptools`).
+* 	Install dependencies (`sudo python setup.py install`).
 *   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
 
 !!! warning
@@ -13,10 +15,10 @@ Before you get started:
 
 ## Get started
 
-1.  Download the [repository](https://github.com/WPTechInnovation/wpw-sdk-python).
-2.  Download the latest version of Apache Thrift (currently 0.10.0).
-3.  Extract the repository and change to the **lib/py/** directory.
-4.  Run: `sudo python setup.py` install.
+1.  Clone the [repository](https://github.com/WPTechInnovation/wpw-sdk-python).
+2.	Change to the directory (for example, `cd wpw-sdk-python`).
+3. 	Run `git submodule update --init --recursive`.
+4. 	Run `sudo python setup.py install`.
 
 ## Run the examples
 
@@ -44,13 +46,7 @@ Once the devices have successfully communicated with each other to make a paymen
 
 ## Debugging
 
-If you get some odd error messages talking about a rpc-agent:
-
-*   Try typing the following command: `ps -e | grep rpc` to get the pid(s) of rpc-agents that are running.
-*   Then do `kill <pid>`, such as `kill 13249234` to kill these processes.
-*   Try re-running the examples.
-
-If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
+If you're having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
 
 ## So what's happening?
 

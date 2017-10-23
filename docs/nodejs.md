@@ -4,8 +4,8 @@ The Node.js implementation for the Worldpay Within IoT payment SDK. This SDK ena
 
 Before you get started:
 
-*   Install [Node.js](https://nodejs.org/en/) on your system. We've tested this wrapper with version 6.11.1.
-*   Install [npm](https://npmjs.com/) on your machine.
+*   Install [Node.js](https://nodejs.org/en/) on your system. We've tested this wrapper with version 8.6.0 on Ubuntu and 4.8.4 on Raspberry Pi.
+*   Install [npm](https://npmjs.com/) on your machine. We've tested version 5.5.1 on Ubuntu and 2.5.11 on Raspberry Pi.
 *   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. 
 
 !!! warning
@@ -18,8 +18,9 @@ Once you've got Node.js and npm.js, you should be good to go.
 
 1.  Clone or download [the repository](https://github.com/WPTechInnovation/wpw-sdk-nodejs).
 2.  Change to the folder `cd wpw-sdk-nodejs` (if using linux / unix).
-3.  Run: `npm install thrift sleep`.  
-    
+3. 	Run: `git submodule update --init --recursive`.
+4. 	Run: `npm install`.
+
 !!! note
 		
 	If you are using a different package manager than npm, please adjust the command accordingly.  
@@ -29,10 +30,9 @@ Once you've got Node.js and npm.js, you should be good to go.
 
 Now you can start testing to see if it works. We'd recommend using your own test API keys for this. We've left ours in the code, but you won't be able to see the payments with our keys.
 
-1.  In one terminal/cmd (or on one device) run: `node example-producer-callbacks.js`.
-    (You can run `node example-producer.js` but this does not recall the producer, once it times out)
-2.  In another terminal/cmd, (or on another device, on the same network) run: `node example-consumer.js`.
-3.  A payment should fire. If you see the `serviceDeliveryToken` returned within the producer terminal/cmd, you'll know that the payment was complete.
+1.  In one terminal/cmd (or on one device) run: `node example-producer-callbacks.js`. You can run `node example-producer.js` but this does not recall the producer once it times out). This starts the producer application with communication on TCP port 9090 from localhost (Apache thrift communication).
+2.  In another terminal/cmd, (or on another device, on the same network) run: `node example-consumer.js`. This starts the consumer application with communication on TCP port 9088 from local host (Apache thrift communication).
+3.  A payment should fire. If you see the `serviceDeliveryToken` returned within the producer terminal/cmd, you'll know that the payment was complete. This payment will happen with our test keys, so you won't be able to see the payment.
 
 ## See the payments
 
@@ -52,13 +52,18 @@ Once the devices have successfully communicated with each other to make a paymen
 
 ## Debugging
 
-If you get some odd error messages talking about a rpc-agent:
+If you're having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
 
-*   Try typing the following command: `ps -e | grep rpc` to get the pid(s) of rpc-agents that are running.
-*   Then do `kill <pid>`, such as `kill 13249234` to kill these processes.
-*   Try re-running the examples.
+### OS-specific issues
+On Debain 14, the default version of Node.JS is 0.10. Distributions based on it such as Raspbian and Ubuntu would be impacted as well. To install Node.JS 8.x:
 
-If you're still having trouble, you can contact us at [Innovation@Worldpay.com](mailto:innovation@worldpay.com). Alternatively, you can [raise an issue in GitHub](https://github.com/WPTechInnovation/worldpay-within-sdk/issues).
+1. In a terminal, run `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
+2. Then do `sudo apt-get install -y nodejs`
+
+To install Node.JS 4.x (Long Time Support release):
+
+1. In a terminal, run `curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash-`
+2. Then do `sudo apt-get install -y nodejs` 
 
 ## So what's happening?
 
