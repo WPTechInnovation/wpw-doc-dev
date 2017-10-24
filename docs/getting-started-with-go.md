@@ -31,10 +31,11 @@ The dev client can be run from anywhere as it is not coupled with anything else.
 2. 	Create a $GOPATH environment variable (for example, `export GOPATH=/home/pi/go`).
 3. 	Get the SDK: `go get https://github.com/WPTechInnovation/wpw-sdk-go.git.` This wil cause some Thrift errors, which we'll address in the next steps.
 4. 	Change directory (for example, `cd $GOPATH/src/git.apache.org/thrift/git/`)
-5. 	Do `git checkout 0.10.0`
+5. 	Do `git checkout 0.10.0`.
 
 Now you've got everything set up, you're able to build the examples inside: `$GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples`. For example:
-1. `cd $GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples/sample-consumer`
+
+1. `cd $GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples/sample-consumer`.
 2. Run the examples: `go run main.go` or `go build main.go`.
 
 ### How to run two example apps on one machine
