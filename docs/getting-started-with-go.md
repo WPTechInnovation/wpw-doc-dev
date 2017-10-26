@@ -18,9 +18,9 @@ The Golang SDK communicates with these other languages using RPC calls (in both 
 ## Get started
 1. Create a $GOPATH environment variable: (for example, on unix do: `export GOPATH=/home/pi/go`).
 2. Get Apache Thrift and use the 0.10.0 branch:
-	a.	`go get git.apache.org/thrift.git/lib/go/thrift/...`
-	b. 	`cd $GOPATH/src/git.apache.org/thrift.git`
-    c.	`git checkout 0.10.0`
+		1.	`go get git.apache.org/thrift.git/lib/go/thrift/...`
+		2. 	`cd $GOPATH/src/git.apache.org/thrift.git`
+    	3.	`git checkout 0.10.0`
 3. 	Get the SDK: `go get github.com/WPTechInnovaion/wpw-sdk-go/...`
 
 !!! note
