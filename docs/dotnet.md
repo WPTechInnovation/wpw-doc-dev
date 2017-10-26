@@ -4,8 +4,8 @@ The .NET implementation for the Worldpay Within IoT payment SDK. This SDK, or So
 
 Before you get started:
 
-* Install the .NET 4.5 framework and Visual Studio 2017 (any edition) on your system. We've tested this wrapper with Visual 2017 Community Edition.
-* Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. 
+*	Install the Visual Studio 2017 (any edition) on your system. We've tested this wrapper with Visual 2017 Community Edition .NET (4.5+).
+*	Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK. 
 
 !!! warning
 
@@ -21,8 +21,8 @@ For now you'll need to build the project yourself, by following these steps:
 
 1. 	Clone or download the repository by typing `git clone https://github.com/WPTechInnovation/wpw-sdk-java.git` in a terminal or console. See the [project homepage](https://github.com/WPTechInnovation/wpw-sdk-dotnet) on GitHub for more options.
 2. 	Change directory: `cd wpw-sdk-dotnet`.
-3. 	Run `git submodule update --init --recursive`.
-4.	Open the Worldpay.Within.sln project in Visual Studio 2017.
+3. 	Update the submodules: `git submodule update --init --recursive`.
+4.	Open the **Worldpay.Within.sln** project in Visual Studio 2017.
 
 ## Run the examples
 

@@ -4,9 +4,9 @@ The Python implementation for the Worldpay Within IoT payment SDK. This SDK enab
 
 Before you get started:
 
-*   Install Python on your system. We've built the SDK to work with version 2.7 and 3.
-*	Install setup tools (for example, `sudo apt install python-setuptools`).
-* 	Install dependencies (`sudo python setup.py install`).
+*   Install Python on your system. We've built the SDK to work with version 2.7.
+*	Verify that the command `python` is available to run without specifying the whole path and update the PATH environment if required.
+*	On some UNIX operating systems, such as Debian, you must additionally install setup tools: `sudo apt install python-setuptools`.
 *   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
 
 !!! warning
@@ -15,18 +15,18 @@ Before you get started:
 
 ## Get started
 
-1.  Clone the [repository](https://github.com/WPTechInnovation/wpw-sdk-python).
+1.  Clone the [repository](https://github.com/WPTechInnovation/wpw-sdk-python): `git clone https://github.com/WPTechInnovation/wpw-sdk-python.git`.
 2.	Change to the directory (for example, `cd wpw-sdk-python`).
 3. 	Run `git submodule update --init --recursive`.
-4. 	Run `sudo python setup.py install`.
+4. 	As an administrator, run `sudo python setup.py install`.
 
 ## Run the examples
 
 You can try the examples by running them in two different console windows. Or, if you're installing on two separate devices, they must be on the same network that allows UDP broadcast traffic. Make sure you're using rhw Online Worldpay (OWP) files rather than the Worldpay Total (WT) ones.
 
-*   In the first window, run: `python runConsumerOWP.py`.
-*   In the second window, run: `python runProducerOWP.py` OR `python runProducerCallbacksOWP.py`.
-*   The two smart devices should communicate with each other and make a payment.
+1.	In the first window, run: `python runProducerOWP.py` or `python runProducerCallbacksOWP.py`.
+2.	In the second window, run: `python runConsumerOWP.py`.
+3.	The two smart devices should communicate with each other and make a payment.
 
 ## See the payments
 
