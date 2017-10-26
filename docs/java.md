@@ -13,7 +13,7 @@ Before you get started:
     Make sure you only use test API keys.
 
 ## Get started
-1. 	Clone the repository: `git clone https://github.com/WPTechInnovation/wpw-sdk-java.git`
+1.  Clone the repository: `git clone https://github.com/WPTechInnovation/wpw-sdk-java.git`
 2. 	Change directory: `cd wpw-sdk-java`
 3. 	Run `git submodule update --init --recursive`
 4. 	Then build it with maven using the default goal: `mvn`
@@ -22,23 +22,23 @@ Before you get started:
 
 You can try the examples by running them in two different console windows. Or, if you're installing on two separate devices, they must be one the same network that allows UDP broadcast traffic. Examples included in the repo are the sample projects: **sample-consumer**, **sample-producer** and **sample-producer-callbacks**. To run them you need to:
 
-1.   In the first window, run the consumer JAR.
-  *		`cd sample-producer-callbacks`
-  * 	`java -jar target/sample-producer-callbacks-<version>-alpha.jar`
-2.   Simultaneously run the producer JAR.
-  *		`cd sample-consumer`
-  *		`java -jar target/sample-consumer-<version>-alpha.jar`
-3.   The two smart devices should communicate with each other and make a payment.
+1.  In the first window, run the consumer JAR.
+  1.	`cd sample-producer-callbacks`
+  2.	`java -jar target/sample-producer-callbacks-<version>-alpha.jar`
+2.  Simultaneously run the producer JAR.
+  1.  `cd sample-consumer`
+  2.  `java -jar target/sample-consumer-<version>-alpha.jar`
+3.  The two smart devices should communicate with each other and make a payment.
 
 The car-example and car-charger are Spring boot projects that start a webservice on **localhost:80** and **localhost:8000**. Those ports should be free if you want to run them. To run these examples you need to:
 
-1.   In the first window, run the car-example.
-  *		`cd car-example`
-  * 	`java -jar ./target/car-example-<version>-alpha.jar`
-2.   Simultaneously run the car-charger.
-  *		`cd sample-consumer`
-  *		`java -jar ./target/car-charger-<version>-alpha.jar`
-3.   In your browser, navigate to `localhost:8000`, open SmartCar UI page in one tab and Producer UI page. Set the battery level by touching the green bar and begin charging by pressing the "Charge the battery" button.
+1.  In the first window, run the car-example.
+  1.  `cd car-example`
+  2. 	`java -jar ./target/car-example-<version>-alpha.jar`
+2.  Simultaneously run the car-charger.
+  1.	`cd sample-consumer`
+  2.	`java -jar ./target/car-charger-<version>-alpha.jar`
+3.  In your browser, navigate to `localhost:8000`, open SmartCar UI page in one tab and Producer UI page. Set the battery level by touching the green bar and begin charging by pressing the "Charge the battery" button.
 
 ## See the payments
 
