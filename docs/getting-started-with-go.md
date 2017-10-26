@@ -18,9 +18,9 @@ The Golang SDK communicates with these other languages using RPC calls (in both 
 ## Get started
 1. Create a $GOPATH environment variable: (for example, on unix do: `export GOPATH=/home/pi/go`).
 2. Get Apache Thrift and use the 0.10.0 branch:
-*	`go get git.apache.org/thrift.git/lib/go/thrift/...`
-* 	`cd $GOPATH/src/git.apache.org/thrift.git`
-* 	`git checkout 0.10.0`
+  *		`go get git.apache.org/thrift.git/lib/go/thrift/...`
+  * 	`cd $GOPATH/src/git.apache.org/thrift.git`
+  *		`git checkout 0.10.0`
 3. 	Get the SDK: `go get github.com/WPTechInnovaion/wpw-sdk-go/...`. Make sure you ignore the rpio.go system-specific warnings.
 
 ## Running the examples
@@ -32,15 +32,15 @@ Each example consists of a sample producer and a sample consumer:
 
 To test the communication, build and run the producer:
 
-* 	`cd $GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples/sample-producer-callbacks`
-* 	`go build`
-* 	`./sample-producer-callbacks`
+1. 	`cd $GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples/sample-producer-callbacks`
+2.	`go build`
+3.	`./sample-producer-callbacks`
 
 In a separate terminal window, build and run the consumer:
 
-*	`cd $GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples/sample-consumer`
-*	`go build`
-* 	`./sample-consumer`
+1.	`cd $GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples/sample-consumer`
+2.	`go build`
+3. 	`./sample-consumer`
 
 ![The output of the log files for the orchestration of the flow](images/get-started/outputoforchestration1.png)
 <figcaption>The output of the log files for the orchestration of the flow.</figcaption>

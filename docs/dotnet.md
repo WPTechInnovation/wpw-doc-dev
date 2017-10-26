@@ -28,16 +28,16 @@ For now you'll need to build the project yourself, by following these steps:
 
 Once you've loaded the projects in Visual Studio and built the project successfully (please note you can [report any problems or errors to us](https://github.com/WPTechInnovation/wpw-sdk-dotnet/issues) on Github), you're good to begin testing.
 
-To run a sample app, run the `Worldpay.Within.Sample` project.
+To run a sample app, run the **Worldpay.Within.Sample** project.
 
-We'd recommend using your own test API keys for this. We've left ours in the code, so that it "just works", but you won't be able to see the payments with our keys unless you change them. To do this, open `SimpleProducer.cs` and search for `MerchantServiceKey` in the `PSPConfig` declaration. You can replace the existing `MerchantServiceKey` with your own value. 
+We'd recommend using your own test API keys for this. We've left ours in the code, so that it "just works", but you won't be able to see the payments with our keys unless you change them. To do this, open **SimpleProducer.cs** and search for `MerchantServiceKey` in the `PSPConfig` declaration. You can replace the existing `MerchantServiceKey` with your own value. 
 
 The sample application is a Windows console application. To make a simple payment, do the following:
 
 1. Select option 1 **Start Simple Producer**. This will start a local RPC Agent and register a separate producer with it. Ths producer has a very simple service declaration.
 1. Select option 3 **Consume Purchase**. This will start another RPC Agent and attempt to consume the first product of the first service it finds on the network (This will most likely be your producer).
 
-The sample application produces lots of logging; you can control this by editing the `App.config` file in the root of the sample project directory.
+The sample application produces lots of logging; you can control this by editing the **App.config** file in the root of the sample project directory.
 
 ## See the payments
 
@@ -67,7 +67,7 @@ You can see there are four phases; **Discover**, **Select**, **Pay**, and **Rele
 
 ### Worldpay.Within
 
-This is the main .NET wrapper entry point assembly. The public API is contained inside the `Worldpay.Within` package.
+This is the main .NET wrapper entry point assembly. The public API is contained inside the **Worldpay.Within** package.
 
 You can use Sandcastle to build the docs, however they will be published online at some point (see [Issue 2](https://github.com/WPTechInnovation/wpw-sdk-dotnet/issues/2)).
 
@@ -81,7 +81,7 @@ To rebuild the code, first delete all the existing source files and their direct
 
 > The `-r` is there just for safety, in case subdirectories are used in future for storing dependent Thrift IDL files.
 
-Be aware that the above paths assume that you have downloaded the [Worldpay Within main SDK project](https://github.com/WPTechInnovation/worldpay-within-sdk) in to a regular "Go" development structure. However, only the thrift interface files are actually required. You can grab those directly from [here](https://github.com/WPTechInnovation/worldpay-within-sdk/tree/master/rpc). You need two files: `wptypes.thrift` and `wpwithin.thrift` - both files must be in the same directory.  They are not included within the .NET repository because they are centrally maintained and used to generate multiple language wrappers.
+Be aware that the above paths assume that you have downloaded the [Worldpay Within main SDK project](https://github.com/WPTechInnovation/worldpay-within-sdk) in to a regular "Go" development structure. However, only the thrift interface files are actually required. You can grab those directly from [here](https://github.com/WPTechInnovation/worldpay-within-sdk/tree/master/rpc). You need two files: **wptypes.thrift** and **wpwithin.thrift** - both files must be in the same directory.  They are not included within the .NET repository because they are centrally maintained and used to generate multiple language wrappers.
 
 Be sure to refresh the project source tree in Visual Studio to ensure that any newly generated files are included in the project. If you fail to do this, expect compile errors for missing types to be thrown.
 
