@@ -24,7 +24,7 @@ The Golang SDK communicates with these other languages using RPC calls (in both 
 3. 	Get the SDK: `go get github.com/WPTechInnovaion/wpw-sdk-go/...`. Make sure you ignore the rpio.go system-specific warnings.
 
 ## Running the examples
-Now you've got everything set up, you're able to build the examples inside: `$GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/example`.
+Now you've got everything set up, you're able to build the examples inside: `$GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/example`
 Each example consists of a sample producer and a sample consumer:
 
 *	$GOPATH/src/github.com/WPTechInnovation/wpw-sdk-go/examples/sample-consumer

@@ -19,9 +19,9 @@ Currently, there are no [NuGet](https://nuget.org) published libraries for the S
 
 For now you'll need to build the project yourself, by following these steps:
 
-1. 	Clone or download the repository by typing `git clone https://github.com/WPTechInnovation/wpw-sdk-java.git` in a terminal or console. See the [project homepage](https://github.com/WPTechInnovation/wpw-sdk-dotnet) on GitHub for more options.
-2. 	Change directory: `cd wpw-sdk-dotnet`.
-3. 	Update the submodules: `git submodule update --init --recursive`.
+1. 	Clone or download the repository by typing `git clone https://github.com/WPTechInnovation/wpw-sdk-dotnet.git` in a terminal or console. See the [project homepage](https://github.com/WPTechInnovation/wpw-sdk-dotnet) on GitHub for more options.
+2. 	Change directory: `cd wpw-sdk-dotnet`
+3. 	Update the submodules: `git submodule update --init --recursive`
 4.	Open the **Worldpay.Within.sln** project in Visual Studio 2017.
 
 ## Run the examples
@@ -52,7 +52,7 @@ If you've used Worldpay's own test API keys:
 
 1. Login to [Worldpay Online](https://online.worldpay.com).
 2. Got to **Settings > API keys** and get your test keys.
-3. Replace the keys in `SimpleProducer.cs`.
+3. Replace the keys in **SimpleProducer.cs**.
 
 Re-run the sample application and you should see the payments coming through on the Worldpay Online payments dashboard.
 
@@ -89,10 +89,10 @@ Be sure to refresh the project source tree in Visual Studio to ensure that any n
 
 To use Worldpay Within, add the following DLLs to your project path:
 
-1. `Worldpay.Within.dll` - this contains the SDK code and public entry points.
-1. `Worldpay.Within.Rpc.dll` - the Thrift compiler-generated code to bridge to the core Go SDK.
-1. `Thrift.dll` - Apache Thrift library. 
-1. `Logging Framework` - whatever logging framework we're going to use.
+1. **Worldpay.Within.dll** - this contains the SDK code and public entry points.
+1. **Worldpay.Within.Rpc.dll** - the Thrift compiler-generated code to bridge to the core Go SDK.
+1. **Thrift.dll** - Apache Thrift library. 
+1. **Logging Framework** - whatever logging framework we're going to use.
 
 To run a Worldpay Within application, the Thrift RPC code will need to be able to talk to an RPC Agent. The RPC Agent is a standalone application that manages the communication with remote third parties (for example, if you are creating a Consumer then the SDK code communicates with a local RPC Agent using the Thrift protocol, which then talks via HTTP to a remote RPC Agent, which then talks to a local Producer via the Thrift protocol).
 

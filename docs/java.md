@@ -13,10 +13,10 @@ Before you get started:
     Make sure you only use test API keys.
 
 ## Get started
-1. 	Clone the repository: `git clone https://github.com/WPTechInnovation/wpw-sdk-java.git`.
-2. 	Change directory: `cd wpw-sdk-java`.
-3. 	Run `git submodule update --init --recursive`.
-4. 	Then build it with maven using the default goal: `mvm`.
+1. 	Clone the repository: `git clone https://github.com/WPTechInnovation/wpw-sdk-java.git`
+2. 	Change directory: `cd wpw-sdk-java`
+3. 	Run `git submodule update --init --recursive`
+4. 	Then build it with maven using the default goal: `mvn`
 
 ## Run the examples
 

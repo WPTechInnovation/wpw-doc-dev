@@ -16,10 +16,10 @@ Before you get started:
 
 Once you've got Node.js and npm.js, you should be good to go.
 
-1.  Clone or download [the repository](https://github.com/WPTechInnovation/wpw-sdk-nodejs): `git clone https://github.com/WPTechInnovation/wpw-sdk-nodejs.git`.
-2.  Change to the folder `cd wpw-sdk-nodejs`.
-3. 	Update the submodules: `git submodule update --init --recursive`.
-4. 	Download the required modules: `npm install`.
+1.  Clone or download [the repository](https://github.com/WPTechInnovation/wpw-sdk-nodejs): `git clone https://github.com/WPTechInnovation/wpw-sdk-nodejs.git`
+2.  Change to the folder `cd wpw-sdk-nodejs`
+3. 	Update the submodules: `git submodule update --init --recursive`
+4. 	Download the required modules: `npm install`
 
 !!! note
 		
@@ -30,8 +30,8 @@ Once you've got Node.js and npm.js, you should be good to go.
 
 Now you can start testing to see if it works. We'd recommend using your own test API keys for this. We've left ours in the code, but you won't be able to see the payments with our keys.
 
-1.  In one terminal/cmd (or on one device) run: `node example-producer-callbacks.js`.
-2.  In another terminal/cmd, (or on another device, on the same network) run: `node example-consumer.js`.
+1.  In one terminal/cmd (or on one device) run: `node example-producer-callbacks.js`
+2.  In another terminal/cmd, (or on another device, on the same network) run: `node example-consumer.js`
 3.  A payment should fire. If you see the `serviceDeliveryToken` returned within the producer terminal/cmd, you'll know that the payment was complete. This payment will happen with our test keys, so you won't be able to see the payment.
 
 ## See the payments
