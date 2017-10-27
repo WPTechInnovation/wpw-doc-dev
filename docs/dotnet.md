@@ -55,8 +55,8 @@ To add your own test API keys:
 4. 	Grab your **Service key** and **Client key**. They'll look something like this: `T_S_fd00db67-b77b-4d6e-1a2a-45f65123f795`.
 5. 	Find the config folder of the SDK and find the producer JSON files.
 6. 	Add your Service and Client keys:
-		a. The `pspConfig.merchant_client_key` and `pspConfig.hte_public_key` must have the same key.
-		b. The `pspConfig.merchant_service_key` and `pspConfig.hte_private_key` must have the same keys.
+	1.	The `pspConfig.merchant_client_key` and `pspConfig.hte_public_key` must have the same key.
+	2.	The `pspConfig.merchant_service_key` and `pspConfig.hte_private_key` must have the same keys.
 7. 	Save your work.
 
 Once you've added your own test keys, you'll be able to start testing your payments.
@@ -69,13 +69,13 @@ To see your test payments:
 1. Login to [Worldpay Online](https://online.worldpay.com).
 2. On the homepage, scroll down to the **Recent Orders** section.
 3. Your payments are here. You'll be able to see:
-		a. 	**Order Code** - The order code
-		b. 	**Customer Order Code** - The customer's order code
-		c. 	**Gross Amount** - The gross amount of the order
-		d. 	**State** - The state of the order. For example, SUCCESS or AUTHORIZED
-		e. 	**Payment type** - The type of payment. For example, ECOM
-		f. 	**Order type**  - The type of order. For example, VISA_CREDIT or VISA_DEBIT
-		g. 	**Updated** - The last time the payment state changed
+	1.	**Order Code** - The order code
+	2.	**Customer Order Code** - The customer's order code
+	3.	**Gross Amount** - The gross amount of the order
+	4.	**State** - The state of the order. For example, SUCCESS or AUTHORIZED
+	5.	**Payment type** - The type of payment. For example, ECOM
+	6.	**Order type**  - The type of order. For example, VISA_CREDIT or VISA_DEBIT
+	7.	**Updated** - The last time the payment state changed
 
 For more information, refer to the [Worldpay Online documentation](https://developer.worldpay.com/jsonapi/docs).
 
