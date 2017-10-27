@@ -31,7 +31,7 @@ Once you've loaded the projects in Visual Studio and built the project successfu
 
 To run a sample app, run the **Worldpay.Within.Sample** project.
 
-We'd recommend using your own test API keys for this. We've left ours in the code, so that it "just works", but you won't be able to see the payments with our keys unless you change them. To do this, open **SimpleProducer.cs** and search for `MerchantServiceKey` in the `PSPConfig` declaration. You can replace the existing `MerchantServiceKey` with your own value. 
+We'd recommend using your own test API keys for this. We've left ours in the code, so that it "just works", but you won't be able to see the payments with our keys unless you change them. For more information, refer to [Creating your own keys](#create-own-keys) below.
 
 The sample application is a Windows console application. To make a simple payment, do the following:
 
@@ -40,7 +40,7 @@ The sample application is a Windows console application. To make a simple paymen
 
 The sample application produces lots of logging; you can control this by editing the **App.config** file in the root of the sample project directory.
 
-## Creating your own keys
+## <a name="create-own-keys"></a> Creating your own keys
 You can do this whenever you want, but you're going to need to create your own API keys. These keys allow you to simulate payments and see the outcome, rather than just using the keys Worldpay included in their SDKs.
 
 !!! warning

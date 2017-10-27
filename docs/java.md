@@ -57,7 +57,7 @@ To add your own test API keys:
 4. 	Grab your **Service key** and **Client key**. They'll look something like this: `T_S_fd00db67-b77b-4d6e-1a2a-45f65123f795`.
 5. 	Find the config folder of the SDK and find the producer JSON files.
 6. 	Add your Service and Client keys:
-  1.	The `pspConfig.merchant_client_key` and `pspConfig.hte_public_key` must have the same key.
+ 	1.	The `pspConfig.merchant_client_key` and `pspConfig.hte_public_key` must have the same key.
 	2.	The `pspConfig.merchant_service_key` and `pspConfig.hte_private_key` must have the same keys.
 7. 	Save your work.
 
