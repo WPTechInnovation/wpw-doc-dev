@@ -5,6 +5,8 @@ The Java implementation for the Worldpay Within IoT payment SDK. This SDK enable
 Before you get started:
 
 * 	Install Java JDK 1.8 on your systems.
+*	Set the `$JAVA_HOME` variable and make sure it points to your JDK installation directory.
+* 	If you do not have it, install [git](https://git-scm.com).
 * 	Install [Apache Maven](https://maven.apache.org/) and add it to PATH.
 *   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
 
@@ -40,21 +42,42 @@ The car-example and car-charger are Spring boot projects that start a webservice
     2.	`java -jar ./target/car-charger-<version>-alpha.jar`
 3.  In your browser, navigate to `localhost:8000`, open SmartCar UI page in one tab and Producer UI page. Set the battery level by touching the green bar and begin charging by pressing the "Charge the battery" button.
 
-## See the payments
+## Creating your own keys
+You can do this whenever you want, but you're going to need to create your own API keys. These keys allow you to simulate payments and see the outcome, rather than just using the keys Worldpay included in their SDKs.
 
-Once the devices have successfully communicated with each other to make a payment, you can check to make sure that your devices are successfully making and receiving payments.
+!!! warning
 
-### If you used your own test API keys
+	Make sure you only use test keys.
 
-1.  Login to [Worldpay Online](https://online.worldpay.com).
-2.  You'll see your dashboard. Scroll down and you should see the payment within your **Recent Orders**.
+To add your own test API keys:
+1. 	Login to [Worldpay Online](https://www.online.worldpay.com).
+2. 	Go to **Settings**.
+3. 	Then click **API Keys**.
+4. 	Grab your **Service key** and **Client key**. They'll look something like this: `T_S_fd00db67-b77b-4d6e-1a2a-45f65123f795`.
+5. 	Find the config folder of the SDK and find the producer JSON files.
+6. 	Add your Service and Client keys:
+		a. The `pspConfig.merchant_client_key` and `pspConfig.hte_public_key` must have the same key.
+		b. The `pspConfig.merchant_service_key` and `pspConfig.hte_private_key` must have the same keys.
+7. 	Save your work.
 
-### If you've used Worldpay's own test API keys
+Once you've added your own test keys, you'll be able to start testing your payments.
 
-1.  Login to [Worldpay Online](https://online.worldpay.com).
-2.  Got to **Settings > API keys** and get your test keys.
-3.  Replace the keys in the producer Java files.
-4.  Re-run the examples and you should see the payments coming through on the Worldpay Online payments dashboard.
+## Seeing your payments
+Now that you've added your own test keys to the producer config files, you can start testing your payments. Refer to the **Run the examples** topic for more information about this.
+
+To see your test payments:
+1. Login to [Worldpay Online](https://online.worldpay.com).
+2. On the homepage, scroll down to the **Recent Orders** section.
+3. Your payments are here. You'll be able to see:
+		a. 	**Order Code** - The order code
+		b. 	**Customer Order Code** - The customer's order code
+		c. 	**Gross Amount** - The gross amount of the order
+		d. 	**State** - The state of the order. For example, SUCCESS or AUTHORIZED
+		e. 	**Payment type** - The type of payment. For example, ECOM
+		f. 	**Order type**  - The type of order. For example, VISA_CREDIT or VISA_DEBIT
+		g. 	**Updated** - The last time the payment state changed
+
+For more information, refer to the [Worldpay Online documentation](https://developer.worldpay.com/jsonapi/docs).
 
 ## Debugging
 
