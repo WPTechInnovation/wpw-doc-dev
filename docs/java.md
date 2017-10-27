@@ -5,7 +5,7 @@ The Java implementation for the Worldpay Within IoT payment SDK. This SDK enable
 Before you get started:
 
 * 	Install Java JDK 1.8 on your systems.
-*	Set the `$JAVA_HOME` variable and make sure it points to your JDK installation directory.
+*	Set the `JAVA_HOME` variable and make sure it points to your JDK installation directory.
 * 	If you do not have it, install [git](https://git-scm.com).
 * 	Install [Apache Maven](https://maven.apache.org/) and add it to PATH.
 *   Create an account with [Worldpay Online](https://online.worldpay.com) so that you can generate your own test API key. You'll replace the Worldpay test keys with your own in the SDK.
@@ -50,6 +50,7 @@ You can do this whenever you want, but you're going to need to create your own A
 	Make sure you only use test keys.
 
 To add your own test API keys:
+
 1. 	Login to [Worldpay Online](https://www.online.worldpay.com).
 2. 	Go to **Settings**.
 3. 	Then click **API Keys**.
@@ -66,6 +67,7 @@ Once you've added your own test keys, you'll be able to start testing your payme
 Now that you've added your own test keys to the producer config files, you can start testing your payments. Refer to the **Run the examples** topic for more information about this.
 
 To see your test payments:
+
 1. Login to [Worldpay Online](https://online.worldpay.com).
 2. On the homepage, scroll down to the **Recent Orders** section.
 3. Your payments are here. You'll be able to see:

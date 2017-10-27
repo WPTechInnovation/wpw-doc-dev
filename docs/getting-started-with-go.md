@@ -18,9 +18,9 @@ The Golang SDK communicates with these other languages using RPC calls (in both 
 ## Get started
 1. Create a $GOPATH environment variable: (for example, on unix do: `export GOPATH=/home/pi/go`).
 2. Get Apache Thrift and use the 0.10.0 branch:
-		1.	`go get git.apache.org/thrift.git/lib/go/thrift/...`
-		2. 	`cd $GOPATH/src/git.apache.org/thrift.git`
-    	3.	`git checkout 0.10.0`
+		a.	`go get git.apache.org/thrift.git/lib/go/thrift/...`
+		b. 	`cd $GOPATH/src/git.apache.org/thrift.git`
+    	c.	`git checkout 0.10.0`
 3. 	Get the SDK: `go get github.com/WPTechInnovaion/wpw-sdk-go/...`
 
 !!! note
@@ -60,6 +60,7 @@ You can do this whenever you want, but you're going to need to create your own A
 	Make sure you only use test keys. If you use live keys, you'll begin Worldpay's boarding process.
 
 To add your own test API keys:
+
 1. 	Login to [Worldpay Online](https://www.online.worldpay.com).
 2. 	Go to **Settings**.
 3. 	Then click **API Keys**.
@@ -76,6 +77,7 @@ Once you've added your own test keys, you'll be able to start testing your payme
 Now that you've added your own test keys to the producer config files, you can start testing your payments. Refer to the **Run the examples** topic for more information about this.
 
 To see your test payments:
+
 1. Login to [Worldpay Online](https://online.worldpay.com).
 2. On the homepage, scroll down to the **Recent Orders** section.
 3. Your payments are here. You'll be able to see:

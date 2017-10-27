@@ -40,9 +40,10 @@ You can do this whenever you want, but you're going to need to create your own A
 
 !!! warning
 
-	Make sure you only use test keys. If you use live keys, you'll begin Worldpay's boarding process.
+	Make sure you only use test keys.
 
 To add your own test API keys:
+
 1. 	Login to [Worldpay Online](https://www.online.worldpay.com).
 2. 	Go to **Settings**.
 3. 	Then click **API Keys**.
@@ -59,6 +60,7 @@ Once you've added your own test keys, you'll be able to start testing your payme
 Now that you've added your own test keys to the producer config files, you can start testing your payments. Refer to the **Run the examples** topic for more information about this.
 
 To see your test payments:
+
 1. Login to [Worldpay Online](https://online.worldpay.com).
 2. On the homepage, scroll down to the **Recent Orders** section.
 3. Your payments are here. You'll be able to see:
