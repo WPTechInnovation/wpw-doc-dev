@@ -1,5 +1,7 @@
 The .NET implementation for the Worldpay Within IoT payment SDK. This SDK, or Software Development Kit, enables smart devices to discover each other, negogiate a price for services, make a payment (through the Worldpay Online Payment gateway) for services, and then consume services via a **trusted trigger**. For an overview, see [Home](index).
 
+You can find the .NET repository [here](https://github.com/WPTechInnovation/wpw-sdk-dotnet).
+
 ## Prerequisites
 
 Before you get started:
