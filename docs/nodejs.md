@@ -44,7 +44,7 @@ You can do this whenever you want, but you're going to need to create your own A
 
 To add your own test API keys:
 
-1. 	Login to [Worldpay Online](https://www.online.worldpay.com).
+1. 	Login to [Worldpay Online](https://online.worldpay.com).
 2. 	Go to **Settings**.
 3. 	Then click **API Keys**.
 4. 	Grab your **Service key** and **Client key**. They'll look something like this: `T_S_fd00db67-b77b-4d6e-1a2a-45f65123f795`.
