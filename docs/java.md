@@ -1,5 +1,7 @@
 The Java implementation for the Worldpay Within IoT payment SDK. This SDK enables smart devices to discover each other, negotiate a price for services, make a payment (through Worldpay) for services, and then consume services via a **trusted trigger**. For an overview, see [Home](index).
 
+You can find the Java SDK [here](https://github.com/WPTechInnovation/wpw-sdk-java).
+
 ## Prerequisites
 
 Before you get started:
