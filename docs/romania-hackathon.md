@@ -7,10 +7,11 @@ The event was a resounding success: the venue was alight with an exciting buzz o
 Armed with a range of gadgets from an Amazon Echo to mini drones, we were blown away by just how innovative some of the ideas were. They ranged from a Smart Cat feeding bowl—which could pay for food when the bowl was empty—and even Smart Car Parking, which pays for a parking space when you arrive in the spot. Some teams even utilised small little drones that could be used to make a payment at a shop!
 
 From a Worldpay perspective, it was a very humbling experience. The Innovation Team had created the SDK from the ground up, and the developers hacking it really helped us to understand some of the limitations of the SDK, and where it can be improved. These are just a few of our findings:
-*  The Python, Node.js and Java SDKs were the most popular
-*  There was a significant demand for an Android version of the SDK
-*  Developers would like us to build more examples of the SDK
-*  There was interest for us to create a webinar for how to use each SDK
+
+* 	The Python, Node.js and Java SDKs were the most popular
+* 	There was a significant demand for an Android version of the SDK
+* 	Developers would like us to build more examples of the SDK
+* 	There was interest for us to create a webinar for how to use each SDK
 
 ## So, who won?
 There were three judges: one from Worldpay, one from Endava, and one from Consult Hyperion. Speaking to them after the judging was complete, it was clear to see that they loved all of the ideas. But, of the 13 groups, there could only be one winner. 
@@ -27,7 +28,8 @@ We’d love to thank each and every contestant who attended the hackathon. It’
 
 ## Check out the code
 We’ve asked some of the teams to share with us the code that they used to build their projects:
-*  Placeholder 1
-*  Placeholder 2
+
+* 	Placeholder 1
+* 	Placeholder 2
 
 Please bear in mind that whilst the Worldpay Within SDK is open source, the code repos above may have different licencing.

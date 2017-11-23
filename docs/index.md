@@ -6,7 +6,7 @@
   </div>
   <div class="txt">
     <h2>What it is</h2>
-    <p>Worldpay Within is an embeddable payments agent that can be 'plugged' into an app or smart device. It lets you discover other devices and pay for that device's service(s). We've got the SDK in five languages: <a href="python27">Python</a>, <a href="dotnet">.NET</a>, <a href="nodejs">Node.js</a>, <a href="python27">Java</a> and <a href="getting-started-with-go">Go</a>.</p>
+    <p>Worldpay Within is an embeddable payments agent that can be 'plugged' into an app or smart device. It lets you discover other devices and pay for that device's service(s). We've got the SDK in five languages: <a href="python27">Python</a>, <a href="dotnet">.NET</a>, <a href="nodejs">Node.js</a>, <a href="java">Java</a> and <a href="getting-started-with-go">Go</a>.</p>
     <a class="md-button" href="#demo">Watch the demo</a>
   </div>
 </div>

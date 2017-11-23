@@ -8,29 +8,49 @@ First, make sure your device name is unique.  In the examples below we use **"Un
 Here is one way to do it (another way is to filter the list of discovered devices by device name or device description):
 ### Node.js
 Replace:
+
 `client.deviceDiscovery(10000, function (err, response) {...})`
+
 With:
+
 `client.searchForDevice(10000, "UniqueProducerName", function (err, response) {...})`
+
 ### Python
 Replace:
+
 `wpw.deviceDiscovery(10000)`
+
 With:
+
 `oneSvcMsg = wpw.searchForDevice(10000, "UniqueProducerName")`
+
 ### Java
 Replace:
+
 `Set<WWServiceMessage> devices = wpw.deviceDiscovery(10000);`
+
 With:
+
 `WWServiceMessage device = wpw.searchForDevice(10000, "UniqueProducerName");`
+
 ### Go
 Replace:
+
 `serviceMessages, err := wpw.DeviceDiscovery(10000)`
+
 With:
+
 `serviceMessage, err := wpw.SearchForDevice(10000, "UniqueProducerName")`
+
 ## C# .NET
 Replace:
+
 `WPWithinService.DeviceDiscovery(10000).ToList();`
+
 With:
+
 `WPWithinService.SearchForDevice(10000, "UniqueProducerName");`
+
 ## 2. I still can't find my producer. Why?
 It could be that you're not waiting long enough for the producer to broadcast its message. The SDK broadcasts the producer message every 5000 milliseconds (that's every 5 seconds).  So this means that your consumer has to be searching for the device for more than 5 seconds to ensure that it finds it.
 If this is too long for you, come and speak to a mentor and we'll help you out.
