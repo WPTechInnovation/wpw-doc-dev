@@ -1,12 +1,10 @@
 ## Payments & IoT Hackathons
 
-### Coming soon - 3-6 November 2017 - Bucharest, Romania hackathon
+### 3-6 November 2017 - Bucharest, Romania hackathon
 
-We're hosting our next hackathon in the beautiful city of Bucharest, Romania, between 3-6 November 2017. The challenge? Taking digital payments to the next level!
+In November 2017, we hosted our first ever hackathon in Bucharest, Romania. Using the Internet of Things as the basis of the challenge, developers were given the task of using Worldpay's very own Worldpay Within SDK to build software that could make payments between two smart devices.
 
-Using the Worldpay Within SDKs on Raspberry Pis, the theme of the hackathon is smart cities, smart homes and smart living. 
-
-For more information on our sponsors, how to register, and what exactly it is we're going to be hacking, head over to the [Worldpay Hackathon Website](http://worldpay-hackathon.bemyapp.com). If you've got any questions, you can reach us at [innovation@worldpay.com](mailto:innovation@worldpay.com).
+For more information, see the [Romania hackathon](romania-hackathon) page.
 
 ### February 2017 - Atlanta hackathon, featuring Worldpay Within
 

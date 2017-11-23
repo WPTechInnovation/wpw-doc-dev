@@ -83,7 +83,9 @@ pages:
     - Sample service messaging: sample-service-messaging.md
     - API Spec: api-spec.md
   - Hackathons: hackathons.md
+  - FAQs: faqs.md
   - (hidden) Atlanta Fintech Hackathon: atdc.md
+  - (hidden) Romania Hackathon: romania-hackathon.md
 
 # Google Analytics
 google_analytics:
