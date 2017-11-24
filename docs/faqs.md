@@ -1,12 +1,12 @@
 # Frequently asked questions
 During the last Worldpay Within Hackthon, we identified some commonly-asked questions. 
 ## 1. How do I find my producer amongst everyone else's on the network?
-**What is the problem?**
+### What is the problem?
 When you run your consumer, it might fail because it is finding the first producer on the network and wrongly assuming that it is your one!
-**How to solve it?**
+### How do I solve it?
 First, make sure your device name is unique.  In the examples below we use **"UniqueProducerName"**, but make sure you use something unique to your team or solution.
 Here is one way to do it (another way is to filter the list of discovered devices by device name or device description):
-### Node.js
+#### Node.js
 Replace:
 
 `client.deviceDiscovery(10000, function (err, response) {...})`
@@ -15,7 +15,7 @@ With:
 
 `client.searchForDevice(10000, "UniqueProducerName", function (err, response) {...})`
 
-### Python
+#### Python
 Replace:
 
 `wpw.deviceDiscovery(10000)`
@@ -24,7 +24,7 @@ With:
 
 `oneSvcMsg = wpw.searchForDevice(10000, "UniqueProducerName")`
 
-### Java
+#### Java
 Replace:
 
 `Set<WWServiceMessage> devices = wpw.deviceDiscovery(10000);`
@@ -33,7 +33,7 @@ With:
 
 `WWServiceMessage device = wpw.searchForDevice(10000, "UniqueProducerName");`
 
-### Go
+#### Go
 Replace:
 
 `serviceMessages, err := wpw.DeviceDiscovery(10000)`
@@ -42,7 +42,7 @@ With:
 
 `serviceMessage, err := wpw.SearchForDevice(10000, "UniqueProducerName")`
 
-## C# .NET
+#### C# .NET
 Replace:
 
 `WPWithinService.DeviceDiscovery(10000).ToList();`
@@ -63,6 +63,6 @@ Our Raspberry Pis come pre-loaded with Raspbian, but you can choose whichever op
 ## 5. How can I see what I'm actually doing on my Raspberry Pi?
 We'd recommend you use [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/). We used it at the Romania Hackathon and it worked well.
 ## 6. What currency should I use?
-We'd recommend you only use GBP, as this is what Worlday Online uses for test accounts.
+We'd recommend you use GBP.
 ## 7. Why can't I get the .NET SDK to work on my Raspberry Pi?
 It doesn't work, but we're looking to get it working.

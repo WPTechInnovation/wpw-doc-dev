@@ -32,4 +32,4 @@ We’ve asked some of the teams to share with us the code that they used to buil
 * 	Placeholder 1
 * 	Placeholder 2
 
-Please bear in mind that whilst the Worldpay Within SDK is open source, the code repos above may have different licencing.
+Please bear in mind that whilst the Worldpay Within SDK is open source, the code repos above may have different licensing.
