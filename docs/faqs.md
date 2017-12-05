@@ -53,7 +53,7 @@ With:
 
 ## 2. I still can't find my producer. Why?
 It could be that you're not waiting long enough for the producer to broadcast its message. The SDK broadcasts the producer message every 5000 milliseconds (that's every 5 seconds). So this means that your consumer has to be searching for the device for more than 5 seconds to ensure that it finds it.
-If this is too long for you, and you're at a hackathon, come and talk to a mentor. Else, [email us](innovation@worldpay.com).
+If this is too long for you, and you're at a hackathon, come and talk to a mentor. Else, [email us](mailto:innovation@worldpay.com).
 
 ## 3. I've tried that but I still cannot find my producer.
 !! note
