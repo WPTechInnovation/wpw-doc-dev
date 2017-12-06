@@ -56,8 +56,10 @@ It could be that you're not waiting long enough for the producer to broadcast it
 If this is too long for you, and you're at a hackathon, come and talk to a mentor. Else, [email us](mailto:innovation@worldpay.com).
 
 ## 3. I've tried that but I still cannot find my producer.
-!! note
-  This issue has mostly been found on Windows devices.
+
+!!! note
+
+    This issue has mostly been found on Windows devices.
 
 If none of your consumers can see a broadcasting producer then check to see which network interface the producer is broadcasting on.
 The SDK will always broadcast on the first available network adapter.  So, for example, if you're using the Wireless network but your first adapter when you list the interfaces is **eth0**, then your broadcasts will be on **eth0** and *not* on the **wlan0** or any other wireless adapter.
