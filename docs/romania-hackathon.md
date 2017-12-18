@@ -25,7 +25,7 @@ The team that built the Smart Utilities platform won the 9000 RON prize. They cr
 <figcaption>The hackathon winners</figcaption>
 
 ## What happens now?
-Well, just because our first ever Romanian hackathon event is over, it doesn’t mean that the development ends here. We’re got a list of over 30 things that we’ve taken away from the event. We’re going to go back to Worldpay HQ with a wealth of ideas to build on the many successes and failures (there were only a couple, promise!), to make sure that the Worldpay Within SDK is the driving force of Worldpay’s involvement in the Internet of Things.
+Well, just because our first ever Romanian hackathon event is over, it doesn’t mean that the development ends here. We’ve got a list of over 30 things that we’ve taken away from the event. We’re going to go back to Worldpay HQ with a wealth of ideas to build on the many successes and failures (there were only a couple, promise!), to make sure that the Worldpay Within SDK is the driving force of Worldpay’s involvement in the Internet of Things.
 
 ## A final thanks
 We couldn’t have done it without our sponsors Endava and Consult Hyperion (and their judges). And the event wouldn’t have even taken place without the unending support of BeMyApp, who helped organise the event and provided platforms and infrastructure for the event. We'd also like to thank the  mentors and the organisation team from Worldpay, who provided support throughout the event.
@@ -34,3 +34,6 @@ We’d love to thank each and every contestant who attended the hackathon. It’
 
 ![The contestants, mentors and sponsors](images/hackathon-photos/photo-3.jpg)
 <figcaption>Group photo of us at the hackathon</figcaption>
+
+## Watch the video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zm2vLlktVmk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
