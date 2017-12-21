@@ -2,6 +2,8 @@
 ## The event in Romania
 On Friday 3 November 2017, developers, designers, makers, entrepreneurs, and  mentors (from Worldpay and the hackathon sponsors) descended on The Impact Hub, Bucharest, for Worldpay’s first ever hackathon in Romania. Based on the ideas of the Internet of Things, Worldpay’s own Worldpay Within SDK was put through its paces as teams of developers worked on building software that allowed smart devices to make payments to each other.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zm2vLlktVmk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
 The event was a resounding success; the venue was alight with an exciting buzz of ideas as the teams started to visualise what they’re going to build and how they’re going to go about doing it. You can see photos from the event [here](https://www.flickr.com/photos/bemyapp/albums/72157662247969258/page1).
 
 The contestants blew us away with just how innovative their ideas were. The ideas ranged from a Smart Cat feeding bowl - which could pay for food when the bowl was empty - and even Smart Car Parking, which pays for a parking space when you arrive in the spot. Some teams even utilised small little drones that could be used to make a payment at a shop!
@@ -34,6 +36,3 @@ We’d love to thank each and every contestant who attended the hackathon. It’
 
 ![The contestants, mentors and sponsors](images/hackathon-photos/photo-3.jpg)
 <figcaption>Group photo of us at the hackathon</figcaption>
-
-## Watch the video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zm2vLlktVmk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
