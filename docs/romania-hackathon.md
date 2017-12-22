@@ -2,7 +2,7 @@
 ## The event in Romania
 On Friday 3 November 2017, developers, designers, makers, entrepreneurs, and  mentors (from Worldpay and the hackathon sponsors) descended on The Impact Hub, Bucharest, for Worldpay’s first ever hackathon in Romania. Based on the ideas of the Internet of Things, Worldpay’s own Worldpay Within SDK was put through its paces as teams of developers worked on building software that allowed smart devices to make payments to each other.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zm2vLlktVmk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zm2vLlktVmk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 The event was a resounding success; the venue was alight with an exciting buzz of ideas as the teams started to visualise what they’re going to build and how they’re going to go about doing it. You can see photos from the event [here](https://www.flickr.com/photos/bemyapp/albums/72157662247969258/page1).
 
