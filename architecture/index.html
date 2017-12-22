@@ -1,0 +1,1138 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Worldpay Within website">
+      
+      
+        <link rel="canonical" href="https://wptechinnovation.github.io/wpw-doc-dev/architecture/">
+      
+      
+        <meta name="author" content="Worldpay Within">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-1.8.1">
+    
+    
+    
+      
+        <title>Architecture - Worldpay Within</title>
+      
+    
+    
+    
+      <script src="../assets/javascripts/modernizr-8210299719.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-a15cc7de21.css">
+      
+    
+    
+      
+        <style>body,input{font-family:adelle_sansregular,"Helvetica Neue",Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6{font-family:adelle_sansthin,"Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://wptechinnovation.github.io/wpw-doc-dev/" title="Worldpay Within" class="md-logo md-header-nav__button">
+            <img src="../images/logo.svg" width="160" height="32">
+                <span class="md-subtitle">within</span>
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                
+                  <span class="md-header-nav__parent">
+                    Advanced
+                  </span>
+                
+              
+              Architecture
+            
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/WPTechInnovation/wpw-doc-dev/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      WPTechInnovation/wpw-doc-dev
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../images/logo.svg" width="160" height="32">
+        <span class="md-subtitle">within</span>
+      </i>
+    
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/WPTechInnovation/wpw-doc-dev/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      WPTechInnovation/wpw-doc-dev
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../get-started/" title="Get started" class="md-nav__link">
+      Get started
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      SDK
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        SDK
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nodejs/" title="Node.js" class="md-nav__link">
+      Node.js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python27/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dotnet/" title=".NET" class="md-nav__link">
+      .NET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started-with-go/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-it-works/" title="How it works" class="md-nav__link">
+      How it works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Architecture
+      </label>
+    
+    <a href="./" title="Architecture" class="md-nav__link md-nav__link--active">
+      Architecture
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-overview" title="Architecture Overview" class="md-nav__link">
+    Architecture Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worldpay-within-iot-service-architecture" title="Worldpay Within IoT Service Architecture" class="md-nav__link">
+    Worldpay Within IoT Service Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discover" title="Discover" class="md-nav__link">
+    Discover
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-discovery-apis" title="Service Discovery APIs" class="md-nav__link">
+    Service Discovery APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-discovery-messages" title="Service discovery messages" class="md-nav__link">
+    Service discovery messages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select" title="Select" class="md-nav__link">
+    Select
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-selection-apis" title="Service selection APIs" class="md-nav__link">
+    Service selection APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-selection-messages" title="Service selection messages" class="md-nav__link">
+    Service selection messages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pay" title="Pay" class="md-nav__link">
+    Pay
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-token-request" title="Client token request" class="md-nav__link">
+    Client token request
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-token-request-apis" title="Client token request APIs" class="md-nav__link">
+    Client token request APIs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thing-a-to-worldpay-client-token-request" title="Thing A to Worldpay client token request" class="md-nav__link">
+    Thing A to Worldpay client token request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-authorisation-request" title="Payment authorisation request" class="md-nav__link">
+    Payment authorisation request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-authorisation-request-apis" title="Payment authorisation request APIs" class="md-nav__link">
+    Payment authorisation request APIs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thing-b-to-worldpay-payment-authorisation-request" title="Thing B to Worldpay payment authorisation request" class="md-nav__link">
+    Thing B to Worldpay payment authorisation request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thing-b-to-thing-a-service-token" title="Thing B to Thing A service token" class="md-nav__link">
+    Thing B to Thing A service token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery" title="Delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-delivery-apis" title="Service Delivery APIs" class="md-nav__link">
+    Service Delivery APIs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../internal-structure/" title="Internal structure" class="md-nav__link">
+      Internal structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sample-service-messaging/" title="Sample service messaging" class="md-nav__link">
+      Sample service messaging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api-spec/" title="API Spec" class="md-nav__link">
+      API Spec
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../hackathons/" title="Hackathons" class="md-nav__link">
+      Hackathons
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faqs/" title="FAQs" class="md-nav__link">
+      FAQs
+    </a>
+  </li>
+
+      
+    
+      
+    
+      
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-overview" title="Architecture Overview" class="md-nav__link">
+    Architecture Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worldpay-within-iot-service-architecture" title="Worldpay Within IoT Service Architecture" class="md-nav__link">
+    Worldpay Within IoT Service Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discover" title="Discover" class="md-nav__link">
+    Discover
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-discovery-apis" title="Service Discovery APIs" class="md-nav__link">
+    Service Discovery APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-discovery-messages" title="Service discovery messages" class="md-nav__link">
+    Service discovery messages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select" title="Select" class="md-nav__link">
+    Select
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-selection-apis" title="Service selection APIs" class="md-nav__link">
+    Service selection APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-selection-messages" title="Service selection messages" class="md-nav__link">
+    Service selection messages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pay" title="Pay" class="md-nav__link">
+    Pay
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-token-request" title="Client token request" class="md-nav__link">
+    Client token request
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-token-request-apis" title="Client token request APIs" class="md-nav__link">
+    Client token request APIs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thing-a-to-worldpay-client-token-request" title="Thing A to Worldpay client token request" class="md-nav__link">
+    Thing A to Worldpay client token request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-authorisation-request" title="Payment authorisation request" class="md-nav__link">
+    Payment authorisation request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-authorisation-request-apis" title="Payment authorisation request APIs" class="md-nav__link">
+    Payment authorisation request APIs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thing-b-to-worldpay-payment-authorisation-request" title="Thing B to Worldpay payment authorisation request" class="md-nav__link">
+    Thing B to Worldpay payment authorisation request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thing-b-to-thing-a-service-token" title="Thing B to Thing A service token" class="md-nav__link">
+    Thing B to Thing A service token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery" title="Delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-delivery-apis" title="Service Delivery APIs" class="md-nav__link">
+    Service Delivery APIs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/edit/master/docs/architecture.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                
+                  <h1>Architecture</h1>
+                
+                
+                <p>To complement the architecture we've released the Worldpay Within SDK. The intention for the SDK is to encapsulate implementation and help third party vendors and developers integrate into their Internet of Things (IoT) solutions.</p>
+<p>The core of the SDK is developed in the Go programming language with wrappers created for <a href="../java">Java</a>, <a href="../nodejs">Node.js</a>, <a href="../python27">Python</a> and <a href="../dotnet">.NET</a>. Service delivery and broadcast have been implemented using TCP/IP networking.</p>
+<p>For more information about the low level service messaging, click <a href="../sample-service-messaging">here</a>.</p>
+<h2 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
+<p>In the IoT, each Thing will perform the function it is designed for, be it acting as a sensor, a controller or both. In order for the Thing to be able to make and receive payments for services they can provide to other Things, they need to add the payments functionality contained in Worldpay Within.</p>
+<p><img alt="Worldpay Within Pluggable agent" src="../images/architecture/architecture-overview-1.png" />
+<figcaption>Figure 1. Worldpay Within Pluggable agent.</figcaption></p>
+<p>Things in the IoT will be implemented on dedicated low cost processor systems. The Thing and Worldpay Within must co-exist and operate on the resources provided by these devices, as demonstrated in Figure 2.</p>
+<p><img alt="Logical Overview" src="../images/architecture/architecture-overview-2.png" />
+<figcaption>Figure 2. Worldpay Within Logical Overview.</figcaption></p>
+<p>In order to make and receive payments in the IoT, a Thing must be able to perform the roles of consumer (shopper), to make a payment for services, and the producer (merchant), to receive a payment for provision of services. In the Worldpay Within IoT architecture, the “consumer” pays for services by supporting Host Card Emulation (HCE). The “merchant” or "producer" receives payments for services by supporting Host Terminal Emulation (HTE). Worldpay Within contains both HCE Brain and HTE Brain functionalities, ensuring a Thing can both consume and supply services. These services are provided through a series of public APIs, described within this document.</p>
+<p>During the payments process, HCE and HTE require the secure storage and use of credentials. This requires the use of secure processing within the Thing in a “Secure Execution Environment”. For HCE Things, these credentials include the details of the “card” which the payment will be made from. For HTE Things, these credentials include the details the Merchant requires to perform transactions with Worldpay.</p>
+<p>As well as the provision of the payment for the services, Worldpay Within provides for the generation and validation of secure service tokens, which allow for services to be consumed in part or together, but separately from the payments functionality.</p>
+<h2 id="worldpay-within-iot-service-architecture">Worldpay Within IoT Service Architecture<a class="headerlink" href="#worldpay-within-iot-service-architecture" title="Permanent link">&para;</a></h2>
+<p>The provision of a service within the Worldpay IoT system is performed in 4 phases, as shown in Figure 3. These are:  <strong>Discover</strong>, <strong>Select</strong>, <strong>Pay</strong>, and <strong>Release</strong>. Each of these phases are described in the following sections.</p>
+<p><img alt="The 4 phases of Worldpay Within" src="../images/architecture/Architecture1.png" />
+<figcaption>Figure 3. The 4 phases of Worldpay Within.</figcaption></p>
+<h2 id="discover">Discover<a class="headerlink" href="#discover" title="Permanent link">&para;</a></h2>
+<p>For each Thing that offers services, the service ‘producer’ shall broadcast its list of available services, as shown in Figure 4 below. When a potential ‘consumer’ of the service connects with ‘producer’, it can request details of the services offered.</p>
+<p>Providing a suitable service is discovered, the consumer then requests the service from the producer, and price negotiations can begin.</p>
+<p><img alt="IoT Service discovery" src="../images/architecture/Architecture2.png" />
+<figcaption>Figure 4. IoT Service discovery.</figcaption></p>
+<h3 id="service-discovery-apis">Service Discovery APIs<a class="headerlink" href="#service-discovery-apis" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Parameters</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>broadcast</td>
+<td><code>server_UUID</code></td>
+<td>Advertising services and identifying the sender.</td>
+</tr>
+<tr>
+<td>request services</td>
+<td>none</td>
+<td>Request a list of all services.</td>
+</tr>
+<tr>
+<td>services_response</td>
+<td><code>list of services</code>, <code>server_UUID</code></td>
+<td>Provide client with a list of possible services that the sender can provide.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-discovery-messages">Service discovery messages<a class="headerlink" href="#service-discovery-messages" title="Permanent link">&para;</a></h3>
+<p>A broadcast message that includes <strong>Thing B</strong>’s UUID is sent.</p>
+<p>Upon receiving the message, <strong>Thing A</strong> connects to <strong>Thing B</strong> and requests the list of available services.</p>
+<p><strong>Thing B</strong> responds with a list identifying the services available.</p>
+<h2 id="select">Select<a class="headerlink" href="#select" title="Permanent link">&para;</a></h2>
+<p>Once a suitable service has been discovered, the shopper will make the choice. The provider may offer the same service at different rates depending on the number of units of service to be purchased. The process is outlined in Figure 5. The outcome of the process is an agreement to purchase an amount of service and a total price for the service to be provided. The service provider can then request payment for the agreed service and price.</p>
+<p><img alt="IoT Service Negotiation" src="../images/architecture/Architecture3.png" />
+<figcaption>Figure 5. IoT Service Negotiation.</figcaption></p>
+<h3 id="service-selection-apis">Service selection APIs<a class="headerlink" href="#service-selection-apis" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Parameters</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>price_request</code></td>
+<td><code>service_id</code></td>
+<td>Request a list of all prices for a given service.</td>
+</tr>
+<tr>
+<td><code>price_response</code></td>
+<td><code>server_UUID</code>, list of prices, (<code>service_id</code>, <code>price_id</code>, <code>price_per_unit</code>, <code>unit_ID</code>, <code>unit_description</code>, <code>price_description</code>)</td>
+<td>Provide the client with a list of prices for a given service. A price object contains the per unit price.</td>
+</tr>
+<tr>
+<td><code>price_select</code></td>
+<td><code>service_id</code>, <code>price_id</code>, <code>number_of_units</code>, <code>client_UUID</code></td>
+<td>Select a price with <code>price_id</code>, for <code>service_id</code> for a number of units.</td>
+</tr>
+<tr>
+<td><code>price_select_response</code></td>
+<td><code>price_id</code>, <code>number_of_units</code>, <code>total_price</code>, <code>server_UUID</code>, <code>client_UUID</code>, <code>payment_ref_ID</code>, <code>Merchant_Client_key</code></td>
+<td>Communicate the expected total price to the client.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-selection-messages">Service selection messages<a class="headerlink" href="#service-selection-messages" title="Permanent link">&para;</a></h3>
+<p>A price request is sent containing the selected <code>service_id</code>.</p>
+<p>The response from <strong>Thing B</strong> contains a list of price items; each item should contain a <code>price_id</code>, per unit price, <code>unit_ID</code> and <code>description</code> fields of both the unit and the price.</p>
+<p><strong>Thing A</strong> then selects an appropriate <code>price_id</code> by sending a request with its <code>client_UUID</code>, the selected <code>service_id</code>, the <code>price_id</code>, and the number of items required.</p>
+<p>If the number of items falls within the correct number of items for the price selected, then <strong>Thing B</strong> responds with a price select response containing the <code>service_id</code>, <code>price_id</code>, the total price, the <code>service_UUID</code> and a reference for the payment and its Merchant Client key. Otherwise, <strong>Thing B</strong> shall return the number of units it can supply along with the correct price, and additional details required to initiate the payment.</p>
+<h2 id="pay">Pay<a class="headerlink" href="#pay" title="Permanent link">&para;</a></h2>
+<p>The payment process with Worldpay is a two stage process, split between the consumer and merchant Things involved in the transaction:</p>
+<ol>
+<li>Client Token Request</li>
+<li>Payment Authorisation Request (Also known as Order Request)</li>
+</ol>
+<p>During the first stage, the consumer sends Worldpay their payment credentials and the merchants Client Key. We return a Client Token, which the consumer passes to the Merchant. This allows the merchant to perform the payment authorisation request with Worldpay by providing the Client Token and transaction details.</p>
+<p>This payment process ensures that the consumer does not pass their payment credentials to the merchant, only to Worldpay.</p>
+<h3 id="client-token-request">Client token request<a class="headerlink" href="#client-token-request" title="Permanent link">&para;</a></h3>
+<p>The first step in the payment process is when <strong>Thing A</strong> receives the <code>Merchant_Client_Key</code> from <strong>Thing B</strong>. <strong>Thing B</strong> passes their public Client Key to <strong>Thing A</strong> as part of the <code>price_select_response</code> during the Service Negotiation phase. Upon receiving the Client Key from <strong>Thing B</strong>, <strong>Thing A</strong> connects with Worldpay to request the client token from us. This request includes <strong>Thing A</strong>’s payment credentials: Card PAN, expiry, and the <code>client_key</code> of <strong>Thing B</strong>. Worldpay will respond with a message that includes a <code>client_token</code>. This is shown in Figure 6.</p>
+<p><img alt="IoT Payment process - client token request" src="../images/architecture/Architecture4.png" />
+<figcaption>Figure 6. IoT Payment process - client token request.</figcaption></p>
+<h4 id="client-token-request-apis">Client token request APIs<a class="headerlink" href="#client-token-request-apis" title="Permanent link">&para;</a></h4>
+<h5 id="thing-a-to-worldpay-client-token-request">Thing A to Worldpay client token request<a class="headerlink" href="#thing-a-to-worldpay-client-token-request" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Parameters</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client_token_request</code></td>
+<td><code>Payment_method</code>, <code>reusable_flag</code>, <code>Merchant_client_key</code>, <code>Payment_method</code> (<code>name</code>, <code>PAN</code>, <code>expiryMonth</code>, <code>expiryYear</code>, <code>type</code>)</td>
+<td>Request a client token from Worldpay, whilst providing us with the payment credentials.</td>
+</tr>
+<tr>
+<td><code>client_token_response</code></td>
+<td><code>client_token</code>, <code>reusable_flag</code>, <code>payment_method_response</code> (<code>type</code>, <code>name</code>, <code>expiryMonth</code>, <code>expiryYear</code>, <code>card_type</code>, <code>card_scheme\_type</code>, <code>card_scheme_name</code>, <code>masked_card_number</code>, <code>card_product_type_description_non_contactless</code>, <code>card_product_type_description_contactless</code>, <code>card_issuer</code>, <code>country_code</code>, <code>card_class</code>, <code>pre-paid</code>)</td>
+<td>Response from Worldpay containing the client_token.</td>
+</tr>
+<tr>
+<td><code>Payment_request</code></td>
+<td><code>client_token</code>, <code>client_UUID</code>, <code>payment_ref_ID</code></td>
+<td>The <code>client_token</code> is passed to Thing B to allow the 2<sup>nd</sup> part of the transaction process to take place.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Thing A</strong> will connect to Worldpay using Transport Layer Security (TLS). It will then request a <code>client_token</code> by securely (see 2.2.1) sending a JSON message containing the <code>paymentMethod</code>, its payment credentials (PAN, expiry) to us, along with the <code>client_key</code> from <strong>Thing B</strong>. In addition, a flag indicating if the client details can be used in future is sent. For IoT this should always be set <code>‘reusable’:’false’</code> in order to force the generation of a new client token for each transaction.</p>
+<p>A successful response will be an HTTP <code>POST</code> response containing fields: <code>client_token</code>, <code>reusable_flag</code> and the <code>payment_method_response</code>. Once received, the <code>client_token</code> is passed to <strong>Thing B</strong>.</p>
+<p>A sample request is shown in <a href="../sample-service-messaging">Sample Service Messaging</a>.</p>
+<p>See <a href="https://developer.worldpay.com/jsonapi/docs/api-keys">API keys</a> for documentation on <code>client_token_request</code> and <code>client_token_repsonse</code> APIs data descriptions.</p>
+<h4 id="payment-authorisation-request">Payment authorisation request<a class="headerlink" href="#payment-authorisation-request" title="Permanent link">&para;</a></h4>
+<p><strong>Thing B</strong> will process the order and request the payment from Worldpay providing its service key, <code>client_token</code>, transaction currency and payment amount. This is transmitted to Worldpay over TLS. After successfully processing the payment, Worldpay will provide a payment response. <strong>Thing B</strong> shall then generate a service token, which <strong>Thing A</strong> may use in future to obtain the services that the payment has been made for. This is shown in Figure 7.</p>
+<p><img alt="Payment Authorisation Request" src="../images/architecture/Architecture5.png" />
+<figcaption>Figure 7. Payment Authorisation Request.</figcaption></p>
+<h4 id="payment-authorisation-request-apis">Payment authorisation request APIs<a class="headerlink" href="#payment-authorisation-request-apis" title="Permanent link">&para;</a></h4>
+<h5 id="thing-b-to-worldpay-payment-authorisation-request">Thing B to Worldpay payment authorisation request<a class="headerlink" href="#thing-b-to-worldpay-payment-authorisation-request" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Parameters</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>order_request</code></td>
+<td><code>client_service_key</code>, <code>client_token</code>, <code>currency_code</code>, <code>amount</code>, <code>order_description</code>, <code>customer_order_code</code></td>
+<td>Request payment from Worldpay.</td>
+</tr>
+<tr>
+<td><code>order_response</code></td>
+<td><code>order_code</code>, <code>client_token</code>, <code>order_description</code>, <code>amount</code>, <code>currency_code</code>, <code>payment_status</code>, <code>customer_order_code</code>, <code>environment</code>, <code>risk_score</code>, <code>payment_response</code> (<code>type</code>, <code>name</code>, <code>expiryMonth</code>, <code>expiryYear</code>, <code>card_type</code>, <code>card_scheme_type</code>, <code>card_scheme_name</code>, <code>masked_card_number</code>, <code>card_product_type_description_non_contactless</code>, <code>card_product_type_description_contactless</code>, <code>card_issuer</code>, <code>country_code</code>, <code>card_class</code>, <code>pre-paid</code>)</td>
+<td>Payment response indicating a successful transaction on the Worldpay platform.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Thing B</strong> will assemble a message to be posted to Worldpay that contains the client token, Service key, the amount, currency and transaction description. We will then perform an authorisation using the payment credentials identified by the <code>client_token</code>. A successful authorisation will result in a <code>payment_status</code> of SUCCESS being returned to <strong>Thing B</strong>.</p>
+<h5 id="thing-b-to-thing-a-service-token">Thing B to Thing A service token<a class="headerlink" href="#thing-b-to-thing-a-service-token" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Parameters</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>payment_request_response</code></td>
+<td><code>service_delivery_token</code>, <code>server_UUID</code>, <code>client_UUID</code>, <code>total_paid</code></td>
+<td><code>service_delivery_token</code> is passed to Thing B.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Thing B</strong> shall then generate a cryptographically secure <code>service_delivery_token</code>, which can be used by <strong>Thing A</strong> to request provision of services from <strong>Thing B</strong>.</p>
+<h2 id="delivery">Delivery<a class="headerlink" href="#delivery" title="Permanent link">&para;</a></h2>
+<p>Once the payment has been made, <strong>Thing B</strong> shall return to broadcasting its available services. <strong>Thing A</strong> will now be able to consume the service from <strong>Thing B</strong> by providing the <code>service_delivery_token</code>. The service delivery may be in a single step, or over time. An overview of service delivery is shown in Figure 8.</p>
+<p><img alt="Service delivery" src="../images/architecture/Architecture6.png" />
+<figcaption>Figure 8. Service delivery.</figcaption></p>
+<p>Once in possession of a <code>service_token</code>, <strong>Thing A</strong> may then request the service be provided. The service could be consumed in one session, or in several sessions over time, depending on the nature of the service and number of units purchased. <strong>Thing A</strong> may repeatedly send service delivery requests until <strong>Thing B</strong> indicates that the service has been delivered.</p>
+<h3 id="service-delivery-apis">Service Delivery APIs<a class="headerlink" href="#service-delivery-apis" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Parameters</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>payment_request_response</code></td>
+<td><code>service_delivery_token</code>, <code>server_UUID</code>, <code>client_UUID</code>, <code>total_paid</code></td>
+<td><code>service_delivery_token</code> is passed to Thing B.</td>
+</tr>
+<tr>
+<td><code>broadcast</code></td>
+<td><code>server_UUID</code></td>
+<td>Advertising services and identifying the sender.</td>
+</tr>
+<tr>
+<td><code>delivery_begin_request</code></td>
+<td><code>service_delivery_token</code>, <code>client_UUID</code>, <code>number_of_units_to_supply</code></td>
+<td>Request the service item, with the <code>service_delivery_token</code> providing right to receive the service, and amount of service to be supplied.</td>
+</tr>
+<tr>
+<td><code>delivery_begin_response</code></td>
+<td><code>server_UUID</code>, <code>service_delivery_token</code>, <code>client_UUID</code>, <code>number_of_units_to_be_supplied</code></td>
+<td>Response for the service delivery. Confirmation of number of service units to be supplied (Allowing for less units than requested).</td>
+</tr>
+<tr>
+<td><code>delivery_end</code></td>
+<td><code>client_UUID</code>, <code>number_of_units_received</code></td>
+<td>Confirmation of service received.</td>
+</tr>
+<tr>
+<td><code>delivery_end_response</code></td>
+<td><code>server_UUID</code>, <code>service_delivery_token</code>, <code>client_UUID</code>, <code>number_of_units_just_supplied</code>, <code>number_of_units_remaining</code></td>
+<td>Service end indicating outstanding service credits and token for subsequent delivery.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Thing</strong> A sends a message with the <code>service_delivery_token</code> to <strong>Thing B</strong>, along with the amount of service it wishes to consume. The response shall confirm the amount of service units that <strong>Thing B</strong> can supply to <strong>Thing A</strong> at that time. Once the service has been delivered, <strong>Thing A</strong> shall confirm the amount of service units it has received, with <strong>Thing B</strong> responding, stating the number of units still remaining to <strong>Thing A</strong>, if any.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="../how-it-works/" title="How it works" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                
+                  How it works
+                
+              </span>
+            </div>
+          </a>
+        
+        
+        
+          <a href="../internal-structure/" title="Internal structure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                
+                  Internal structure
+                
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+        <script src="../search/require.js"></script>
+      
+        <script src="../search/search.js"></script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-77147930-12","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

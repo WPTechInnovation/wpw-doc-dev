@@ -1,0 +1,1111 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Worldpay Within website">
+      
+      
+        <link rel="canonical" href="https://wptechinnovation.github.io/wpw-doc-dev/sample-service-messaging/">
+      
+      
+        <meta name="author" content="Worldpay Within">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-1.8.1">
+    
+    
+    
+      
+        <title>Sample service messaging - Worldpay Within</title>
+      
+    
+    
+    
+      <script src="../assets/javascripts/modernizr-8210299719.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-a15cc7de21.css">
+      
+    
+    
+      
+        <style>body,input{font-family:adelle_sansregular,"Helvetica Neue",Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6{font-family:adelle_sansthin,"Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://wptechinnovation.github.io/wpw-doc-dev/" title="Worldpay Within" class="md-logo md-header-nav__button">
+            <img src="../images/logo.svg" width="160" height="32">
+                <span class="md-subtitle">within</span>
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                
+                  <span class="md-header-nav__parent">
+                    Advanced
+                  </span>
+                
+              
+              Sample service messaging
+            
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/WPTechInnovation/wpw-doc-dev/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      WPTechInnovation/wpw-doc-dev
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../images/logo.svg" width="160" height="32">
+        <span class="md-subtitle">within</span>
+      </i>
+    
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/WPTechInnovation/wpw-doc-dev/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      WPTechInnovation/wpw-doc-dev
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../get-started/" title="Get started" class="md-nav__link">
+      Get started
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      SDK
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        SDK
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nodejs/" title="Node.js" class="md-nav__link">
+      Node.js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python27/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dotnet/" title=".NET" class="md-nav__link">
+      .NET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started-with-go/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-it-works/" title="How it works" class="md-nav__link">
+      How it works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../architecture/" title="Architecture" class="md-nav__link">
+      Architecture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../internal-structure/" title="Internal structure" class="md-nav__link">
+      Internal structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Sample service messaging
+      </label>
+    
+    <a href="./" title="Sample service messaging" class="md-nav__link md-nav__link--active">
+      Sample service messaging
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#service-discovery-messages" title="Service discovery messages" class="md-nav__link">
+    Service discovery messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-broadcast" title="Service broadcast" class="md-nav__link">
+    Service broadcast
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-list-request" title="Service list request" class="md-nav__link">
+    Service list request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-list-response" title="Service list response" class="md-nav__link">
+    Service list response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-negotiation-messages" title="Service negotiation messages" class="md-nav__link">
+    Service negotiation messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-price-request" title="Service price request" class="md-nav__link">
+    Service price request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-price-response" title="Service price response" class="md-nav__link">
+    Service price response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-total-price-request" title="Get Total price request" class="md-nav__link">
+    Get Total price request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-total-price-response" title="Get Total price response" class="md-nav__link">
+    Get Total price response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-request" title="Token request" class="md-nav__link">
+    Token request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-response" title="Token response" class="md-nav__link">
+    Token response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-request" title="Payment request" class="md-nav__link">
+    Payment request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-request" title="Order request" class="md-nav__link">
+    Order request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-response" title="Order response" class="md-nav__link">
+    Order response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-request-response" title="Payment request response" class="md-nav__link">
+    Payment request response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#begin-service-delivery-request" title="Begin Service Delivery request" class="md-nav__link">
+    Begin Service Delivery request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#begin-service-delivery-response-content" title="Begin Service Delivery response content:" class="md-nav__link">
+    Begin Service Delivery response content:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-service-delivery-request" title="End Service Delivery request" class="md-nav__link">
+    End Service Delivery request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-service-delivery-response-content" title="End Service Delivery response content" class="md-nav__link">
+    End Service Delivery response content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api-spec/" title="API Spec" class="md-nav__link">
+      API Spec
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../hackathons/" title="Hackathons" class="md-nav__link">
+      Hackathons
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faqs/" title="FAQs" class="md-nav__link">
+      FAQs
+    </a>
+  </li>
+
+      
+    
+      
+    
+      
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#service-discovery-messages" title="Service discovery messages" class="md-nav__link">
+    Service discovery messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-broadcast" title="Service broadcast" class="md-nav__link">
+    Service broadcast
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-list-request" title="Service list request" class="md-nav__link">
+    Service list request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-list-response" title="Service list response" class="md-nav__link">
+    Service list response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-negotiation-messages" title="Service negotiation messages" class="md-nav__link">
+    Service negotiation messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-price-request" title="Service price request" class="md-nav__link">
+    Service price request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-price-response" title="Service price response" class="md-nav__link">
+    Service price response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-total-price-request" title="Get Total price request" class="md-nav__link">
+    Get Total price request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-total-price-response" title="Get Total price response" class="md-nav__link">
+    Get Total price response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-request" title="Token request" class="md-nav__link">
+    Token request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-response" title="Token response" class="md-nav__link">
+    Token response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-request" title="Payment request" class="md-nav__link">
+    Payment request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-request" title="Order request" class="md-nav__link">
+    Order request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-response" title="Order response" class="md-nav__link">
+    Order response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-request-response" title="Payment request response" class="md-nav__link">
+    Payment request response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#begin-service-delivery-request" title="Begin Service Delivery request" class="md-nav__link">
+    Begin Service Delivery request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#begin-service-delivery-response-content" title="Begin Service Delivery response content:" class="md-nav__link">
+    Begin Service Delivery response content:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-service-delivery-request" title="End Service Delivery request" class="md-nav__link">
+    End Service Delivery request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-service-delivery-response-content" title="End Service Delivery response content" class="md-nav__link">
+    End Service Delivery response content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/edit/master/docs/sample-service-messaging.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                
+                  <h1>Sample service messaging</h1>
+                
+                
+                <div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p>This is an early reference guide which has evolved since it was first published. However, in combination with the SDK code, it should give you plenty of hints as to how to work with the SDK. </p>
+</div>
+<h2 id="service-discovery-messages">Service discovery messages<a class="headerlink" href="#service-discovery-messages" title="Permanent link">&para;</a></h2>
+<p>We're going to build a reference application to prove the concepts and APIs outlined above. This reference application will be implemented on the current range of platforms aimed at providing IoT services. These boards are typically running ‘M’ class processors which as yet do not contain an SE. Currently only the application processors (A class such as A57 Cortex) contain SEs. However developments are being made in the IoT platform space, for example ARM has released a new M architecture with does contain an SE, although there will be a delay before boards using these processors and compiler tools become mainstream. This document requires these more secure platforms to be available.</p>
+<h3 id="service-broadcast">Service broadcast<a class="headerlink" href="#service-broadcast" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;DeviceDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Worldpay Within Enabled Electric Car Charger&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Hostname&quot;</span><span class="p">:</span> <span class="s2">&quot;[Your hostname]&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PortNumber&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">Your</span> <span class="err">port</span> <span class="err">number</span><span class="p">],</span>
+    <span class="nt">&quot;ServerID&quot;</span><span class="p">:</span> <span class="s2">&quot;58d8f9fb-b3e9-45bc-b701-fcdd295bc265&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UrlPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;v1/carcharge&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="service-list-request">Service list request<a class="headerlink" href="#service-list-request" title="Permanent link">&para;</a></h3>
+<p>To build the URL, use the hostname and the port number, then concatenate the URL with “service/discover”.</p>
+<p><code>http://[Your hostname]:[Your port number]/v1/carcharge/service/discover</code></p>
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+ <span class="p">}</span> 
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The body content is empty; the request is direct to the server, which is indicated in the broadcast.</p>
+</div>
+<h3 id="service-list-response">Service list response<a class="headerlink" href="#service-list-response" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ServerID&quot;</span><span class="p">:</span> <span class="s2">&quot;58d8f9fb-b3e9-45bc-b701-fcdd295bc265&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Services&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;ServiceID&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;ServiceDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Car charging&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;ServiceID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;ServiceDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Car parking&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="service-negotiation-messages">Service negotiation messages<a class="headerlink" href="#service-negotiation-messages" title="Permanent link">&para;</a></h2>
+<h3 id="service-price-request">Service price request<a class="headerlink" href="#service-price-request" title="Permanent link">&para;</a></h3>
+<p>To build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with “service ID” and then “prices”.</p>
+<p><code>http://[Your hostname]:[Your port number]/v1/carcharge/service/0/prices</code></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+<span class="p">}</span> 
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Body content is empty. URL includes the serviceID (i.e. 0) for the prices being requested, e.g. for serviceID 1, URL would be <code>/v1/carcharge/service/1/prices</code>)</p>
+</div>
+<h3 id="service-price-response">Service price response<a class="headerlink" href="#service-price-response" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ServerID&quot;</span> <span class="p">:</span> <span class="s2">&quot;58d8f9fb-b3e9-45bc-b701-fcdd295bc265&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Prices&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;ServiceID&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;PriceID&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;PricePerUnit&quot;</span> <span class="p">:</span> <span class="mi">140</span><span class="p">,</span>
+            <span class="nt">&quot;UnitID&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;UnitDescription&quot;</span> <span class="p">:</span> <span class="s2">&quot;kW&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;PriceDescription&quot;</span> <span class="p">:</span> <span class="s2">&quot;Slow (3.6kWh)&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="nt">&quot;ServiceID&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;PriceID&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;PricePerUnit&quot;</span> <span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+            <span class="nt">&quot;UnitID&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;UnitDescription&quot;</span> <span class="p">:</span> <span class="s2">&quot;kW&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;PriceDescription&quot;</span> <span class="p">:</span> <span class="s2">&quot;Medium (7.2kWh)&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="nt">&quot;ServiceID&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;PriceID&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;PricePerUnit&quot;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nt">&quot;UnitID&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;UnitDescription&quot;</span> <span class="p">:</span> <span class="s2">&quot;kW&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;PriceDescription&quot;</span> <span class="p">:</span> <span class="s2">&quot;Super (120kWh)&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="get-total-price-request">Get Total price request<a class="headerlink" href="#get-total-price-request" title="Permanent link">&para;</a></h3>
+<p>To build the URL, use the hostname, with the port number, the url prefix all concatenated. The concatenate with “service” concatenated with <code>service ID</code> and then <code>requestTotal</code>.</p>
+<p><code>http://[Your hostname]:[Your port number]/v1/carcharge/service/0/requestTotal</code></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ClientID&quot;</span><span class="p">:</span><span class="s2">&quot;54560ba2-87c0-4172-a904-67a9b7a5e1ee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;SelectedNumberOfUnits&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;SelectedPriceID&quot;</span><span class="p">:</span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="get-total-price-response">Get Total price response<a class="headerlink" href="#get-total-price-response" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ServerID&quot;</span><span class="p">:</span> <span class="s2">&quot;58d8f9fb-b3e9-45bc-b701-fcdd295bc265&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ClientID&quot;</span><span class="p">:</span> <span class="s2">&quot;54560ba2-87c0-4172-a904-67a9b7a5e1ee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PriceID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;UnitsToSupply&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;TotalPrice&quot;</span><span class="p">:</span> <span class="mi">560</span><span class="p">,</span>
+    <span class="nt">&quot;PaymentReferenceID&quot;</span><span class="p">:</span> <span class="s2">&quot;e7c18800-706d-4f0c-933c-19f8d5be72da&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;MerchantClientKey&quot;</span><span class="p">:</span> <span class="s2">&quot; T_C_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx &quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="token-request">Token request<a class="headerlink" href="#token-request" title="Permanent link">&para;</a></h3>
+<p>HTTP POST to:</p>
+<p><code>https://api.worldpay.com/v1/tokens</code></p>
+<p>No custom HTTP headers used.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;clientKey&quot;</span> <span class="p">:</span> <span class="s2">&quot;T_C_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;paymentMethod&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;cardNumber&quot;</span> <span class="p">:</span> <span class="s2">&quot;1234567890124444&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;expiryMonth&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;expiryYear&quot;</span> <span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Bilbo Baggins&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;Card&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;reusable&quot;</span> <span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="token-response">Token response<a class="headerlink" href="#token-response" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;paymentMethod&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ObfuscatedCard&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bilbo Baggins&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;expiryMonth&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;expiryYear&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+        <span class="nt">&quot;cardType&quot;</span><span class="p">:</span> <span class="s2">&quot;MASTERCARD_CREDIT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;maskedCardNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;**** **** **** 4444&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardSchemeType&quot;</span><span class="p">:</span> <span class="s2">&quot;consumer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardSchemeName&quot;</span><span class="p">:</span> <span class="s2">&quot;MCI CREDIT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardIssuer&quot;</span><span class="p">:</span> <span class="s2">&quot;LLOYDS BANK PLC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;countryCode&quot;</span><span class="p">:</span> <span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardClass&quot;</span><span class="p">:</span> <span class="s2">&quot;credit&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardProductTypeDescNonContactless&quot;</span><span class="p">:</span> <span class="s2">&quot;MasterCard Business&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardProductTypeDescContactless&quot;</span><span class="p">:</span> <span class="s2">&quot;CL MasterCard Bus&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;prepaid&quot;</span><span class="p">:</span> <span class="s2">&quot;unknown&quot;</span>
+        <span class="p">},</span>
+    <span class="nt">&quot;reusable&quot;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="payment-request">Payment request<a class="headerlink" href="#payment-request" title="Permanent link">&para;</a></h3>
+<p>HTTP POST to:</p>
+<p><code>http://[Your hostname]:[Your port number]/v1/carcharge/payment</code></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ClientID&quot;</span> <span class="p">:</span> <span class="s2">&quot;54560ba2-87c0-4172-a904-67a9b7a5e1ee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ClientToken&quot;</span> <span class="p">:</span> <span class="s2">&quot;TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy &quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PaymentReferenceID&quot;</span> <span class="p">:</span> <span class="s2">&quot;e7c18800-706d-4f0c-933c-19f8d5be72da&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="order-request">Order request<a class="headerlink" href="#order-request" title="Permanent link">&para;</a></h3>
+<p>HTTP POST to <code>https://api.worldpay.com/v1/orders</code>. </p>
+<p>HTTP header includes the Merchant's Service Key (Private)</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;amount&quot;</span> <span class="p">:</span> <span class="mi">560</span><span class="p">,</span>
+    <span class="nt">&quot;currencyCode&quot;</span> <span class="p">:</span> <span class="s2">&quot;GBP&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;customerOrderCode&quot;</span> <span class="p">:</span> <span class="s2">&quot;Car charge (8kW @ Medium (7.2kWh)) - 26\/01\/2016 15:40&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;orderDescription&quot;</span> <span class="p">:</span> <span class="s2">&quot;Car charging payment&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;token&quot;</span> <span class="p">:</span> <span class="s2">&quot;TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy &quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="order-response">Order response<a class="headerlink" href="#order-response" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;orderCode&quot;</span> <span class="p">:</span> <span class="s2">&quot;4d22cb5d-5dfb-43ce-9108-dfe230151429&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;token&quot;</span> <span class="p">:</span> <span class="s2">&quot;TEST_SU_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy &quot;</span><span class="p">,</span>
+    <span class="nt">&quot;orderDescription&quot;</span> <span class="p">:</span> <span class="s2">&quot;Car charging payment&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span> <span class="p">:</span> <span class="mi">560</span><span class="p">,</span>
+    <span class="nt">&quot;currencyCode&quot;</span> <span class="p">:</span> <span class="s2">&quot;GBP&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;paymentStatus&quot;</span> <span class="p">:</span> <span class="s2">&quot;SUCCESS&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;paymentResponse&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;ObfuscatedCard&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Bilbo Baggins&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;expiryMonth&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;expiryYear&quot;</span> <span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+        <span class="nt">&quot;cardType&quot;</span> <span class="p">:</span> <span class="s2">&quot;MASTERCARD_CREDIT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;maskedCardNumber&quot;</span> <span class="p">:</span> <span class="s2">&quot;**** **** **** 4444&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardSchemeType&quot;</span> <span class="p">:</span> <span class="s2">&quot;consumer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardSchemeName&quot;</span> <span class="p">:</span> <span class="s2">&quot;MCI CREDIT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardIssuer&quot;</span> <span class="p">:</span> <span class="s2">&quot;LLOYDS BANK PLC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;countryCode&quot;</span> <span class="p">:</span> <span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardClass&quot;</span> <span class="p">:</span> <span class="s2">&quot;credit&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardProductTypeDescNonContactless&quot;</span> <span class="p">:</span> <span class="s2">&quot;MasterCard Business&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cardProductTypeDescContactless&quot;</span> <span class="p">:</span> <span class="s2">&quot;CL MasterCard Bus&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;prepaid&quot;</span> <span class="p">:</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;customerOrderCode&quot;</span> <span class="p">:</span> <span class="s2">&quot;Car charge (8kW @ Medium (7.2kWh)) - 26/01/2016 15:40&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;environment&quot;</span> <span class="p">:</span> <span class="s2">&quot;TEST&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;riskScore&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;value&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="payment-request-response">Payment request response<a class="headerlink" href="#payment-request-response" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ServerID&quot;</span> <span class="p">:</span> <span class="s2">&quot;58d8f9fb-b3e9-45bc-b701-fcdd295bc265&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ClientID&quot;</span> <span class="p">:</span> <span class="s2">&quot;54560ba2-87c0-4172-a904-67a9b7a5e1ee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TotalPaid&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;ServiceDeliveryToken&quot;</span> <span class="p">:</span> <span class="s2">&quot;3e7b4c25-157d-4b47-999c-e4faba086590&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;client-uuid&quot;</span><span class="p">:</span><span class="s2">&quot;719D329B-8909-4A8B-B352-E449C3132074&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="begin-service-delivery-request">Begin Service Delivery request<a class="headerlink" href="#begin-service-delivery-request" title="Permanent link">&para;</a></h3>
+<p>HTTP POST to </p>
+<p><code>http://[Your hostname]:[Your port number]/v1/carcharge/service/0/delivery/begin</code></p>
+<p>URL encodes the <code>serviceID</code> being requested</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ClientID&quot;</span> <span class="p">:</span> <span class="s2">&quot;54560ba2-87c0-4172-a904-67a9b7a5e1ee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ServiceDeliveryToken&quot;</span> <span class="p">:</span> <span class="s2">&quot;3e7b4c25-157d-4b47-999c-e4faba086590&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UnitsToSupply&quot;</span> <span class="p">:</span> <span class="mi">8</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="begin-service-delivery-response-content">Begin Service Delivery response content:<a class="headerlink" href="#begin-service-delivery-response-content" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ServerID&quot;</span> <span class="p">:</span> <span class="s2">&quot;58d8f9fb-b3e9-45bc-b701-fcdd295bc265&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ClientID&quot;</span> <span class="p">:</span> <span class="s2">&quot;54560ba2-87c0-4172-a904-67a9b7a5e1ee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ServiceDeliveryToken&quot;</span> <span class="p">:</span> <span class="s2">&quot;3e7b4c25-157d-4b47-999c-e4faba086590&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UnitsToSupply&quot;</span> <span class="p">:</span> <span class="mi">8</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="end-service-delivery-request">End Service Delivery request<a class="headerlink" href="#end-service-delivery-request" title="Permanent link">&para;</a></h3>
+<p>HTTP POST to </p>
+<p><code>http://[Your hostname]:[Your port number]/v1/carcharge/service/0/delivery/end</code></p>
+<p>URL encodes the <code>serviceID</code> being requested</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ClientID&quot;</span> <span class="p">:</span> <span class="s2">&quot;54560ba2-87c0-4172-a904-67a9b7a5e1ee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ServiceDeliveryToken&quot;</span> <span class="p">:</span> <span class="s2">&quot;3e7b4c25-157d-4b47-999c-e4faba086590&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UnitsReceived&quot;</span> <span class="p">:</span> <span class="mi">8</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="end-service-delivery-response-content">End Service Delivery response content<a class="headerlink" href="#end-service-delivery-response-content" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ServerID&quot;</span> <span class="p">:</span> <span class="s2">&quot;58d8f9fb-b3e9-45bc-b701-fcdd295bc265&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ClientID&quot;</span> <span class="p">:</span> <span class="s2">&quot;54560ba2-87c0-4172-a904-67a9b7a5e1ee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ServiceDeliveryToken&quot;</span> <span class="p">:</span> <span class="s2">&quot;3e7b4c25-157d-4b47-999c-e4faba086590&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;UnitsJustSupplied&quot;</span> <span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;UnitsRemaining&quot;</span> <span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="../internal-structure/" title="Internal structure" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                
+                  Internal structure
+                
+              </span>
+            </div>
+          </a>
+        
+        
+        
+          <a href="../api-spec/" title="API Spec" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                
+                  API Spec
+                
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+        <script src="../search/require.js"></script>
+      
+        <script src="../search/search.js"></script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-77147930-12","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
