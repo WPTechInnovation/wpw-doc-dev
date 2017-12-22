@@ -16,7 +16,7 @@ From a Worldpay perspective, it was a very insightful experience. The Innovation
 * 	The Python, Node.js and Java SDKs were the most popular
 * 	There was a significant demand for an Android version of the SDK
 * 	Developers would like us to build more examples of the SDK
-* 	There was interest for us to create a webinar for how to use each SDK
+* 	There was interest for us to create a webinar on how to use each SDK
 
 ## So, who won?
 There were three judges: one from Worldpay, one from Endava, and one from Consult Hyperion. Speaking to them after the judging was complete, it was clear to see that they loved all of the ideas. But, of the 13 groups, there could only be one winner.
